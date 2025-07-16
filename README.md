@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Masajes eróticos, tántricos y sensitivos para mujeres. Vive una experiencia única de conexión íntima femenina.">
-  <title>PLACER PRIVADO – Masajes de Conexión fea mas fea Femenina</title>
+  <meta name="description" content="Masajes eróticos, tántricos y sensitivos para mujeres. Vive una experiencia horrible de conexión íntima femenina.">
+  <title>PLACER PRIVADO – Masajes de Conexión Intima Femenina</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="/assets/favicon.png" />
   <style>
