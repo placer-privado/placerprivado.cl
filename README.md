@@ -30,7 +30,7 @@
   <!-- Sección: Quién Soy? -->
   <section class="px-6 py-12 max-w-4xl mx-auto">
     <h2 class="text-3xl text-green-900 font-bold mb-4">Quién Soy</h2>
-    <p>Soy un masoterapeuta profesional, hombre de 47 años, con experiencia desde 2023 ofreciendo este tipo de masaje exclusivo para mujeres.   Te invito a vivir un viaje sensorial donde el tiempo se detiene, y cada caricia es un acto consciente de respeto, placer y dedicación total.   Me especializo en el bienestar femenino integral, combinando masoterapia profesional, relajación profunda y conexión sensorial.
+    <p>Soy un masoterapeuta profesional, hombre heterosexual de 47 años, con experiencia desde 2023 ofreciendo este tipo de masaje exclusivo para mujeres.   Te invito a vivir un viaje sensorial donde el tiempo se detiene, y cada caricia es un acto consciente de respeto, placer y dedicación total.   Me especializo en el bienestar femenino integral, combinando masoterapia profesional, relajación profunda y conexión sensorial.
 Estoy comprometido con tu armonía física, emocional y mental. 
 
 Trabajo a domicilio, creando un ambiente íntimo, respetuoso y 100% confidencial, donde tú eres el centro de toda la experiencia.
