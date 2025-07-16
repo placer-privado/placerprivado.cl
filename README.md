@@ -12,7 +12,7 @@
       background-color: #FFF8E7; /* Marfil */
     }
     .hero {
-      background: linear-gradient(rgba(1, 68, 33, 0.8), rgba(1, 68, 33, 0.8)), url('/assets/fondo_02.png');
+      background: linear-gradient(rgba(1, 68, 33, 0.8), rgba(1, 68, 33, 0.8)), url('/assets/logo.jpeg');
       background-size: cover;
       background-position: center;
     }
