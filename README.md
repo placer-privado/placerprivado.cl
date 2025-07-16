@@ -72,7 +72,7 @@ Algarrobo
 Donde estés, si me necesitas, llegaré con discreción, calidez y profesionalismo..</p>
   </section>
   
-  </MASAJE EROTICO, TANTRICO-SENSITIVO>
+  MASAJE EROTICO, TANTRICO-SENSITIVO
    <section class="bg-red-50 px-6 py-12">
     <div class="max-w-4xl mx-auto">
       <h2 class="text-3xl text-red-800 font-bold mb-4">Masaje Erótico, Tántrico-Sensitivo</h2>
