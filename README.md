@@ -24,7 +24,8 @@
   <section class="hero text-white py-20 px-6 text-center">
     <h1 class="text-4xl md:text-6xl font-bold mb-4 tracking-wide">PLACER PRIVADO</h1>
     <h2 class="text-xl md:text-2xl italic">Masajes de Conexión Íntima Femenina</h2>
-    <p class="mt-6 text-lg max-w-2xl mx-auto">Masaje Erótico, Tántrico, Sensitivo para mujeres. Disfruta una experiencia multisensorial a domicilio, única y transformadora.</p>
+    <p class="mt-6 text-lg max-w-2xl mx-auto">Masaje Erótico, Tántrico, Sensitivo para mujeres. Vive una experiencia SUBLIME a domicilio, única y transformadora.
+.</p>
   </section>
 
   <!-- Sección: Quién Soy? -->
