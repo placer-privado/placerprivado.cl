@@ -27,26 +27,51 @@
     <p class="mt-6 text-lg max-w-2xl mx-auto">Masaje Erótico, Tántrico, Sensitivo para mujeres. Disfruta una experiencia multisensorial a domicilio, única y transformadora.</p>
   </section>
 
-  <!-- Sección: Quién Soy -->
+  <!-- Sección: Quién Soy? -->
   <section class="px-6 py-12 max-w-4xl mx-auto">
     <h2 class="text-3xl text-green-900 font-bold mb-4">Quién Soy</h2>
-    <p>Soy un masoterapeuta profesional, hombre de 47 años, con experiencia desde 2023 ofreciendo este tipo de masaje exclusivo para mujeres...</p>
-    <!-- Puedes seguir con el mismo texto completo que me diste, está abajo -->
-  </section>
+    <p>Soy un masoterapeuta profesional, hombre de 47 años, con experiencia desde 2023 ofreciendo este tipo de masaje exclusivo para mujeres.   Te invito a vivir un viaje sensorial donde el tiempo se detiene, y cada caricia es un acto consciente de respeto, placer y dedicación total.   Me especializo en el bienestar femenino integral, combinando masoterapia profesional, relajación profunda y conexión sensorial.
+Estoy comprometido con tu armonía física, emocional y mental. 
+
+Trabajo a domicilio, creando un ambiente íntimo, respetuoso y 100% confidencial, donde tú eres el centro de toda la experiencia.
+
+Creo en el poder del tacto consciente y en la importancia de escucharte. Por eso, cada sesión es personalizada, única y diseñada para llevarte a un estado profundo de calma, alivio y placer.
+
+Estos masajes, realizados a domicilio, en hoteles, moteles, oficinas o espacios Airbnb, son mucho más que una sesión de bienestar: son una experiencia de reconexión femenina, una invitación a redescubrir tu cuerpo, tu deseo y tu energía vital..</p>
+</section>
 
   <!-- Sección: Experiencia Multisensorial -->
   <section class="bg-green-50 px-6 py-12">
     <div class="max-w-4xl mx-auto">
       <h2 class="text-3xl text-green-900 font-bold mb-4">Una experiencia multisensorial</h2>
-      <p>Cada sesión se ambienta con delicadeza: velas, música suave, calefactor para templar el ambiente, aromaterapia embriagadora, geles estimulantes y juguetes opcionales...</p>
+      <p>Cada sesión se ambienta con delicadeza: velas, música suave, calefactor para templar el ambiente, aromaterapia embriagadora, geles estimulantes y juguetes opcionales. Llevo todo para preparar el ambiente para que puedas entregarte con confianza, sin prisa, a un espacio solo para ti.
+
+Confía en mis manos.
+Donde estés, ahí estaré contigo.
+Un encuentro sagrado contigo misma...</p>
     </div>
   </section>
 
   <!-- Sección: Cobertura -->
   <section class="px-6 py-12 max-w-4xl mx-auto">
     <h2 class="text-3xl text-green-900 font-bold mb-4">Cobertura de Atención</h2>
-    <p>Atiendo a domicilio en toda la Región Metropolitana... y también en la Quinta Región.</p>
+    <p>Atiendo a domicilio en toda la Región Metropolitana, con especial presencia en:
+Las Condes
+Vitacura
+Providencia
+Santiago Centro
+Ñuñoa
+Huechuraba
+
+Y en la Quinta Región, destacando:
+Viña del Mar
+Reñaca
+Concón
+Quilpué
+Algarrobo
+Donde estés, si me necesitas, llegaré con discreción, calidez y profesionalismo..</p>
   </section>
+  </MASAJE EROTICO, TANTRICO-SENSITIVO>
 
   <!-- Sección: Beneficios -->
   <section class="bg-yellow-50 px-6 py-12">
@@ -54,8 +79,11 @@
       <h2 class="text-3xl text-yellow-700 font-bold mb-4">Beneficios que trascienden el cuerpo</h2>
       <ul class="list-disc pl-6 space-y-2">
         <li>Desbloqueo de emociones profundas y tensiones sexuales antiguas</li>
+        Estimulación de hormonas del bienestar (dopamina, serotonina, oxitocina). 
         <li>Aumento de la autoestima, el deseo y la sensualidad natural</li>
+        Mejor calidad del sueño, circulación y energía vital.
         <li>Profunda reconexión emocional, sexual y espiritual</li>
+        Mejora del tono del piso pélvico y del flujo de placer consciente.
         <!-- Agrega los demás beneficios -->
       </ul>
     </div>
