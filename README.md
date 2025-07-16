@@ -120,8 +120,8 @@ Donde estés, si me necesitas, llegaré con discreción, calidez y profesionalis
   <section class="px-6 py-12 max-w-4xl mx-auto">
     <h2 class="text-3xl text-red-800 font-bold mb-4">Servicios y Tarifas</h2>
     <p class="mb-4">✔ Experiencia sensitiva breve: desde $35.000 (30 min)<br/>
-    ✔ Masaje tántrico o erótico completo: $50.000 (final feliz incluido)<br/>
-    ✔ Masaje con extensión sensorial profunda: a convenir</p>
+    ✔ Masaje tántrico o erótico completo: $50.000 (sin límite de tiempo y final feliz incluido)<br/>
+    ✔ Masaje con extensión sensorial profunda: a convenir!! (sin límite de tiempo y final feliz incluido)</p>
   </section>
 
   <!-- Sección: Testimonios -->
