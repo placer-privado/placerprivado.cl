@@ -119,7 +119,7 @@ solo me falta agregar que eres muy profesional en todo!.”
       <blockquote class="italic border-l-4 border-pink-400 pl-4 mb-6">“Lo llamé después de un día agotador. Me trajo calma y fuego al mismo tiempo.”
 — Mujer, 19 años, estudiante de psicología</blockquote>
       <p class="mb-4"> 🌿¿Quieres vivirlo tú también?
-Solo para mujeres. A domicilio. Confidencialidad absoluta.</p>
+Solo para mujeres. Directo a tu domicilio. Confidencialidad absoluta.</p>
       </div>
   </section>
 
