@@ -6,7 +6,7 @@
   <meta name="description" content="Masajes eróticos, tántricos y sensitivos para mujeres. Vive una experiencia SUBLIME de conexión íntima femenina.">
   <title>PLACER PRIVADO – Masajes de Conexión Intima Femenina</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" href="/assets/favicon.png" />
+  <link rel="icon" href="/assets/fondo_02.png" />
   <style>
     body {
       background-color: #FFF8E7; /* Marfil */
