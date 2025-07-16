@@ -72,12 +72,12 @@ Algarrobo
 Donde estés, si me necesitas, llegaré con discreción, calidez y profesionalismo..</p>
   </section>
   
-  MASAJE EROTICO, TANTRICO-SENSITIVO
    <section class="bg-red-50 px-6 py-12">
     <div class="max-w-4xl mx-auto">
       <h2 class="text-3xl text-red-800 font-bold mb-4">Masaje Erótico, Tántrico-Sensitivo</h2>
       <p class="mb-4">Un arte delicado y provocador, donde tu piel se convierte en escenario del placer más exquisito.
-      En este masaje, el deseo no se apura, se cultiva. Cada caricia es una invitación a rendirte, a soltar el control y dejar que tu cuerpo hable en susurros. A través de toques sutiles, profundos y sensuales, despierto tus zonas más sensibles y erógenas, llevando tu energía a flor de piel y más allá.</p>
+      En este masaje, el deseo no se apura, se cultiva. Cada caricia es una invitación a rendirte, a soltar el control y dejar que tu cuerpo hable en susurros. 
+        A través de toques sutiles, profundos y sensuales, despierto tus zonas más sensibles y erógenas, llevando tu energía a flor de piel y más allá.</p>
       <ul class="list-disc pl-6 mb-6 space-y-2">
         <li>Una experiencia erótica, intensa y sagrada</li>
         <li>Caricias lentas, exploratorias, que recorren todo tu cuerpo sin prisa</li>
@@ -85,8 +85,7 @@ Donde estés, si me necesitas, llegaré con discreción, calidez y profesionalis
         <li>Juegos de temperatura, respiración profunda y presencia total en cada roce</li>
         <li>Atención sensual al piso pélvico, puntos energéticos y zonas de alto voltaje sensorial</li>
         <li>Tu placer fluye sin exigencias ni culpas, solo el goce de sentir</li>
-      </ul>
-
+   
       <h3 class="text-2xl text-red-700 font-semibold mb-3">Lo que este ritual puede despertar en ti</h3>
       <ul class="list-disc pl-6 mb-4 space-y-2">
         <li>Un viaje erótico donde el cuerpo se expande en oleadas de placer</li>
