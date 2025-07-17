@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -5,10 +6,8 @@
   <meta name="description" content="Masajes eróticos, tántricos y sensitivos para mujeres. Vive una experiencia sublime de conexión íntima femenina.">
   <meta name="keywords" content="masajes eróticos para mujeres, masaje tántrico, masaje sensitivo, conexión íntima femenina, masajes a domicilio, masajes Santiago, masajes Viña del Mar">
   <title>PLACER PRIVADO – Masajes de Conexión Íntima Femenina</title>
-
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" type="image/jpeg" href="/assets/logo.jpeg" />
-
   <style>
     body {
       background-color: #FFF8E7; /* Marfil */
