@@ -3,16 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Masajes eróticos, tántricos y sensitivos para mujeres. Vive una experiencia SUBLIME de conexión íntima femenina.">
-  <title>PLACER PRIVADO – Masajes de Conexión Intima Femenina</title>
+  <meta name="description" content="Masajes eróticos, tántricos y sensitivos para mujeres. Vive una experiencia sublime de conexión íntima femenina.">
+  <meta name="keywords" content="masajes eróticos para mujeres, masaje tántrico, masaje sensitivo, conexión íntima femenina, masajes a domicilio, masajes Santiago, masajes Viña del Mar">
+  <title>PLACER PRIVADO – Masajes de Conexión Íntima Femenina</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" href="/assets/fondo_02.png" />
+  <link rel="icon" type="image/jpeg" href="/assets/logo.jpeg" />
+
   <style>
     body {
       background-color: #FFF8E7; /* Marfil */
     }
     .hero {
-      background: linear-gradient(rgba(1, 68, 33, 0.8), rgba(1, 68, 33, 0.8)), url('/assets/fondo_02.png');
+      background: linear-gradient(rgba(1, 68, 33, 0.8), rgba(1, 68, 33, 0.8)), url('/assets/fondo1.png');
       background-size: cover;
       background-position: center;
     }
