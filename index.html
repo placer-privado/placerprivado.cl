@@ -19,19 +19,39 @@
     }
   </style>
 </head>
-<body class="text-gray-800 font-sans">
-<header class="fixed top-0 left-0 w-full bg-white bg-opacity-90 shadow-md z-50">
-<nav class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3 text-sm md:text-base text-gray-800 font-semibold">
-<a class="hover:text-pink-700" href="#inicio">Inicio</a>
-<a class="hover:text-pink-700" href="#quien-soy">Quién soy</a>
-<a class="hover:text-pink-700" href="#experiencia">Experiencia</a>
-<a class="hover:text-pink-700" href="#beneficios">Beneficios</a>
-<a class="hover:text-pink-700" href="#tantrico">Masaje Tántrico</a>
-<a class="hover:text-pink-700" href="#testimonios">Testimonios</a>
-<a class="hover:text-pink-700" href="#faq">Preguntas Frecuentes</a>
-<a class="hover:text-pink-700" href="#tarifas">Tarifas y Cobertura</a>
-<a class="hover:text-pink-700" href="#contacto">Contacto</a>
-</nav>
+<header class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-md">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+    <a href="#inicio" class="text-xl font-bold text-green-900">PlacerPrivado</a>
+    
+    <!-- Botón hamburguesa en móviles -->
+    <button id="menu-btn" class="md:hidden text-green-900 focus:outline-none text-3xl">&#9776;</button>
+    
+    <!-- Navegación -->
+    <nav id="menu" class="hidden md:flex space-x-4 text-green-900 font-semibold">
+      <a href="#inicio" class="hover:text-red-600">Inicio</a>
+      <a href="#quien-soy" class="hover:text-red-600">Quién Soy</a>
+      <a href="#experiencia" class="hover:text-red-600">Experiencia</a>
+      <a href="#beneficios" class="hover:text-red-600">Beneficios</a>
+      <a href="#tantrico" class="hover:text-red-600">Masaje Tántrico</a>
+      <a href="#tarifas" class="hover:text-red-600">Tarifas y Cobertura</a>
+      <a href="#testimonios" class="hover:text-red-600">Testimonios</a>
+      <a href="#faq" class="hover:text-red-600">Preguntas Frecuentes</a>
+      <a href="#contacto" class="hover:text-red-600">Contacto</a>
+    </nav>
+  </div>
+
+  <!-- Menú móvil desplegable -->
+  <div id="mobile-menu" class="md:hidden hidden bg-white/90 backdrop-blur-md text-green-900 px-6 pb-4 space-y-2">
+    <a href="#inicio" class="block">Inicio</a>
+    <a href="#quien-soy" class="block">Quién Soy</a>
+    <a href="#experiencia" class="block">Experiencia</a>
+    <a href="#beneficios" class="block">Beneficios</a>
+    <a href="#tantrico" class="block">Masaje Tántrico</a>
+    <a href="#tarifas" class="block">Tarifas y Cobertura</a>
+    <a href="#testimonios" class="block">Testimonios</a>
+    <a href="#faq" class="block">Preguntas Frecuentes</a>
+    <a href="#contacto" class="block">Contacto</a>
+  </div>
 </header>
 <div class="pt-24"></div>
   <!-- Hero principal -->
@@ -221,5 +241,12 @@ Me corrí sin que me tocaras. Te juro. Y luego me hiciste acabar dos veces más.
 <p class="mb-6 text-lg">Solo para mujeres. A domicilio. Confidencialidad absoluta.</p>
 <a class="bg-yellow-500 text-green-900 font-bold py-3 px-6 rounded-full hover:bg-yellow-400" href="https://wa.me/56959085200">Agenda por WhatsApp</a>
 </section>
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
 </body>
 </html>
