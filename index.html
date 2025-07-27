@@ -242,11 +242,20 @@ Me corrí sin que me tocaras. Te juro. Y luego me hiciste acabar dos veces más.
 <a class="bg-yellow-500 text-green-900 font-bold py-3 px-6 rounded-full hover:bg-yellow-400" href="https://wa.me/56959085200">Agenda por WhatsApp</a>
 </section>
 <script>
-  const btn = document.getElementById('menu-btn');
-  const menu = document.getElementById('mobile-menu');
-  btn.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
-  });
-</script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    // Cerrar el menú cuando se hace clic en un enlace del menú móvil
+    const links = menu.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+      });
+    });
+  </script>
 </body>
 </html>
