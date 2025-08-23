@@ -10,7 +10,8 @@
 <link href="/assets/logo.jpeg" rel="icon"/>
 <style>
   body { background-color: #FFF8E7; }
-  .hero { background: linear-gradient(rgba(1, 68, 33, 0.8), rgba(1, 68, 33, 0.8)), url('/assets/fondo1.png'); background-size: cover; background-position: center; }
+  /* Menos verde, más transparencia en el hero */
+  .hero { background: linear-gradient(rgba(1, 68, 33, 0.45), rgba(1, 68, 33, 0.45)), url('/assets/fondo1.png'); background-size: cover; background-position: center; }
   .lock-scroll { overflow: hidden; }
   /* Collapsible helpers for quick sections */
   .collapsible { position: relative; }
@@ -31,10 +32,10 @@
       <a href="#experiencia" class="hover:text-red-600">Experiencia</a>
       <a href="#beneficios" class="hover:text-red-600">Beneficios</a>
       <a href="#tantrico" class="hover:text-red-600">Masaje Tántrico</a>
-      <a href="#tarifas" data-modal-link="tarifas" class="hover:text-red-600">Tarifas y Cobertura</a>
+      <a href="#tarifas-teaser" data-modal-link="tarifas" class="hover:text-red-600">Tarifas y Cobertura</a>
       <a href="#testimonios" data-modal-link="testimonios" class="hover:text-red-600">Testimonios</a>
       <a href="#faq" data-modal-link="faq" class="hover:text-red-600">Preguntas Frecuentes</a>
-      <a href="#contacto" data-modal-link="contacto" class="hover:text-red-600">Contacto</a>
+      <a href="#contacto-teaser" data-modal-link="contacto" class="hover:text-red-600">Contacto</a>
     </nav>
   </div>
   <div id="mobile-menu" class="md:hidden hidden bg-white/90 backdrop-blur-md text-green-900 px-6 pb-4 space-y-2">
@@ -43,10 +44,10 @@
     <a href="#experiencia" class="block">Experiencia</a>
     <a href="#beneficios" class="block">Beneficios</a>
     <a href="#tantrico" class="block">Masaje Tántrico</a>
-    <a href="#tarifas" data-modal-link="tarifas" class="block">Tarifas y Cobertura</a>
+    <a href="#tarifas-teaser" data-modal-link="tarifas" class="block">Tarifas y Cobertura</a>
     <a href="#testimonios" data-modal-link="testimonios" class="block">Testimonios</a>
     <a href="#faq" data-modal-link="faq" class="block">Preguntas Frecuentes</a>
-    <a href="#contacto" data-modal-link="contacto" class="block">Contacto</a>
+    <a href="#contacto-teaser" data-modal-link="contacto" class="block">Contacto</a>
   </div>
 </header>
 <div class="pt-24"></div>
@@ -66,7 +67,7 @@
   <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
     <button class="rounded-xl bg-pink-600 px-4 py-2 text-white" data-modal-link="testimonios">Leer Testimonios</button>
     <button class="rounded-xl border border-white/70 px-4 py-2 text-white/90" data-modal-link="tarifas">Tarifas & Cobertura</button>
-    <button class="rounded-xl border border-white/70 px-4 py-2 text-white/90" data-modal-link="tarifas">Preguntas Frecuentes</button>
+    <button class="rounded-xl border border-white/70 px-4 py-2 text-white/90" data-modal-link="faq">Preguntas Frecuentes</button>
   </div>
 </section>
 
@@ -125,7 +126,7 @@
     contacto@placerprivado.cl</p>
     <div class="flex flex-wrap gap-3">
       <button class="rounded-xl border border-neutral-300 px-4 py-2 hover:bg-neutral-50" data-modal-link="contacto">Abrir formulario</button>
-      <a href="https://wa.me/56965747615" target="_blank" class="rounded-xl bg-green-600 px-4 py-2 text-white">WhatsApp</a>
+      <a href="https://wa.me/56965747615" target="_blank" rel="noopener noreferrer" class="rounded-xl bg-green-600 px-4 py-2 text-white">WhatsApp</a>
     </div>
   </div>
 </section>
@@ -172,12 +173,11 @@
       </div>
       <div>
         <h3 class="text-xl font-semibold mb-2">¿Se permite sexo oral?</h3>
-        <p class="text-neutral-700">Sí, solo para complementar el servicio hacia tu cuerpo. Siempre con pasión, lascivia, y lujuria. Nada se asume, todo se acuerda.  Y
-          recuerda que despues de comerte los labios, subiré para besar tu boca.</p>
+        <p class="text-neutral-700">Sí, solo para complementar el servicio hacia tu cuerpo. Siempre con pasión, lascivia y lujuria. Nada se asume, todo se acuerda. Y recuerda que después de comerte los labios, subiré para besar tu boca.</p>
       </div>
       <div>
         <h3 class="text-xl font-semibold mb-2">¿Sexo anal?</h3>
-        <p class="text-neutral-700">Solo con la petición explícita de parte de la paciente y se hará con mucha obscenidad, lascivia, y lujuria. Se acuerda, dilatar previamente para no causar dolor.</p>
+        <p class="text-neutral-700">Solo con la petición explícita de parte de la paciente y se hará con mucha obscenidad, lascivia y lujuria. Se acuerda, dilatar previamente para no causar dolor.</p>
       </div>
       <div>
         <h3 class="text-xl font-semibold mb-2">¿Dónde se realiza el servicio?</h3>
@@ -185,7 +185,8 @@
       </div>
       <div>
         <h3 class="text-xl font-semibold mb-2">Confidencialidad</h3>
-        <p class="text-neutral-700">Máxima discreción. No se comparten datos, contenidos, conversaciones privadas, NADA!. Todo lo realizado y hablado queda en un anonimato total.</p>
+        <p class="text-neutral-700">Máxima discreción. No se comparten datos, contenidos o conversaciones privadas. Todo lo realizado y hablado queda en anonimato total.</p>
+      </div>
     </div>
   </div>
 </div>
@@ -285,13 +286,12 @@
         </div>
         <div class="flex flex-col sm:flex-row justify-between items-center mt-4 gap-4">
           <button type="submit" class="bg-green-700 hover:bg-green-800 text-white font-bold py-3 px-6 rounded shadow-lg transition duration-300">Enviar mensaje</button>
-          <a href="https://wa.me/56965747615" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded shadow-lg transition duration-300 flex items-center gap-2">WhatsApp</a>
+          <a href="https://wa.me/56965747615" target="_blank" rel="noopener noreferrer" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded shadow-lg transition duration-300 flex items-center gap-2">WhatsApp</a>
         </div>
       </form>
       <div class="text-xs text-neutral-500 mt-4">Nota: La recepción en <strong>contacto@placerprivado.cl</strong> se configura en Netlify → <em>Forms</em> → <em>Notifications</em> (destinatario Zoho). El campo <code>email</code> se usa como <em>Reply-To</em>.</div>
     </div>
   </div>
-</div>
 </div>
 
 <script>
@@ -324,6 +324,12 @@
     overlay.classList.remove('hidden');
     document.body.classList.add('lock-scroll');
     safeSetHash('#' + id);
+    // Carga inmediata de testimonios (si aún no hay ítems)
+    try {
+      if (id === 'testimonios' && typeof LIST_TEST !== 'undefined' && LIST_TEST && !LIST_TEST.children.length && typeof renderMoreTests === 'function') {
+        renderMoreTests();
+      }
+    } catch(e) {}
   }
   function closeAnyModal(){
     Object.values(OVERLAYS).forEach(ov => ov.classList.add('hidden'));
@@ -407,9 +413,8 @@ Me dijiste que publicabas los mensajes y correos y espero que éste sea uno de e
   }
   BTN_MORE_TEST.addEventListener('click', renderMoreTests);
 
-  // Auto-carga la primera página si abres el modal de testimonios
+  // Auto-carga la primera página si abres el modal de testimonios (fallbacks)
   OVERLAYS.testimonios.addEventListener('transitionstart', () => { if (testIndex === 0) renderMoreTests(); });
-  // Fallback por si no dispara transitionstart en algunos navegadores
   OVERLAYS.testimonios.addEventListener('click', () => { if (testIndex === 0) renderMoreTests(); }, { once: true });
 
   // --- Self tests ---
@@ -447,4 +452,3 @@ Me dijiste que publicabas los mensajes y correos y espero que éste sea uno de e
 </script>
 </body>
 </html>
-
