@@ -5,21 +5,144 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Masajes eróticos, tántricos y sensitivos para mujeres. Vive una experiencia sublime de conexión íntima femenina." name="description"/>
 <meta content="masajes eróticos femeninos a domicilio en toda la Región Metropolitana, con especial presencia en Las Condes, Vitacura, Providencia, Santiago Centro, Ñuñoa, Huechuraba... Y en la Quinta Región: Viña del Mar, Reñaca, Concón, Quilpué, Algarrobo, masajes sensuales para mujeres, masaje tántrico femenino, masajes íntimos para mujeres, masajes con final feliz mujeres, masajes relajantes y eróticos Santiago, terapeuta hombre masajes eróticos, masaje a domicilio mujer santiago" name="keywords"/>
+<meta name="robots" content="index,follow"/>
+<link rel="canonical" href="https://placerprivado.cl/"/>
+<link rel="alternate" hreflang="es-cl" href="https://placerprivado.cl/"/>
+
 <title>PLACER PRIVADO – Masajes de Conexión Íntima Femenina</title>
+
+<!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Favicon -->
 <link href="/assets/logo.jpeg" rel="icon"/>
+
+<!-- Open Graph / Twitter -->
+<meta property="og:title" content="PLACER PRIVADO – Masajes de Conexión Íntima Femenina">
+<meta property="og:description" content="Masajes eróticos, tántricos y sensitivos para mujeres. Servicio a domicilio en RM y Valparaíso, solo con cita previa.">
+<meta property="og:url" content="https://placerprivado.cl/">
+<meta property="og:image" content="https://placerprivado.cl/assets/logo.jpeg">
+<meta property="og:type" content="business.business">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Señales geográficas (opcionales) -->
+<meta name="geo.region" content="CL-RM">
+<meta name="geo.region" content="CL-VS">
+<meta name="geo.placename" content="Santiago, Chile">
+<meta name="geo.position" content="-33.4489;-70.6693">
+<meta name="ICBM" content="-33.4489, -70.6693">
+
 <style>
   body { background-color: #FFF8E7; }
-  /* Menos verde, más transparencia en el hero */
-  .hero { background: linear-gradient(rgba(1, 68, 33, 0.35), rgba(1, 68, 33, 0.35)), url('/assets/fondo1.png'); background-size: cover; background-position: center; }
+  /* Menos verde, más transparencia en el hero: baja 0.35 si quieres (ej. 0.25) */
+  .hero {
+    background:
+      linear-gradient(rgba(1, 68, 33, 0.35), rgba(1, 68, 33, 0.35)),
+      url('/assets/fondo1.png');
+    background-size: cover;
+    background-position: center;
+  }
   .lock-scroll { overflow: hidden; }
-  /* Collapsible helpers for quick sections */
+  /* Collapsible helpers */
   .collapsible { position: relative; }
   .collapsible.collapsed { max-height: 300px; overflow: hidden; }
   .collapsible .fade { display: none; }
-  .collapsible.collapsed .fade { display: block; position: absolute; left: 0; right: 0; bottom: 0; height: 64px; }
+  .collapsible.collapsed .fade {
+    display: block; position: absolute; left: 0; right: 0; bottom: 0; height: 64px;
+    background: linear-gradient(transparent, #FFF8E7);
+  }
 </style>
+
+<!-- JSON-LD: Website + LocalBusiness con área de servicio y WhatsApp -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://placerprivado.cl/#website",
+      "url": "https://placerprivado.cl/",
+      "name": "PLACER PRIVADO",
+      "inLanguage": "es",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://placerprivado.cl/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://placerprivado.cl/#business",
+      "name": "PLACER PRIVADO",
+      "url": "https://placerprivado.cl/",
+      "image": "https://placerprivado.cl/assets/logo.jpeg",
+      "email": "mailto:contacto@placerprivado.cl",
+      "telephone": "+56965747615",
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "contactType": "WhatsApp",
+        "telephone": "+56965747615",
+        "url": "https://wa.me/56965747615",
+        "availableLanguage": ["es"]
+      }],
+      "sameAs": ["https://wa.me/56965747615"],
+      "priceRange": "CLP $35.000–$80.000",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "CLP",
+        "lowPrice": "35000",
+        "highPrice": "80000",
+        "offerCount": "3"
+      },
+      "paymentAccepted": "Cash, BankTransfer",
+      "byAppointmentOnly": true,
+      "slogan": "Masajes de Conexión Íntima Femenina",
+      "description": "Masajes eróticos, tántricos y sensitivos para mujeres. Servicio a domicilio con cita previa.",
+      "areaServed": [
+        {"@type":"AdministrativeArea","name":"Región Metropolitana de Santiago"},
+        {"@type":"AdministrativeArea","name":"Región de Valparaíso"}
+      ],
+      "serviceArea": [
+        { "@type":"GeoShape", "circle":"-33.4489 -70.6693 40km" },
+        { "@type":"GeoShape", "circle":"-33.0153 -71.5500 35km" }
+      ],
+      "address": { "@type": "PostalAddress", "addressCountry": "CL" },
+      "hasMap": "https://maps.google.com/?q=-33.4489,-70.6693",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"],
+          "opens": "10:00",
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Friday",
+          "opens": "18:00",
+          "closes": "23:59"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "00:00",
+          "closes": "23:59"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "00:00",
+          "closes": "22:00"
+        }
+      ],
+      "isAcceptingNewCustomers": true,
+      "currenciesAccepted": "CLP",
+      "knowsAbout": ["masajes a domicilio mujer","masaje tántrico femenino","masaje erótico femenino","masajes sensuales Santiago"]
+    }
+  ]
+}
+</script>
 </head>
+
 <body>
 <!-- HEADER fijo -->
 <header class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-md">
