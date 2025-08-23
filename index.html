@@ -5,21 +5,144 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Masajes eróticos, tántricos y sensitivos para mujeres. Vive una experiencia sublime de conexión íntima femenina." name="description"/>
 <meta content="masajes eróticos femeninos a domicilio en toda la Región Metropolitana, con especial presencia en Las Condes, Vitacura, Providencia, Santiago Centro, Ñuñoa, Huechuraba... Y en la Quinta Región: Viña del Mar, Reñaca, Concón, Quilpué, Algarrobo, masajes sensuales para mujeres, masaje tántrico femenino, masajes íntimos para mujeres, masajes con final feliz mujeres, masajes relajantes y eróticos Santiago, terapeuta hombre masajes eróticos, masaje a domicilio mujer santiago" name="keywords"/>
+<meta name="robots" content="index,follow"/>
+<link rel="canonical" href="https://placerprivado.cl/"/>
+<link rel="alternate" hreflang="es-cl" href="https://placerprivado.cl/"/>
+
 <title>PLACER PRIVADO – Masajes de Conexión Íntima Femenina</title>
+
+<!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Favicon -->
 <link href="/assets/logo.jpeg" rel="icon"/>
+
+<!-- Open Graph / Twitter -->
+<meta property="og:title" content="PLACER PRIVADO – Masajes de Conexión Íntima Femenina">
+<meta property="og:description" content="Masajes eróticos, tántricos y sensitivos para mujeres. Servicio a domicilio en RM y Valparaíso, solo con cita previa.">
+<meta property="og:url" content="https://placerprivado.cl/">
+<meta property="og:image" content="https://placerprivado.cl/assets/logo.jpeg">
+<meta property="og:type" content="business.business">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Señales geográficas (opcionales) -->
+<meta name="geo.region" content="CL-RM">
+<meta name="geo.region" content="CL-VS">
+<meta name="geo.placename" content="Santiago, Chile">
+<meta name="geo.position" content="-33.4489;-70.6693">
+<meta name="ICBM" content="-33.4489, -70.6693">
+
 <style>
   body { background-color: #FFF8E7; }
-  /* Menos verde, más transparencia en el hero */
-  .hero { background: linear-gradient(rgba(1, 68, 33, 0.35), rgba(1, 68, 33, 0.35)), url('/assets/fondo1.png'); background-size: cover; background-position: center; }
+  /* Menos verde, más transparencia en el hero: baja 0.35 si quieres (ej. 0.25) */
+  .hero {
+    background:
+      linear-gradient(rgba(1, 68, 33, 0.35), rgba(1, 68, 33, 0.35)),
+      url('/assets/fondo1.png');
+    background-size: cover;
+    background-position: center;
+  }
   .lock-scroll { overflow: hidden; }
-  /* Collapsible helpers for quick sections */
+  /* Collapsible helpers */
   .collapsible { position: relative; }
   .collapsible.collapsed { max-height: 300px; overflow: hidden; }
   .collapsible .fade { display: none; }
-  .collapsible.collapsed .fade { display: block; position: absolute; left: 0; right: 0; bottom: 0; height: 64px; }
+  .collapsible.collapsed .fade {
+    display: block; position: absolute; left: 0; right: 0; bottom: 0; height: 64px;
+    background: linear-gradient(transparent, #FFF8E7);
+  }
 </style>
+
+<!-- JSON-LD: Website + LocalBusiness con área de servicio y WhatsApp -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://placerprivado.cl/#website",
+      "url": "https://placerprivado.cl/",
+      "name": "PLACER PRIVADO",
+      "inLanguage": "es",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://placerprivado.cl/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://placerprivado.cl/#business",
+      "name": "PLACER PRIVADO",
+      "url": "https://placerprivado.cl/",
+      "image": "https://placerprivado.cl/assets/logo.jpeg",
+      "email": "mailto:contacto@placerprivado.cl",
+      "telephone": "+56965747615",
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "contactType": "WhatsApp",
+        "telephone": "+56965747615",
+        "url": "https://wa.me/56965747615",
+        "availableLanguage": ["es"]
+      }],
+      "sameAs": ["https://wa.me/56965747615"],
+      "priceRange": "CLP $35.000–$80.000",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "CLP",
+        "lowPrice": "35000",
+        "highPrice": "80000",
+        "offerCount": "3"
+      },
+      "paymentAccepted": "Cash, BankTransfer",
+      "byAppointmentOnly": true,
+      "slogan": "Masajes de Conexión Íntima Femenina",
+      "description": "Masajes eróticos, tántricos y sensitivos para mujeres. Servicio a domicilio con cita previa.",
+      "areaServed": [
+        {"@type":"AdministrativeArea","name":"Región Metropolitana de Santiago"},
+        {"@type":"AdministrativeArea","name":"Región de Valparaíso"}
+      ],
+      "serviceArea": [
+        { "@type":"GeoShape", "circle":"-33.4489 -70.6693 40km" },
+        { "@type":"GeoShape", "circle":"-33.0153 -71.5500 35km" }
+      ],
+      "address": { "@type": "PostalAddress", "addressCountry": "CL" },
+      "hasMap": "https://maps.google.com/?q=-33.4489,-70.6693",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"],
+          "opens": "10:00",
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Friday",
+          "opens": "18:00",
+          "closes": "23:59"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "00:00",
+          "closes": "23:59"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "00:00",
+          "closes": "22:00"
+        }
+      ],
+      "isAcceptingNewCustomers": true,
+      "currenciesAccepted": "CLP",
+      "knowsAbout": ["masajes a domicilio mujer","masaje tántrico femenino","masaje erótico femenino","masajes sensuales Santiago"]
+    }
+  ]
+}
+</script>
 </head>
+
 <body>
 <!-- HEADER fijo -->
 <header class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-md">
@@ -33,7 +156,8 @@
       <a href="#beneficios" class="hover:text-red-600">Beneficios</a>
       <a href="#tantrico" class="hover:text-red-600">Masaje Tántrico</a>
       <a href="#tarifas-teaser" data-modal-link="tarifas" class="hover:text-red-600">Tarifas y Cobertura</a>
-      <a href="#testimonios" data-modal-link="testimonios" class="hover:text-red-600">Testimonios</a><a href="#recomendaciones" data-modal-link="recomendaciones" class="hover:text-red-600">Recomendaciones</a>$1
+      <a href="#testimonios" data-modal-link="testimonios" class="hover:text-red-600">Testimonios</a>
+      <a href="#faq" data-modal-link="faq" class="hover:text-red-600">Preguntas Frecuentes</a>
       <a href="#contacto-teaser" data-modal-link="contacto" class="hover:text-red-600">Contacto</a>
     </nav>
   </div>
@@ -44,7 +168,8 @@
     <a href="#beneficios" class="block">Beneficios</a>
     <a href="#tantrico" class="block">Masaje Tántrico</a>
     <a href="#tarifas-teaser" data-modal-link="tarifas" class="block">Tarifas y Cobertura</a>
-    <a href="#testimonios" data-modal-link="testimonios" class="block">Testimonios</a><a href="#recomendaciones" data-modal-link="recomendaciones" class="block">Recomendaciones</a>$1
+    <a href="#testimonios" data-modal-link="testimonios" class="block">Testimonios</a>
+    <a href="#faq" data-modal-link="faq" class="block">Preguntas Frecuentes</a>
     <a href="#contacto-teaser" data-modal-link="contacto" class="block">Contacto</a>
   </div>
 </header>
@@ -65,8 +190,7 @@
   <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
     <button class="rounded-xl bg-pink-600 px-4 py-2 text-white" data-modal-link="testimonios">Leer Testimonios</button>
     <button class="rounded-xl border border-white/70 px-4 py-2 text-white/90" data-modal-link="tarifas">Tarifas & Cobertura</button>
-    $1
-    <button class="rounded-xl border border-white/70 px-4 py-2 text-white/90" data-modal-link="recomendaciones">Recomendaciones</button>
+    <button class="rounded-xl border border-white/70 px-4 py-2 text-white/90" data-modal-link="faq">Preguntas Frecuentes</button>
   </div>
 </section>
 
@@ -74,7 +198,11 @@
 <section id="quien-soy" class="bg-cover bg-center bg-no-repeat py-16 px-6 text-yellow-100" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/assets/masaje5.png');">
   <div class="max-w-4xl mx-auto js-collapsible">
     <h2 class="text-3xl font-bold mb-4">Quién Soy</h2>
-    <p class="mb-3">Masoterapeuta profesional, hombre hétero de 47 años que atiende exclusivamente a mujeres desde 2023. Mi enfoque combina técnica, sensualidad y erotismo en un ambiente seguro y confidencial.</p>
+    <p class="mb-3">Masoterapeuta profesional, hombre hétero de 47 años, dedicado por vocación al arte del masaje íntimo, erótico y sexual femenino. He acompañado a cientos de mujeres que desean algo más que un simple masaje; buscan convertirse en un templo del placer.
+      <strong>Mi energía te envuelve, te contiene, te excita</strong> y mi objetivo es uno solo: <strong>que te redescubras con lujuria, sensualidad y libertad.</strong></p>
+    <ul class="list-disc pl-6">
+      <li>Te aconsejo recibir el tratamiento completamente desnuda; o puedes permanecer con tu ropa íntima o bikini. El objetivo es que te sientas cómoda.</li>
+    </ul>
   </div>
 </section>
 
@@ -82,10 +210,9 @@
   <div class="max-w-4xl mx-auto bg-white bg-opacity-40 backdrop-blur-md rounded-xl shadow-xl p-6 js-collapsible">
     <h2 class="text-3xl font-bold mb-4">La experiencia</h2>
     <ul class="list-disc pl-6 space-y-2">
-      <li>Ambientación multisensorial: velas, aromas, ambiente.</li>
-      <li>Contacto consciente, lento y profundo.</li>
-      <li>Texturas y juguetes elegidos contigo.</li>
-      <li>Respeto absoluto por tus límites y tiempos.</li>
+      <li>No llego solo con mis manos... llego con un ritual. Transformo tu espacio en un santuario íntimo: velas encendidas, aromas que despiertan memorias, sonidos que acarician desde adentro y una atmósfera caliente, lista para el pecado, el desenfreno y el descanso.</li>
+      <li>Cada detalle está pensado para que tú te rindas sin culpas, sin vergüenzas, sin juicios.</li>
+      <li>Tú solo déjate caer sobre mi camilla o tu cama... el resto es arte, fuego, ¡pasión!</li>
     </ul>
   </div>
 </section>
@@ -94,17 +221,26 @@
   <div class="relative max-w-4xl mx-auto js-collapsible">
     <h2 class="text-3xl font-bold mb-4">Beneficios</h2>
     <ul class="list-disc pl-6 space-y-2 text-gray-800">
-      <li>Relaja, desbloquea y reconecta con tu cuerpo.</li>
-      <li>Mejora el descanso y tu energía vital.</li>
-      <li>Eleva autoestima, deseo y sexualidad.</li>
+      <li>Desbloqueo de emociones profundas y tensiones antiguas ligadas a tu sexualidad.</li>
+      <li>Mejor calidad del sueño, circulación y energía vital.</li>
+      <li>Profunda reconexión emocional, sexual y espiritual.</li>
+      <li>Fortalece el tono del piso pélvico y el flujo del placer.</li>
     </ul>
   </div>
 </section>
 
 <section id="tantrico" class="bg-cover bg-center bg-no-repeat py-16 px-6 text-red-900" style="background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), url('/assets/tantrico6.png');">
   <div class="relative max-w-4xl mx-auto bg-white bg-opacity-10 backdrop-blur-md rounded-xl shadow-xl p-6 text-gray-800 js-collapsible">
-    <h2 class="text-3xl font-bold mb-4">Masaje erótico tántrico-sensitivo</h2>
-    <p class="mb-3">Contacto consciente y provocador que enciende tu sexualidad con caricias lentas, presencia total y respeto por tus límites.</p>
+    <h2 class="text-3xl font-bold mb-4">Masaje Erótico, Tántrico-Sensitivo</h2>
+    <p class="mb-3">Un arte delicado y provocador, donde tu piel se convierte en escenario del placer más exquisito.</p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li>Una experiencia erótica, intensa y sagrada.</li>
+      <li>Caricias lentas, exploratorias, que recorren todo tu cuerpo sin prisa.</li>
+      <li>Estimulación de tus zonas más íntimas y oscuras con aceites, texturas suaves y el arte del contacto energético.</li>
+      <li>Atención personal y sensual al piso pélvico, puntos energéticos y zonas de alto voltaje sensorial.</li>
+      <li>Tu cuerpo es un bosque virgen que debo descubrir lento, con fuerza y energía vital.</li>
+      <li>Es un viaje erótico donde tu cuerpo se expande y se abre en oleadas de placer.</li>
+    </ul>
   </div>
 </section>
 
@@ -153,33 +289,6 @@
   </div>
 </div>
 
-<!-- MODAL: Recomendaciones (fuera del scroll principal) -->
-<div id="overlay-recomendaciones" class="fixed inset-0 z-50 hidden place-items-center bg-black/40 backdrop-blur-sm">
-  <div role="dialog" aria-modal="true" aria-labelledby="title-recomendaciones" class="mx-4 flex h-[86vh] w-full max-w-3xl flex-col overflow-hidden rounded-3xl bg-white shadow-2xl">
-    <div class="flex items-center justify-between border-b border-neutral-200 px-5 py-4">
-      <div class="flex items-center gap-3">
-        <span id="title-recomendaciones" class="rounded-lg bg-green-700 px-2.5 py-1 text-xs font-semibold text-white">Recomendaciones</span>
-        <button data-copy="recomendaciones" class="rounded-lg border border-neutral-300 px-2 py-1 text-xs hover:bg-neutral-50" title="Copiar enlace directo">Copiar enlace</button>
-      </div>
-      <button data-close class="rounded-xl border border-neutral-300 p-2 hover:bg-neutral-50" aria-label="Cerrar">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-      </button>
-    </div>
-    <div class="flex-1 overflow-y-auto px-5 py-5 bg-green-50 text-green-900">
-      <h3 class="text-xl font-semibold mb-3">Recomendaciones y Sugerencias</h3>
-      <ul class="list-disc pl-6 space-y-2">
-        <li>Elige un espacio cómodo y privado para tu masaje: habitación, sala u oficina amplia.</li>
-        <li>Informa previamente cualquier problema de salud, lesión o condición médica relevante.</li>
-        <li>Evita el masaje si estás con infecciones vaginales, fiebre o condiciones de riesgo.</li>
-        <li>Hidrátate bien antes del masaje y evita comer justo antes de la sesión.</li>
-        <li>Mantén tu celular apagado o en silencio para disfrutar una sesión completamente enfocada en ti.</li>
-        <li>Cuida tu higiene íntima y usa ropa cómoda o simplemente déjate llevar por la experiencia sin prendas.</li>
-        <li>Después del masaje, evita el frío y escucha las recomendaciones personalizadas del masajista.</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
 <!-- MODAL: FAQ (contenido elocuente fuera del scroll principal) -->
 <div id="overlay-faq" class="fixed inset-0 z-50 hidden place-items-center bg-black/40 backdrop-blur-sm">
   <div role="dialog" aria-modal="true" aria-labelledby="title-faq" class="mx-4 flex h-[86vh] w-full max-w-5xl flex-col overflow-hidden rounded-3xl bg-white shadow-2xl">
@@ -199,11 +308,11 @@
       </div>
       <div>
         <h3 class="text-xl font-semibold mb-2">¿Se permite sexo oral?</h3>
-        <p class="text-neutral-700">Sí, solo para complementar el servicio hacia tu cuerpo. Siempre con pasión, lascivia y lujuria. Nada se asume, todo se acuerda. Y recuerda que después de comerte los labios, subiré para besar tu boca.</p>
+        <p class="text-neutral-700">Sí, solo para complementar el servicio hacia tu cuerpo. Siempre con pasión, lascivia y lujuria. Nada se asume, todo se acuerda. Y recuerda que te daré el mejor oral que hayas tenido.</p>
       </div>
       <div>
         <h3 class="text-xl font-semibold mb-2">¿Sexo anal?</h3>
-        <p class="text-neutral-700">Solo con la petición explícita de parte de la paciente y se hará con mucha obscenidad, lascivia y lujuria. Se acuerda, dilatar previamente para no causar dolor.</p>
+        <p class="text-neutral-700">Solo con la petición explícita de parte tuya y se hará con mucha obscenidad. Se acuerda humedecer, mojar, lubricar y dilatar previamente, con inmoralidad, para causar mucho placer.</p>
       </div>
       <div>
         <h3 class="text-xl font-semibold mb-2">¿Dónde se realiza el servicio?</h3>
@@ -211,7 +320,7 @@
       </div>
       <div>
         <h3 class="text-xl font-semibold mb-2">Confidencialidad</h3>
-        <p class="text-neutral-700">Máxima discreción. No se comparten datos, contenidos o conversaciones privadas. Todo lo realizado y hablado queda en anonimato total.</p>
+        <p class="text-neutral-700">Máxima discreción. No se comparten datos, contenidos o conversaciones privadas. Todo lo realizado y hablado queda en anonimato total <strong>EXCEPTO</strong> si regalas tu <strong>TESTIMONIO</strong> para publicarlo.</p>
       </div>
     </div>
   </div>
@@ -341,7 +450,6 @@
     testimonios: document.getElementById('overlay-testimonios'),
     faq: document.getElementById('overlay-faq'),
     tarifas: document.getElementById('overlay-tarifas'),
-    recomendaciones: document.getElementById('overlay-recomendaciones'),
     contacto: document.getElementById('overlay-contacto')
   };
 
@@ -361,7 +469,7 @@
   function closeAnyModal(){
     Object.values(OVERLAYS).forEach(ov => ov.classList.add('hidden'));
     document.body.classList.remove('lock-scroll');
-    if (['#testimonios','#faq','#tarifas','#contacto','#recomendaciones'].includes(location.hash)) safeClearHash();
+    if (['#testimonios','#faq','#tarifas','#contacto'].includes(location.hash)) safeClearHash();
   }
 
   // Botones/links que abren modales
@@ -389,7 +497,7 @@
   // Deep-link inicial
   (function openFromHash(){
     const h = location.hash.replace('#','');
-    if (['testimonios','faq','tarifas','contacto','recomendaciones'].includes(h)) openModal(h);
+    if (['testimonios','faq','tarifas','contacto'].includes(h)) openModal(h);
   })();
 
   // --- Collapsibles en secciones largas (para lectura ágil) ---
@@ -417,12 +525,12 @@
   const LIST_TEST = document.getElementById('list-testimonios');
   const BTN_MORE_TEST = document.getElementById('more-testimonios');
   const TESTIMONIOS_POOL = [
-    { name: 'Mujer, 46 años, ejecutiva de marketing', text: `Recuerdo que te llamé a mi oficina y llegaste antes de la hora acordada con tu pelo largo amarrado y todas tus cosas, maleta gigante, bolso, mochilas y comenzaste a armar el show. Te juro que hasta vergüenza me dió y salí a tomar aire. Cuando llegué tenías todo preparado y me pediste que cuando yo estuviera lista me sacara la ropa para subir a tu camilla y mientras lo hacía me hiciste un montón de preguntas de salud y personales. No te miento, deseé pagarte y que te fueras antes de comenzar todo, pero, mi yo interna me dijo que te quedaras. Te juzgué, me anticipé, caí en un grave error. Tus manos cálidas (y eso que hacía mucho frio ese día) me tocaron los hombros, recorrieron mi espalda, mis brazos, mis manos, mis piernas, mi cuerpo completo! Siquiera mi esposo me conoce tan bien como me conoces tú, Nolberto (poco común tu nombre, te lo han dicho?) Hiciste que el placer tuviera otro significado con tus manos, tus brazos y tu boca. Confieso que acabé mas de una vez y fue mentira cuando te dije que estás dentro de lo normal. La verdad es que "eres un ángel", quiero volver a conectar contigo. Sé, que es tu trabajo y todo pero, definitivamente necesito tenerte tocando mi piel.
-Me dijiste que publicabas los mensajes y correos y espero que éste sea uno de ellos. Solo me falta agregar que eres muy profesional en todo!` },
-    { name: 'Mujer, 36 años, azafata internacional', text: `No esperaba que metieras tus dedos tan profundo... tan delicadamente. Lo hiciste mientras me masajeabas el cuello con la otra mano. Me vine con la garganta cerrada y las piernas temblando. Y luego me diste vuelta, y me besaste el vientre como si fuera sagrado. ¿Eso haces con todas? No me importa. Solo dime que volverás si te llamo nuevamente.` },
-    { name: 'Mujer, 35 años, ingeniero', text: `Pensé que iba a un masaje con final feliz y todo pero, lo que viví fue un reencuentro con mi sexualidad, no sentí culpa. Me sentí poderosa.` },
+    { name: 'Mujer, 46 años, ejecutiva de marketing', text: `Recuerdo que te llamé a mi oficina y llegaste antes de la hora acordada con tu pelo largo amarrado y todas tus cosas, maleta gigante, bolso, mochilas y comenzaste a armar el show. Te juro que hasta vergüenza me dio y salí a tomar aire. Cuando llegué tenías todo preparado y me pediste que cuando yo estuviera lista me sacara la ropa para subir a tu camilla y, mientras lo hacía, me hiciste un montón de preguntas de salud y personales. No te miento, deseé pagarte y que te fueras antes de comenzar todo, pero mi yo interna me dijo que te quedaras. Te juzgué, me anticipé, caí en un grave error. Tus manos cálidas (y eso que hacía mucho frío ese día) me tocaron los hombros, recorrieron mi espalda, mis brazos, mis manos, mis piernas, ¡mi cuerpo completo! Ni siquiera mi esposo me conoce tan bien como me conoces tú, Nolberto (¿poco común tu nombre, te lo han dicho?). Hiciste que el placer tuviera otro significado con tus manos, tus brazos y tu boca. Confieso que acabé más de una vez y fue mentira cuando te dije que estás dentro de lo normal. La verdad es que "eres un ángel"; quiero volver a conectar contigo. Sé que es tu trabajo y todo, pero definitivamente necesito tenerte tocando mi piel.
+Me dijiste que publicabas los mensajes y correos y espero que este sea uno de ellos. Solo me falta agregar que eres muy profesional en todo!` },
+    { name: 'Mujer, 36 años, azafata internacional', text: `No esperaba que metieras tus dedos tan profundo... tan delicadamente. Lo hiciste mientras me masajeabas el cuello con la otra mano. Me vine con la garganta cerrada y las piernas temblando. Y luego me diste vuelta y me besaste el vientre como si fuera sagrado. ¿Eso haces con todas? No me importa. Solo dime que volverás si te llamo nuevamente.` },
+    { name: 'Mujer, 35 años, ingeniero', text: `Pensé que iba a un masaje con final feliz y todo, pero lo que viví fue un reencuentro con mi sexualidad. No sentí culpa. Me sentí poderosa.` },
     { name: 'Mujer, 43 años, emprendedora', text: `Nunca pensé que un masaje a domicilio pudiera ser tan excitante y liberador. Sentí todo su ser dentro de mí. Te vuelvo a llamar sí o sí.` },
-    { name: 'Mujer, 31 años, arquitecta', text: `Oye Nolberto, solo me dijiste ‘solo relájate, yo me encargo de todo’. Y así fue. Tus dedos dibujaban círculos en mi cadera, tus manos bajaban, subían… Y cuando ya estaba tan mojada que la toalla se pegaba a mí, te acercaste sin tocar. Solo respirabas sobre mi clítoris. ¡Eso fue peor que el contacto! Me corrí sin que me tocaras. Te juro. Y luego me hiciste acabar dos veces más.` }
+    { name: 'Mujer, 31 años, arquitecta', text: `Oye, Nolberto, solo me dijiste: ‘relájate, yo me encargo de todo’. Y así fue. Tus dedos dibujaban círculos en mi cadera; tus manos bajaban, subían… Y cuando ya estaba tan mojada que la toalla se pegaba a mí, te acercaste sin tocar. Solo respirabas sobre mi clítoris. ¡Eso fue peor que el contacto! Me corrí sin que me tocaras, te juro. Y luego me hiciste acabar dos veces más.` }
   ];
   let testIndex = 0; const TEST_PAGE = 3; // carga 3 largos por click para no saturar
   const poolRandom = TESTIMONIOS_POOL.slice(); // podrías hacer shuffle si quieres
