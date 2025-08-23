@@ -238,19 +238,28 @@ Quilpué, Valparaíso, Algarrobo, El Quisco.</p>
       </button>
     </div>
     <div class="flex-1 overflow-y-auto px-5 py-5">
-      <form name="contacto" method="POST" data-netlify="true" class="space-y-4">
+      <div class="mb-4 text-sm text-neutral-700">Los mensajes llegan a <strong>contacto@placerprivado.cl</strong>. Si incluyes tu correo, podrás recibir respuesta directa.</div>
+      <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-4">
         <input type="hidden" name="form-name" value="contacto" />
+        <!-- Campo honeypot para spam -->
+        <p class="hidden">
+          <label>No llenar: <input name="bot-field" /></label>
+        </p>
+        <!-- Destino (informativo / útil para integraciones externas) -->
+        <input type="hidden" name="to" value="contacto@placerprivado.cl" />
+        <input type="hidden" name="subject" value="Nuevo contacto — PlacerPrivado.cl" />
         <div>
           <label class="block mb-1 font-semibold">Nombre</label>
-          <input type="text" name="nombre" required class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500" />
+          <input type="text" name="nombre" autocomplete="name" required class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500" />
         </div>
         <div>
           <label class="block mb-1 font-semibold">Correo electrónico</label>
-          <input type="email" name="email" required class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500" />
+          <input type="email" name="email" autocomplete="email" required class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500" />
+          <div class="text-xs text-neutral-500 mt-1">Al responder desde tu bandeja, el mensaje irá a este correo.</div>
         </div>
         <div>
           <label class="block mb-1 font-semibold">Teléfono</label>
-          <input type="text" name="telefono" class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500" />
+          <input type="text" name="telefono" autocomplete="tel" class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500" />
         </div>
         <div>
           <label class="block mb-1 font-semibold">Mensaje</label>
@@ -258,9 +267,10 @@ Quilpué, Valparaíso, Algarrobo, El Quisco.</p>
         </div>
         <div class="flex flex-col sm:flex-row justify-between items-center mt-4 gap-4">
           <button type="submit" class="bg-green-700 hover:bg-green-800 text-white font-bold py-3 px-6 rounded shadow-lg transition duration-300">Enviar mensaje</button>
-          <a href="https://wa.me/56965747615" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded shadow-lg transition duration-300 flex items-center gap-2">WhatsApp</a>
+          <a href="https://wa.me/56959085200" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded shadow-lg transition duration-300 flex items-center gap-2">WhatsApp</a>
         </div>
       </form>
+      <div class="text-xs text-neutral-500 mt-4">Nota: La recepción en <strong>contacto@placerprivado.cl</strong> se configura en Netlify → <em>Forms</em> → <em>Notifications</em> (destinatario Zoho). El campo <code>email</code> se usa como <em>Reply-To</em>.</div>
     </div>
   </div>
 </div>
@@ -393,278 +403,5 @@ Me dijiste que publicabas los mensajes y correos y espero que éste sea uno de e
     noThrow(() => { openModal('contacto'); closeAnyModal(); }, 'Open/close Contacto modal');
   })();
 </script>
-</body>
-</html>
-      <a href="#testimonios" class="hover:text-red-600">Testimonios</a>
-      <a href="#faq" class="hover:text-red-600">Preguntas Frecuentes</a>
-      <a href="#contacto" class="hover:text-red-600">Contacto</a>
-    </nav>
-  </div>
-
-  <!-- Menú móvil desplegable -->
-  <div id="mobile-menu" class="md:hidden hidden bg-white/90 backdrop-blur-md text-green-900 px-6 pb-4 space-y-2">
-    <a href="#inicio" class="block">Inicio</a>
-    <a href="#quien-soy" class="block">Quién Soy</a>
-    <a href="#experiencia" class="block">Experiencia</a>
-    <a href="#beneficios" class="block">Beneficios</a>
-    <a href="#tantrico" class="block">Masaje Tántrico</a>
-    <a href="#tarifas" class="block">Tarifas y Cobertura</a>
-    <a href="#testimonios" class="block">Testimonios</a>
-    <a href="#faq" class="block">Preguntas Frecuentes</a>
-    <a href="#contacto" class="block">Contacto</a>
-  </div>
-</header>
-<div class="pt-24"></div>
-  <!-- Hero principal -->
-  <section id="inicio" class="hero text-white py-32 px-6 text-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/assets/fondo1.png'); background-size: cover; background-position: center;">
-    <img alt="Logo Placer Privado" class="mx-auto mb-6 w-32 h-auto rounded-full shadow-lg" src="/assets/logo.jpeg" />
-    <h1 class="text-5xl md:text-6xl font-bold tracking-wide">PLACER PRIVADO</h1>
-    <h2 class="text-xl md:text-2xl mt-2 font-semibold">Masajes íntimos con final feliz para mujeres en hoteles, domicilios, moteles y Airbnb</h2>
-    <h3 class="text-xl md:text-2xl italic mt-4">Masajes de Conexión Íntima Femenina</h3>
-    <p class="mt-6 text-lg max-w-2xl mx-auto">
-      Masaje erótico, tántrico y sensitivo para mujeres. Vive una experiencia sublime a domicilio, única y transformadora.
-    </p>
-  </section>
-  <!-- QUIEN SOY -->
-<section id="quien-soy" class="bg-cover bg-center bg-no-repeat py-20 px-6 text-yellow-100" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/assets/masaje5.png');">
-<div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl font-bold mb-6">Quién Soy</h2>
-      <p class="mb-4">Soy un hombre heterosexual de 47 años, masoterapeuta profesional, dedicado por vocación al arte del masaje íntimo y erótico femenino.
-      Desde 2023 he acompañado a mujeres que desean algo más que un simple masaje: buscan ser tocadas con pasión, escuchadas sin palabras,
-      y deseadas sin prisa.</p>
-      <p class="mb-4">Mi especialidad no es solo relajar tu cuerpo... es encenderlo, con presencia, con entrega total. Cada caricia que ofrezco es una invitación a que sueltes el control y te permitas sentir desde lo más profundo de tu piel.</p>
-      <p class="mb-4">Trabajo exclusivamente a domicilio: llego a tu espacio —casa, hotel, motel, oficina o Airbnb— y lo transformo en un templo de placer, donde tú eres el centro. Llevo conmigo todo lo necesario para crear un ambiente íntimo, cálido y 100% confidencial: velas, aromas, texturas, juguetes y mis manos.</p>
-      <p class="font-semibold">
-        <strong>Mi presencia no juzga, no apura. Solo te guía.<br>
-        Mi energía te envuelve, te contiene, te excita.<br>
-        Y mi objetivo es uno solo: que te redescubras… con lujuria, ternura y libertad.</strong>
-      </p>
-    </div>
-  </section>
-  <!-- EXPERIENCIA MULTISENSORIAL -->
-<section id="experiencia" class="bg-cover bg-center bg-no-repeat py-20 px-6 text-green-900" style="background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), url('/assets/ambiente2.png');">
-  <div class="max-w-4xl mx-auto bg-white bg-opacity-40 backdrop-blur-md rounded-xl shadow-xl p-8">
-    <h2 class="text-3xl font-bold mb-6">Una experiencia multisensorial</h2>
-    <p class="mb-4">
-      No llego solo con mis manos… llego con un ritual. Transformo tu espacio en un santuario íntimo:
-      velas encendidas, aromas que despiertan memorias, música que acaricia desde adentro y una atmósfera tibia, lista para el pecado y el descanso.
-    </p>
-    <p class="mb-4">
-      Cada detalle está pensado para que tú te rindas sin culpa, sin vergüenza, sin juicios.
-    </p>
-    <p class="mb-4">
-      Geles tibios, texturas suaves, juguetes exquisitos (solo si tú lo deseas) y mi presencia total: calmada, atenta, deseosa.
-    </p>
-    <p>
-      Tú solo déjate caer sobre la camilla… el resto es arte, fuego y entrega. <br><br>
-      <strong>Confía. Te vas a descubrir distinta.</strong>
-    </p>
-  </div>
-</section>
-  <!-- BENEFICIOS -->
-<section id="beneficios" class="bg-cover bg-center bg-no-repeat py-20 px-6 text-orange-900" style="background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('/assets/beneficio8.png');">
-  <div class="relative max-w-4xl mx-auto">
-      <h2 class="text-3xl font-bold mb-6">Beneficios que trascienden el cuerpo</h2>
-      <ul class="list-disc pl-6 space-y-2 text-gray-800">
-        <li>Desbloqueo de emociones profundas y tensiones antiguas ligados a la sexualidad.</li>
-        <li>Estimulación de hormonas del bienestar (dopamina, serotonina, oxitocina).</li>
-        <li>Incrementa la autoestima, el deseo y la sensualidad natural.</li>
-        <li>Mejor calidad del sueño, circulación y energía vital.</li>
-        <li>Profunda reconexión emocional, sexual y espiritual.</li>
-        <li>Fortalece el tono del piso pélvico y del flujo de placer.</li>
-      </ul>
-    </div>
-  </section>
-  <!-- MASAJE TÁNTRICO SENSITIVO -->
-<section id="tantrico" class="bg-cover bg-center bg-no-repeat py-20 px-6 text-red-900" style="background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), url('/assets/tantrico6.png');">
-<div class="relative max-w-4xl mx-auto bg-white bg-opacity-10 backdrop-blur-md rounded-xl shadow-xl p-8 text-gray-800">
-      <h2 class="text-3xl font-bold mb-6">Masaje Erótico, Tántrico-Sensitivo</h2>
-      <p class="mb-4">Un arte delicado y provocador, donde tu piel se convierte en escenario del placer más exquisito.
-      En este masaje, el deseo no se apura, se cultiva. Cada caricia es una invitación a rendirte, a soltar el control y dejar que tu cuerpo hable en susurros.
-      A través de toques sutiles, profundos y sensuales, despierto tus zonas más sensibles y erógenas, llevando tu energía a flor de piel y más allá.</p>
-      <ul class="list-disc pl-6 mb-6 space-y-2">
-        <li>Una experiencia erótica, intensa y sagrada</li>
-        <li>Caricias lentas, exploratorias, que recorren todo tu cuerpo sin prisa</li>
-        <li>Estimulación de tus zonas más íntimas con aceites tibios, texturas suaves y el arte del contacto consciente</li>
-        <li>Juegos de temperatura, respiración profunda y presencia total en cada roce</li>
-        <li>Atención sensual al piso pélvico, puntos energéticos y zonas de alto voltaje sensorial</li>
-        <li>Tu placer fluye sin exigencias ni culpas, solo el goce de sentir, de ser tocada, de abrirte a lo que eres.</li>
-      </ul>
-      <h3 class="text-2xl font-semibold mb-4">Lo que este ritual puede despertar en ti</h3>
-      <ul class="list-disc pl-6 mb-6 space-y-2">
-        <li>Un viaje erótico donde el cuerpo se expande en oleadas de placer</li>
-        <li>Reconexión con tu sexualidad auténtica</li>
-        <li>Desbloqueo emocional profundo ligado al deseo y al contacto</li>
-        <li>Energía sexual que fluye y nutre, no solo genital, sino total</li>
-        <li>Sensación de rendición y fuego interno</li>
-      </ul>
-      <p class="italic">
-        <strong>Tu placer no se fuerza… se acompaña.<br>
-        Tu cuerpo no se domina… se celebra.<br>
-        Tu energía no se controla… se libera.</strong>
-      </p>
-    </div>
-  </section>
-<!-- PROTOCOLO Y AMBIENTE -->
-<section class="bg-yellow-50 px-6 py-12">
-<div class="max-w-4xl mx-auto">
-<h2 class="text-3xl text-yellow-700 font-bold mb-4">Protocolo y ambiente</h2>
-<p class="mb-4">Masajes solo para mujeres, realizados con el mayor respeto, profesionalismo y confidencialidad.</p>
-<ul class="list-disc pl-6 space-y-2">
-<li>Ambientación personalizada: velas, aromaterapia, calefactor eléctrico, música relajante.</li>
-<li>Uso de juguetes eróticos solo si lo deseas, y todo con higiene y consentimiento previo.</li>
-<li>Masajes en ropa interior (masajista), según el nivel de confianza mutua.</li>
-</ul>
-</div>
-</section>
-<!-- Testimonios -->
-<section id="testimonios" class="bg-cover bg-center bg-no-repeat py-20 px-6 text-pink-900" style="background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url('/assets/testimonio3.png');">
-<div class="relative max-w-4xl mx-auto bg-white bg-opacity-80 backdrop-blur-md rounded-xl shadow-xl p-8 text-gray-800">
-<h2 class="text-3xl text-pink-800 font-bold mb-6">Testimonios Íntimos de Mujeres Reales</h2>
-<blockquote class="italic border-l-4 border-pink-400 pl-4 mb-6">
-      “Recuerdo que te llamé a mi oficina y llegaste antes de la hora acordada con tu pelo largo amarrado y todas tus cosas, maleta gigante, bolso, mochilas y comenzaste a armar el show. Te juro que hasta vergüenza me dió y salí a tomar aire.   Cuando llegué tenías todo preparado y me pediste que cuando yo estuviera lista me sacara la ropa para subir a tu camilla y mientras lo hacía me hiciste un montón de preguntas de salud y personales.   No te miento, deseé pagarte y que te fueras antes de comenzar todo, pero, mi yo interna me dijo que te quedaras. Te juzgué, me anticipé, caí en un grave error.   Tus manos cálidas (y eso que hacía mucho frio ese día) me tocaron los hombros, recorrieron mi espalda, mis brazos, mis manos, mis piernas, mi cuerpo completo! Siquiera mi esposo me conoce tan bien como me conoces tú, Nolberto (poco común tu nombre, te lo han dicho?)  Hiciste que el placer tuviera otro significado con tus manos, tus brazos y tu boca.  Confieso que acabé mas de una vez y fue mentira cuando te dije que estás dentro de lo normal. La verdad es que "eres un ángel", quiero volver a conectar contigo.   Sé, que es tu trabajo y todo pero, definitivamente necesito tenerte tocando mi piel.<br/>
-      Me dijiste que publicabas los mensajes y correos y espero que éste sea uno de ellos. Solo me falta agregar que eres muy profesional en todo!”
-      <br/><strong>— Mujer, 46 años, ejecutiva de marketing</strong>
-</blockquote>
-<blockquote class="italic border-l-4 border-pink-400 pl-4 mb-6">
-      “No esperaba que metieras tus dedos tan profundo... tan delicadamente.
-Lo hiciste mientras me masajeabas el cuello con la otra mano. Me vine con la garganta cerrada y las piernas temblando. Y luego me diste vuelta, y me besaste el vientre como si fuera sagrado.
-¿Eso haces con todas? No me importa.
-Solo dime que volverás si te llamo nuevamente.”
-      <br/><strong>— Mujer, 36 años, azafata internacional</strong>
-</blockquote>
-<blockquote class="italic border-l-4 border-pink-400 pl-4 mb-6">
-      “Pensé que iba a un masaje con final feliz y todo pero, lo que viví fue un reencuentro con mi sexualidad, no sentí culpa. Me sentí poderosa.”
-      <br/><strong>— Mujer, 35 años, ingeniero</strong>
-</blockquote>
-<blockquote class="italic border-l-4 border-pink-400 pl-4 mb-6">
-      “Nunca pensé que un masaje a domicilio pudiera ser tan excitante y liberador. Sentí todo su ser dentro de mí. Te vuelvo a llamar sí o sí.”
-      <br/><strong>— Mujer, 43 años, emprendedora</strong>
-</blockquote>
-<blockquote class="italic border-l-4 border-pink-400 pl-4 mb-6">
-      “Oye Nolberto, solo me dijiste ‘solo relájate, yo me encargo de todo’. Y así fue.
-Tus dedos dibujaban círculos en mi cadera, tus manos bajaban, subían… Y cuando ya estaba tan mojada que la toalla se pegaba a mí, te acercaste sin tocar. Solo respirabas sobre mi clítoris.   ¡Eso fue peor que el contacto!
-Me corrí sin que me tocaras. Te juro. Y luego me hiciste acabar dos veces más.”
-      <br/><strong>— Mujer, 31 años, arquitecta</strong>
-</blockquote>
-</div>
-</section>
-<!-- Preguntas Frecuentes -->
-<section id="faq" class="bg-cover bg-center bg-no-repeat bg-white/80 py-20 px-6 text-yellow-900" style="background-image: linear-gradient(rgba(255,255,255,0.60), rgba(255,255,255,0.60)), url('/assets/preguntas7.png');">
-<div class="max-w-4xl mx-auto">
-<h2 class="text-3xl font-bold mb-6">Preguntas Frecuentes</h2>
-<h3 class="text-xl font-semibold mb-2">¿Hay penetración digital o con pene?</h3>
-<p class="mb-4">Sí, la penetración digital forma parte del servicio base solo con consentimiento mutuo. La penetración con pene no es habitual, pero puede considerarse en casos excepcionales, previa conversación clara.</p>
-<h3 class="text-xl font-semibold mb-2">¿Se permite sexo oral?</h3>
-<p class="mb-4">Sí, solo si hay consentimiento mutuo y se aborda con respeto, higiene y profesionalismo.</p>
-<h3 class="text-xl font-semibold mb-2">¿Y sexo anal?</h3>
-<p class="mb-4">No está incluido dentro del servicio estándar. Cualquier interacción adicional debe conversarse previamente.</p>
-<h3 class="text-xl font-semibold mb-2">¿Dónde se realiza el servicio?</h3>
-<p class="mb-4">El servicio es 100% a domicilio: en hoteles, moteles, oficinas o espacios tipo Airbnb. En casos excepcionales, se puede realizar en mi propio espacio privado.</p>
-</div>
-</section>
-<!-- Recomendaciones -->
-<section class="bg-green-50 px-6 py-12">
-<div class="max-w-4xl mx-auto">
-<h2 class="text-3xl text-green-900 font-bold mb-4">Recomendaciones y Sugerencias</h2>
-<ul class="list-disc pl-6 space-y-2">
-<li>Elige un espacio cómodo y privado para tu masaje: habitación, sala u oficina amplia.</li>
-<li>Informa previamente cualquier problema de salud, lesión o condición médica relevante.</li>
-<li>Evita el masaje si estás con infecciones vaginales, fiebres, o condiciones de riesgo.</li>
-<li>Hidrátate bien antes del masaje y evita comer justo antes de la sesión.</li>
-<li>Mantén tu celular apagado o en silencio para disfrutar una sesión completamente enfocada en ti.</li>
-<li>Cuida tu higiene íntima y usa ropa cómoda o simplemente déjate llevar por la experiencia sin prendas.</li>
-<li>Después del masaje, evita el frío y escucha las recomendaciones personalizadas del masajista.</li>
-</ul>
-</div>
-</section>
-<!-- TARIFAS Y COBERTURA con imagen de fondo -->
-<section id="tarifas" class="bg-cover bg-center bg-no-repeat bg-white/80 py-20 px-6 text-green-900" style="background-image: linear-gradient(rgba(255,255,255,0.50), rgba(255,255,255,0.50)), url('/assets/taco4.png');">
-<div class="max-w-4xl mx-auto">
-<!-- Tarifas -->
-<h2 class="text-3xl font-bold mb-4">Tarifas</h2>
-<ul class="list-disc pl-6 space-y-2 mb-6">
-<li>Experiencia sensitiva breve: desde $35.000 (30 min)</li>
-<li>Masaje tántrico o erótico completo: $50.000 (final feliz incluido)</li>
-<li>Masaje con extensión sensorial profunda: ¡a convenir! (final feliz incluido)</li>
-</ul>
-<p class="mb-10">Cada cuerpo es único, cada deseo merece atención, y cada sesión es un ritual de placer y conexión con tu feminidad.<br/>
-    Permítete vivir el arte del tacto consciente. Tu cuerpo tiene una historia... Yo estoy aquí para escucharla con mis manos.</p>
-<!-- Cobertura -->
-<h2 class="text-3xl font-bold mb-4">Masajes a domicilio para mujeres en Santiago y Quinta Región</h2>
-<h3 class="text-xl font-semibold mb-2">Cobertura de atención profesional en hoteles, casas, moteles y Airbnb</h3>
-<p>Atiendo a domicilio en toda la Región Metropolitana, con especial presencia en:</p>
-<ul class="list-disc pl-6 mb-4">
-<li>Las Condes, Vitacura, Providencia, Santiago Centro</li>
-<li>Ñuñoa, Huechuraba, La Reina, Peñalolén</li>
-</ul>
-<p>También ofrezco mis masajes íntimos para mujeres en la Quinta Región, especialmente en:</p>
-<ul class="list-disc pl-6">
-<li>Viña del Mar, Reñaca, Concón</li>
-<li>Quilpué, Valparaíso, Algarrobo, El Quisco</li>
-</ul>
-</div>
-</section>
-<!-- Contacto -->
-<section id="contacto" class="bg-cover bg-center bg-no-repeat bg-white/80 py-20 px-6 text-gray-900" style="background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)), url('/assets/contacto1.png');">
-  <div class="max-w-3xl mx-auto bg-white bg-opacity-30 backdrop-blur-md rounded-xl shadow-xl p-8">
-
-    <h2 class="text-3xl font-bold text-green-800 mb-6">Contacto Privado y Confidencial</h2>
-    <p class="mb-4 text-gray-800">
-      Si deseas reservar una sesión, resolver dudas o simplemente conversar, puedes usar este formulario. Tu mensaje será recibido con total discreción.
-    </p>
-      <p class="mb-2"><strong>Email:</strong> contacto@placerprivado.cl</p>
-       <p class="mb-6"><strong>WhatsApp:</strong> +56 9 5908 5200</p>
-    <form name="contacto" method="POST" data-netlify="true" class="space-y-4">
-      <input type="hidden" name="form-name" value="contacto" />
-      
-      <div>
-        <label class="block mb-1 font-semibold">Nombre</label>
-        <input type="text" name="nombre" required class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500" />
-      </div>
-
-      <div>
-        <label class="block mb-1 font-semibold">Correo electrónico</label>
-        <input type="email" name="email" required class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500" />
-      </div>
-
-      <div>
-        <label class="block mb-1 font-semibold">Teléfono</label>
-        <input type="text" name="telefono" class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500" />
-      </div>
-
-      <div>
-        <label class="block mb-1 font-semibold">Mensaje</label>
-        <textarea name="mensaje" rows="4" required class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
-      </div>
-
-      <div class="flex flex-col sm:flex-row justify-between items-center mt-6 gap-4">
-        <button type="submit" class="bg-green-700 hover:bg-green-800 text-white font-bold py-3 px-6 rounded shadow-lg transition duration-300">
-          Enviar mensaje
-        </button>
-        <a href="https://wa.me/56965747615" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded shadow-lg transition duration-300 flex items-center gap-2">
-          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M..."/></svg>
-          WhatsApp
-        </a>
-      </div>
-    </form>
-  </div>
-</section>
-<script>
-    const btn = document.getElementById('menu-btn');
-    const menu = document.getElementById('mobile-menu');
-
-    btn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
-
-    // Cerrar el menú cuando se hace clic en un enlace del menú móvil
-    const links = menu.querySelectorAll('a');
-    links.forEach(link => {
-      link.addEventListener('click', () => {
-        menu.classList.add('hidden');
-      });
-    });
-  </script>
 </body>
 </html>
