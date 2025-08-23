@@ -158,6 +158,8 @@
       <a href="#tarifas-teaser" data-modal-link="tarifas" class="hover:text-red-600">Tarifas y Cobertura</a>
       <a href="#testimonios" data-modal-link="testimonios" class="hover:text-red-600">Testimonios</a>
       <a href="#faq" data-modal-link="faq" class="hover:text-red-600">Preguntas Frecuentes</a>
+      <!-- NUEVO: Recomendaciones en menú -->
+      <a href="#recomendaciones" data-modal-link="recomendaciones" class="hover:text-red-600">Recomendaciones</a>
       <a href="#contacto-teaser" data-modal-link="contacto" class="hover:text-red-600">Contacto</a>
     </nav>
   </div>
@@ -170,6 +172,8 @@
     <a href="#tarifas-teaser" data-modal-link="tarifas" class="block">Tarifas y Cobertura</a>
     <a href="#testimonios" data-modal-link="testimonios" class="block">Testimonios</a>
     <a href="#faq" data-modal-link="faq" class="block">Preguntas Frecuentes</a>
+    <!-- NUEVO: Recomendaciones en menú móvil -->
+    <a href="#recomendaciones" data-modal-link="recomendaciones" class="block">Recomendaciones</a>
     <a href="#contacto-teaser" data-modal-link="contacto" class="block">Contacto</a>
   </div>
 </header>
@@ -191,6 +195,8 @@
     <button class="rounded-xl bg-pink-600 px-4 py-2 text-white" data-modal-link="testimonios">Leer Testimonios</button>
     <button class="rounded-xl border border-white/70 px-4 py-2 text-white/90" data-modal-link="tarifas">Tarifas & Cobertura</button>
     <button class="rounded-xl border border-white/70 px-4 py-2 text-white/90" data-modal-link="faq">Preguntas Frecuentes</button>
+    <!-- NUEVO: Botón verde claro -->
+    <button class="rounded-xl bg-green-400 px-4 py-2 text-green-900" data-modal-link="recomendaciones">Recomendaciones y Sugerencias</button>
   </div>
 </section>
 
@@ -268,7 +274,7 @@
 
 <!-- ===== MODALES ===== -->
 
-<!-- MODAL: Testimonios (lista larga; fuera del scroll principal) -->
+<!-- MODAL: Testimonios -->
 <div id="overlay-testimonios" class="fixed inset-0 z-50 hidden place-items-center bg-black/40 backdrop-blur-sm">
   <div role="dialog" aria-modal="true" aria-labelledby="title-testimonios" class="mx-4 flex h-[86vh] w-full max-w-5xl flex-col overflow-hidden rounded-3xl bg-white shadow-2xl">
     <div class="flex items-center justify-between border-b border-neutral-200 px-5 py-4">
@@ -289,7 +295,7 @@
   </div>
 </div>
 
-<!-- MODAL: FAQ (contenido elocuente fuera del scroll principal) -->
+<!-- MODAL: FAQ -->
 <div id="overlay-faq" class="fixed inset-0 z-50 hidden place-items-center bg-black/40 backdrop-blur-sm">
   <div role="dialog" aria-modal="true" aria-labelledby="title-faq" class="mx-4 flex h-[86vh] w-full max-w-5xl flex-col overflow-hidden rounded-3xl bg-white shadow-2xl">
     <div class="flex items-center justify-between border-b border-neutral-200 px-5 py-4">
@@ -374,6 +380,37 @@
   </div>
 </div>
 
+<!-- NUEVO: MODAL Recomendaciones y Sugerencias -->
+<div id="overlay-recomendaciones" class="fixed inset-0 z-50 hidden place-items-center bg-black/40 backdrop-blur-sm">
+  <div role="dialog" aria-modal="true" aria-labelledby="title-recomendaciones" class="mx-4 flex h-[86vh] w-full max-w-5xl flex-col overflow-hidden rounded-3xl bg-white shadow-2xl">
+    <div class="flex items-center justify-between border-b border-neutral-200 px-5 py-4">
+      <div class="flex items-center gap-3">
+        <!-- etiqueta en tono verde claro -->
+        <span id="title-recomendaciones" class="rounded-lg bg-green-400 px-2.5 py-1 text-xs font-semibold text-green-900">Recomendaciones y Sugerencias</span>
+        <button data-copy="recomendaciones" class="rounded-lg border border-neutral-300 px-2 py-1 text-xs hover:bg-neutral-50" title="Copiar enlace directo">Copiar enlace</button>
+      </div>
+      <button data-close class="rounded-xl border border-neutral-300 p-2 hover:bg-neutral-50" aria-label="Cerrar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <!-- cuerpo con fondo verde suave, como pediste -->
+    <div class="flex-1 overflow-y-auto px-5 py-5">
+      <div class="max-w-4xl mx-auto rounded-2xl border border-green-100 bg-green-50 p-5 text-green-900">
+        <h3 class="text-2xl font-semibold mb-3">Recomendaciones y Sugerencias</h3>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>Elige un espacio cómodo y privado para tu masaje: habitación, sala u oficina amplia.</li>
+          <li>Informa previamente cualquier problema de salud, lesión o condición médica relevante.</li>
+          <li>Evita el masaje si estás con infecciones vaginales, fiebres, o condiciones de riesgo.</li>
+          <li>Hidrátate bien antes del masaje y evita comer justo antes de la sesión.</li>
+          <li>Mantén tu celular apagado o en silencio para disfrutar una sesión completamente enfocada en ti.</li>
+          <li>Cuida tu higiene íntima y usa ropa cómoda o simplemente déjate llevar por la experiencia sin prendas.</li>
+          <li>Después del masaje, evita el frío y escucha las recomendaciones personalizadas del masajista.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- MODAL: Contacto (formulario completo) -->
 <div id="overlay-contacto" class="fixed inset-0 z-50 hidden place-items-center bg-black/40 backdrop-blur-sm">
   <div role="dialog" aria-modal="true" aria-labelledby="title-contacto" class="mx-4 flex h-[86vh] w-full max-w-3xl flex-col overflow-hidden rounded-3xl bg-white shadow-2xl">
@@ -450,7 +487,9 @@
     testimonios: document.getElementById('overlay-testimonios'),
     faq: document.getElementById('overlay-faq'),
     tarifas: document.getElementById('overlay-tarifas'),
-    contacto: document.getElementById('overlay-contacto')
+    contacto: document.getElementById('overlay-contacto'),
+    // NUEVO
+    recomendaciones: document.getElementById('overlay-recomendaciones')
   };
 
   function openModal(id){
@@ -469,7 +508,7 @@
   function closeAnyModal(){
     Object.values(OVERLAYS).forEach(ov => ov.classList.add('hidden'));
     document.body.classList.remove('lock-scroll');
-    if (['#testimonios','#faq','#tarifas','#contacto'].includes(location.hash)) safeClearHash();
+    if (['#testimonios','#faq','#tarifas','#contacto','#recomendaciones'].includes(location.hash)) safeClearHash();
   }
 
   // Botones/links que abren modales
@@ -497,7 +536,7 @@
   // Deep-link inicial
   (function openFromHash(){
     const h = location.hash.replace('#','');
-    if (['testimonios','faq','tarifas','contacto'].includes(h)) openModal(h);
+    if (['testimonios','faq','tarifas','contacto','recomendaciones'].includes(h)) openModal(h);
   })();
 
   // --- Collapsibles en secciones largas (para lectura ágil) ---
@@ -548,10 +587,6 @@ Me dijiste que publicabas los mensajes y correos y espero que este sea uno de el
   }
   BTN_MORE_TEST.addEventListener('click', renderMoreTests);
 
-  // Auto-carga la primera página si abres el modal de testimonios (fallbacks)
-  OVERLAYS.testimonios.addEventListener('transitionstart', () => { if (testIndex === 0) renderMoreTests(); });
-  OVERLAYS.testimonios.addEventListener('click', () => { if (testIndex === 0) renderMoreTests(); }, { once: true });
-
   // --- Self tests ---
   (function selfTests(){
     function noThrow(fn, name){ try { fn(); console.log('[TEST OK]', name); } catch(e){ console.error('[TEST FAIL]', name, e); } }
@@ -560,6 +595,8 @@ Me dijiste que publicabas los mensajes y correos y espero que este sea uno de el
     noThrow(() => { openModal('faq'); closeAnyModal(); }, 'Open/close FAQ modal');
     noThrow(() => { openModal('tarifas'); closeAnyModal(); }, 'Open/close Tarifas modal');
     noThrow(() => { openModal('contacto'); closeAnyModal(); }, 'Open/close Contacto modal');
+    // NUEVO test
+    noThrow(() => { openModal('recomendaciones'); closeAnyModal(); }, 'Open/close Recomendaciones modal');
   })();
 </script>
 <script>
@@ -587,3 +624,4 @@ Me dijiste que publicabas los mensajes y correos y espero que este sea uno de el
 </script>
 </body>
 </html>
+
