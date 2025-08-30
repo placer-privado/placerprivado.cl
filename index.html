@@ -201,17 +201,25 @@
 </section>
 
 <!-- Secciones breves (teaser + botón que abre leer mas) -->
-<section id="quien-soy" class="bg-cover bg-center bg-no-repeat py-16 px-6 text-yellow-100" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/assets/masaje5.png');">
+<section id="quien-soy" class="bg-cover bg-center bg-no-repeat py-16 px-6 text-yellow-100"
+  style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('/assets/masaje5.png');">
   <div class="max-w-4xl mx-auto js-collapsible">
-    <h2 class="text-3xl font-bold mb-4">Quién Soy</h2>
-    <p class="mb-3">Hombre hétero de 47 años, “<strong>Mi nombre en el mundo del masaje es Bjorn Feminae Privé</strong>. Maestro profesional del arte del masaje íntimo, erótico, tántrico, sensitivo y sexual femenino. Aplico técnicas de canalización de energía, masoterapia y relajación. Comandante de caricias que desarman y guardián de silencios que erizan la piel; <strong>leal servidor de tus límites, de tu fuego y de tus deseos</strong>. Nacido de la calma que abre caminos hacia tus húmedos secretos, cómplice del aceite tibio y del vaivén de caderas que liberan pensamientos. 
-<strong>Juro —con calma y fuego— encender tu piel, hasta que tu respiración y tus gemidos se vuelvan música</strong>, esta noche o cuando tú la elijas.”
- He acompañado a cientos de mujeres que desean algo más que un simple masaje; buscan convertirse en un templo del placer.
+
+    <!-- Caja translúcida para mejorar legibilidad -->
+    <div class="max-w-prose bg-black/55 md:bg-black/35 backdrop-blur-[1px] rounded-2xl p-5 sm:p-6 shadow-lg">
+      <h2 class="text-3xl font-bold mb-4">Quién Soy</h2>
+      <p class="leading-relaxed">
+        Hombre hétero de 47 años, “<strong>Mi nombre en el mundo del masaje es Bjorn Feminae Privé</strong>. Maestro profesional del arte del masaje íntimo, erótico, tántrico, sensitivo y sexual femenino. Aplico técnicas de canalización de energía, masoterapia y relajación. Comandante de caricias que desarman y guardián de silencios que erizan la piel; <strong>leal servidor de tus límites, de tu fuego y de tus deseos</strong>. Nacido de la calma que abre caminos hacia tus húmedos secretos, cómplice del aceite tibio y del vaivén de caderas que liberan pensamientos. 
+        <strong>Juro —con calma y fuego— encender tu piel, hasta que tu respiración y tus gemidos se vuelvan música</strong>, esta noche o cuando tú la elijas.”
+        He acompañado a cientos de mujeres que desean algo más que un simple masaje; buscan convertirse en un templo del placer.
       </p>
-    <ul class="list-disc pl-6">
-    </ul>
+    </div>
+    <!-- /Caja translúcida -->
+
+    <ul class="list-disc pl-6"></ul>
   </div>
 </section>
+
 
 <section id="experiencia" class="bg-cover bg-center bg-no-repeat py-16 px-6 text-green-900" style="background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), url('/assets/ambiente2.png');">
   <div class="max-w-4xl mx-auto bg-white bg-opacity-40 backdrop-blur-md rounded-xl shadow-xl p-6 js-collapsible">
@@ -437,8 +445,8 @@
 
       <form id="contact-form" name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-4">
         <input type="hidden" name="form-name" value="contacto" />
-        <!-- Campo honeypot para spam -->
-        <p class="hidden">
+        <!-- Campo honeypot para spam (oculto también para lectores de pantalla) -->
+        <p class="hidden" aria-hidden="true">
           <label>No llenar: <input name="bot-field" /></label>
         </p>
         <!-- Destino (informativo / útil para integraciones externas) -->
@@ -466,12 +474,18 @@
           <a href="https://wa.me/56965747615" target="_blank" rel="noopener noreferrer" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded shadow-lg transition duration-300 flex items-center gap-2">WhatsApp</a>
         </div>
       </form>
-      <div class="text-xs text-neutral-500 mt-4">Nota: La recepción en <strong>contacto@placerprivado.cl</strong> se configura en Netlify → <em>Forms</em> → <em>Notifications</em> (destinatario Zoho). El campo <code>email</code> se usa como <em>Reply-To</em>.</div>
+
+      <!--
+      NOTA TÉCNICA (OCULTA)
+      - Netlify Forms envía a contacto@placerprivado.cl (Zoho) vía Forms → Notifications.
+      - El campo "email" se usa como Reply-To.
+      -->
     </div>
   </div>
 </div>
 
 <script>
+
   // --- Menú móvil ---
   const btn = document.getElementById('menu-btn');
   const menu = document.getElementById('mobile-menu');
