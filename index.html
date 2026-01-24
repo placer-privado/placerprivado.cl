@@ -1,647 +1,325 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Masajes eróticos, tántricos y sensitivos para mujeres. Vive una experiencia sublime de conexión íntima femenina." name="description"/>
-<meta content="masajes eróticos femeninos a domicilio en toda la Región Metropolitana, con especial presencia en Las Condes, Vitacura, Providencia, Santiago Centro, Ñuñoa, Huechuraba... Y en la Quinta Región: Viña del Mar, Reñaca, Concón, Quilpué, Algarrobo, masajes sensuales para mujeres, masaje tántrico femenino, masajes íntimos para mujeres, masajes con final feliz mujeres, masajes relajantes y eróticos Santiago, terapeuta hombre masajes eróticos, masaje a domicilio mujer santiago" name="keywords"/>
-<meta name="robots" content="index,follow"/>
-<link rel="canonical" href="https://placerprivado.cl/"/>
-<link rel="alternate" hreflang="es-cl" href="https://placerprivado.cl/"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PLACER PRIVADO — Masajes de Conexión Íntima Femenina</title>
 
-<title>PLACER PRIVADO – Masajes de Conexión Íntima Femenina</title>
+  <meta name="description" content="Masaje Sensitivo (Tántrico) para mujeres. Experiencia profesional, discreta y confidencial. Atención a domicilio y con cita previa en RM y V Región." />
+  <meta name="keywords" content="masaje sensitivo para mujeres, masaje tántrico femenino, masajes para mujeres a domicilio, masajes providencia, masajes las condes, masajes vitacura, masajes viña del mar, reñaca, concón" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://placerprivado.cl/" />
+  <link rel="alternate" hreflang="es-cl" href="https://placerprivado.cl/" />
 
-<!-- Tailwind -->
-<script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="/assets/logo.jpeg" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- Favicon -->
-<link href="/assets/logo.jpeg" rel="icon"/>
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="PLACER PRIVADO — Masajes de Conexión Íntima Femenina">
+  <meta property="og:description" content="Masaje Sensitivo (Tántrico) para mujeres. Profesional, discreto, confidencial. Agenda por WhatsApp o formulario.">
+  <meta property="og:url" content="https://placerprivado.cl/">
+  <meta property="og:image" content="https://placerprivado.cl/assets/logo.jpeg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
 
-<!-- Open Graph / Twitter -->
-<meta property="og:title" content="PLACER PRIVADO – Masajes de Conexión Íntima Femenina">
-<meta property="og:description" content="Masajes eróticos, tántricos y sensitivos para mujeres. Servicio a domicilio en RM y Valparaíso, solo con cita previa.">
-<meta property="og:url" content="https://placerprivado.cl/">
-<meta property="og:image" content="https://placerprivado.cl/assets/logo.jpeg">
-<meta property="og:type" content="business.business">
-<meta name="twitter:card" content="summary_large_image">
-
-<!-- Señales geográficas (opcionales) -->
-<meta name="geo.region" content="CL-RM">
-<meta name="geo.region" content="CL-VS">
-<meta name="geo.placename" content="Santiago, Chile">
-<meta name="geo.position" content="-33.4489;-70.6693">
-<meta name="ICBM" content="-33.4489, -70.6693">
-
-<style>
-  body { background-color: #FFF8E7; }
-  /* Menos verde, más transparencia en el hero: baja 0.35 si quieres (ej. 0.25) */
-  .hero {
-    background:
-      linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-      url('/assets/fondo1.png');
-    background-size: cover;
-    background-position: center;
-  }
-  .lock-scroll { overflow: hidden; }
-  /* Collapsible helpers */
-  .collapsible { position: relative; }
-  .collapsible.collapsed { max-height: 300px; overflow: hidden; }
-  .collapsible .fade { display: none; }
-  .collapsible.collapsed .fade {
-    display: block; position: absolute; left: 0; right: 0; bottom: 0; height: 64px;
-    background: linear-gradient(transparent, #FFF8E7);
-  }
-</style>
-
-<!-- JSON-LD: Website + LocalBusiness con área de servicio y WhatsApp -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "@id": "https://placerprivado.cl/#website",
-      "url": "https://placerprivado.cl/",
-      "name": "PLACER PRIVADO",
-      "inLanguage": "es",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://placerprivado.cl/?s={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    },
-    {
-      "@type": "LocalBusiness",
-      "@id": "https://placerprivado.cl/#business",
-      "name": "PLACER PRIVADO",
-      "url": "https://placerprivado.cl/",
-      "image": "https://placerprivado.cl/assets/logo.jpeg",
-      "email": "mailto:contacto@placerprivado.cl",
-      "telephone": "+56965747615",
-      "contactPoint": [{
-        "@type": "ContactPoint",
-        "contactType": "WhatsApp",
-        "telephone": "+56965747615",
-        "url": "https://wa.me/56965747615",
-        "availableLanguage": ["es"]
-      }],
-      "sameAs": ["https://wa.me/56965747615"],
-      "priceRange": "CLP $35.000–$80.000",
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "CLP",
-        "lowPrice": "35000",
-        "highPrice": "80000",
-        "offerCount": "3"
-      },
-      "paymentAccepted": "Cash, BankTransfer",
-      "byAppointmentOnly": true,
-      "slogan": "Masajes de Conexión Íntima Femenina",
-      "description": "Masajes eróticos, tántricos y sensitivos para mujeres. Servicio a domicilio con cita previa.",
-      "areaServed": [
-        {"@type":"AdministrativeArea","name":"Región Metropolitana de Santiago"},
-        {"@type":"AdministrativeArea","name":"Región de Valparaíso"}
-      ],
-      "serviceArea": [
-        { "@type":"GeoShape", "circle":"-33.4489 -70.6693 40km" },
-        { "@type":"GeoShape", "circle":"-33.0153 -71.5500 35km" }
-      ],
-      "address": { "@type": "PostalAddress", "addressCountry": "CL" },
-      "hasMap": "https://maps.google.com/?q=-33.4489,-70.6693",
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"],
-          "opens": "10:00",
-          "closes": "23:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Friday",
-          "opens": "18:00",
-          "closes": "23:59"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Saturday",
-          "opens": "00:00",
-          "closes": "23:59"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Sunday",
-          "opens": "00:00",
-          "closes": "22:00"
-        }
-      ],
-      "isAcceptingNewCustomers": true,
-      "currenciesAccepted": "CLP",
-      "knowsAbout": ["masajes a domicilio mujer","masaje tántrico femenino","masaje erótico femenino","masajes sensuales Santiago"]
+  <style>
+    .bg-video{
+      position: fixed; inset: 0;
+      width: 100vw; height: 100vh;
+      object-fit: cover; z-index: -1;
+      filter: brightness(0.55);
+      background: url('/assets/hero_poster.jpg') center/cover no-repeat;
     }
-  ]
-}
-</script>
+    .glass { background: rgba(255,255,255,.78); backdrop-filter: blur(10px); }
+    html { scroll-behavior: smooth; }
+  </style>
+
+  <!-- JSON-LD (sobrio y profesional) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"PLACER PRIVADO",
+    "url":"https://placerprivado.cl/",
+    "image":"https://placerprivado.cl/assets/logo.jpeg",
+    "telephone":"+56965747615",
+    "email":"mailto:contacto@placerprivado.cl",
+    "priceRange":"CLP $$",
+    "byAppointmentOnly": true,
+    "description":"Masaje Sensitivo (Tántrico) para mujeres. Experiencia profesional, discreta y confidencial. Atención a domicilio y con cita previa.",
+    "areaServed":[
+      {"@type":"AdministrativeArea","name":"Región Metropolitana de Santiago"},
+      {"@type":"AdministrativeArea","name":"Región de Valparaíso"}
+    ],
+    "contactPoint":[{
+      "@type":"ContactPoint",
+      "contactType":"WhatsApp",
+      "telephone":"+56965747615",
+      "url":"https://wa.me/56965747615",
+      "availableLanguage":["es"]
+    }]
+  }
+  </script>
 </head>
 
-<body>
-<!-- HEADER fijo -->
-<header class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-md">
-  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
-    <a href="#inicio" class="text-xl font-bold text-green-900">PlacerPrivado</a>
-    <button id="menu-btn" class="md:hidden text-green-900 focus:outline-none text-3xl" aria-label="Abrir menú">&#9776;</button>
-    <nav id="menu" class="hidden md:flex space-x-4 text-green-900 font-semibold">
-      <a href="#inicio" class="hover:text-red-600">Inicio</a>
-      <a href="#quien-soy" class="hover:text-red-600">Quién Soy</a>
-      <a href="#experiencia" class="hover:text-red-600">Experiencia</a>
-      <a href="#beneficios" class="hover:text-red-600">Beneficios</a>
-      <a href="#tantrico" class="hover:text-red-600">Masaje Tántrico</a>
-      <a href="#tarifas-teaser" data-modal-link="tarifas" class="hover:text-red-600">Tarifas y Cobertura</a>
-      <a href="#testimonios" data-modal-link="testimonios" class="hover:text-red-600">Testimonios</a>
-      <a href="#faq" data-modal-link="faq" class="hover:text-red-600">Preguntas Frecuentes</a>
-      <!-- NUEVO: Recomendaciones en menú -->
-      <a href="#recomendaciones" data-modal-link="recomendaciones" class="hover:text-red-600">Recomendaciones</a>
-      <a href="#contacto-teaser" data-modal-link="contacto" class="hover:text-red-600">Contacto</a>
+<body class="text-slate-800">
+
+  <!-- Video de fondo -->
+  <video class="bg-video" autoplay muted loop playsinline poster="/assets/hero_poster.jpg">
+    <source src="/assets/videofondo.mp4" type="video/mp4" />
+  </video>
+
+  <!-- Header -->
+  <header class="fixed inset-x-0 top-0 z-40">
+    <nav class="mx-auto max-w-6xl px-4 py-3 glass rounded-b-2xl shadow">
+      <div class="flex items-center justify-between gap-4">
+        <a href="#inicio" class="flex items-center gap-3">
+          <img src="/assets/logo.jpeg" alt="Placer Privado" class="h-10 w-10 rounded-full object-cover" />
+          <span class="font-semibold tracking-wide">PLACER PRIVADO</span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-5 text-sm">
+          <a href="#quien" class="hover:underline">Quién Soy</a>
+          <a href="#experiencia" class="hover:underline">Experiencia</a>
+          <a href="#servicio" class="hover:underline">Servicio</a>
+          <a href="#tarifas" class="hover:underline">Tarifas</a>
+          <a href="#testimonios" class="hover:underline">Testimonios</a>
+          <a href="#agenda" class="inline-block rounded-xl border px-3 py-1.5 hover:bg-white">Agendar</a>
+          <a href="https://wa.me/56965747615" target="_blank" rel="noopener"
+             class="inline-flex items-center rounded-xl bg-emerald-600 px-3 py-1.5 text-white hover:bg-emerald-700">
+            WhatsApp
+          </a>
+        </div>
+
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-xl border px-3 py-2"
+                aria-label="Abrir menú" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+      <div id="mobileMenu" class="mt-3 hidden flex-col gap-3 text-sm md:hidden">
+        <a href="#quien" class="rounded-lg px-2 py-2 hover:bg-white">Quién Soy</a>
+        <a href="#experiencia" class="rounded-lg px-2 py-2 hover:bg-white">Experiencia</a>
+        <a href="#servicio" class="rounded-lg px-2 py-2 hover:bg-white">Servicio</a>
+        <a href="#tarifas" class="rounded-lg px-2 py-2 hover:bg-white">Tarifas</a>
+        <a href="#testimonios" class="rounded-lg px-2 py-2 hover:bg-white">Testimonios</a>
+        <a href="#agenda" class="rounded-lg px-2 py-2 border hover:bg-white">Agendar</a>
+        <a href="https://wa.me/56965747615" target="_blank" rel="noopener"
+           class="rounded-lg px-2 py-2 bg-emerald-600 text-white hover:bg-emerald-700">
+          WhatsApp
+        </a>
+      </div>
     </nav>
-  </div>
-  <div id="mobile-menu" class="md:hidden hidden bg-white/90 backdrop-blur-md text-green-900 px-6 pb-4 space-y-2">
-    <a href="#inicio" class="block">Inicio</a>
-    <a href="#quien-soy" class="block">Quién Soy</a>
-    <a href="#experiencia" class="block">Experiencia</a>
-    <a href="#beneficios" class="block">Beneficios</a>
-    <a href="#tantrico" class="block">Masaje Tántrico</a>
-    <a href="#tarifas-teaser" data-modal-link="tarifas" class="block">Tarifas y Cobertura</a>
-    <a href="#testimonios" data-modal-link="testimonios" class="block">Testimonios</a>
-    <a href="#faq" data-modal-link="faq" class="block">Preguntas Frecuentes</a>
-    <!-- NUEVO: Recomendaciones en menú móvil -->
-    <a href="#recomendaciones" data-modal-link="recomendaciones" class="block">Recomendaciones</a>
-    <a href="#contacto-teaser" data-modal-link="contacto" class="block">Contacto</a>
-  </div>
-</header>
-<div class="pt-24"></div>
+  </header>
 
-<!-- HERO -->
-<section id="inicio" class="hero text-white py-28 px-6 text-center">
-  <img alt="Logo Placer Privado" class="mx-auto mb-6 w-36 md:w-44 h-auto rounded-full shadow-lg" src="/assets/logo.jpeg" />
-  <h1 class="text-5xl md:text-6xl font-bold tracking-wide">PLACER PRIVADO</h1>
-  <h2 class="text-xl md:text-2xl mt-2 font-semibold">Masajes íntimos con final feliz para mujeres en hoteles, domicilios, moteles y Airbnb</h2>
-  <h3 class="text-xl md:text-2xl italic mt-3">Masajes de Conexión Íntima Femenina</h3>
-  <p class="mt-5 text-lg max-w-2xl mx-auto">Masaje erótico, tántrico y sensitivo para mujeres a domicilio. Vive una experiencia lujuriosa, única y sensual.</p>
-  <div class="mt-6 flex flex-wrap items-center justify-center gap-2 text-sm">
-    <span class="rounded-full bg-white/90 text-green-900 px-3 py-1">A domicilio</span>
-    <span class="rounded-full bg-white/90 text-green-900 px-3 py-1">100% confidencial</span>
-    <span class="rounded-full bg-white/90 text-green-900 px-3 py-1">Caliente</span>
-  </div>
-  <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
-    <button class="rounded-xl bg-pink-600 px-4 py-2 text-white" data-modal-link="testimonios">Leer Testimonios</button>
-    <button class="rounded-xl border border-white/70 px-4 py-2 text-white/90" data-modal-link="tarifas">Tarifas & Cobertura</button>
-    <button class="rounded-xl border border-white/70 px-4 py-2 text-white/90" data-modal-link="faq">Preguntas Frecuentes</button>
-    <!-- NUEVO: Botón verde claro -->
-    <button class="rounded-xl bg-green-300 px-4 py-2 text-green-900" data-modal-link="recomendaciones">Recomendaciones y Sugerencias</button>
-  </div>
-</section>
+  <main id="inicio" class="pt-28">
 
-<!-- Secciones breves (teaser + botón que abre leer mas) -->
-<section id="quien-soy" class="bg-cover bg-center bg-no-repeat py-16 px-6 text-yellow-100"
-  style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('/assets/masaje5.png');">
-  <div class="max-w-4xl mx-auto js-collapsible">
+    <!-- HERO -->
+    <section class="mx-auto max-w-6xl px-4">
+      <div class="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
+        <div class="glass rounded-3xl p-8 shadow-xl">
+          <img src="/assets/logo.jpeg" alt="Logo Placer Privado" class="h-16 w-16 rounded-full mb-4" />
+          <h1 class="text-3xl sm:text-4xl font-bold leading-tight">Masajes de Conexión Íntima Femenina</h1>
+          <p class="mt-3 text-base leading-relaxed">
+            Masaje Sensitivo (Tántrico) <strong>solo para mujeres</strong>. Una experiencia profesional, discreta y profundamente relajante,
+            diseñada para reconectar contigo desde el cuerpo y la respiración, en un ambiente cuidado y confidencial.
+          </p>
 
-    <!-- Caja translúcida para mejorar legibilidad -->
-    <div class="max-w-prose bg-black/55 md:bg-black/35 backdrop-blur-[1px] rounded-2xl p-5 sm:p-6 shadow-lg">
-      <h2 class="text-3xl font-bold mb-4">Quién Soy</h2>
-      <p class="leading-relaxed">
-        Hombre hétero de 47 años, “<strong>Mi nombre en el mundo del masaje es Bjorn Feminae Privé</strong>. Maestro profesional del arte del masaje íntimo, erótico, tántrico, sensitivo y sexual femenino. Aplico técnicas de canalización de energía, masoterapia descontracturante y de relajación. Comandante de caricias que desarman y guardián de silencios que erizan la piel; <strong>leal servidor de tus límites, de tu fuego y de tus deseos</strong>. Nacido de la calma que abre caminos hacia tus húmedos secretos, cómplice del aceite tibio y del vaivén de caderas que liberan pensamientos. 
-        <strong>Juro —con calma y fuego— encender tu piel, hasta que tu respiración y tus gemidos se vuelvan música</strong>, esta noche o cuando tú la elijas.”
-        He acompañado a cientos de mujeres que desean algo más que un simple masaje; buscan convertirse en un templo del placer.
-      </p>
-    </div>
-    <!-- /Caja translúcida -->
+          <div class="mt-4 flex flex-wrap gap-2 text-xs">
+            <span class="rounded-full bg-white/90 px-3 py-1">100% confidencial</span>
+            <span class="rounded-full bg-white/90 px-3 py-1">Higiene & respeto</span>
+            <span class="rounded-full bg-white/90 px-3 py-1">Solo con cita</span>
+            <span class="rounded-full bg-white/90 px-3 py-1">A domicilio / oficina</span>
+          </div>
 
-    <ul class="list-disc pl-6"></ul>
-  </div>
-</section>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#agenda" class="rounded-xl bg-black/70 px-5 py-3 text-white hover:bg-black">Agendar ahora</a>
+            <a href="#servicio" class="rounded-xl border px-5 py-3 hover:bg-white">Ver servicio</a>
+            <a href="https://wa.me/56965747615" target="_blank" rel="noopener"
+               class="rounded-xl bg-emerald-600 px-5 py-3 text-white hover:bg-emerald-700">
+              WhatsApp +56 9 6574 7615
+            </a>
+          </div>
 
+          <p class="mt-4 text-xs text-slate-700">
+            *Todo se realiza con respeto, consentimiento y límites claros. La experiencia es personalizada y profesional.
+          </p>
+        </div>
 
-<section id="experiencia" class="bg-cover bg-center bg-no-repeat py-16 px-6 text-green-900" style="background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), url('/assets/ambiente2.png');">
-  <div class="max-w-4xl mx-auto bg-white bg-opacity-40 backdrop-blur-md rounded-xl shadow-xl p-6 js-collapsible">
-    <h2 class="text-3xl font-bold mb-4">La experiencia</h2>
-    <ul class="list-disc pl-6 space-y-2">
-      <li>No llego solo con mis manos... llego con un ritual. Transformo tu espacio en un santuario íntimo: velas encendidas, aromas que despiertan memorias, sonidos que acarician desde adentro y una atmósfera caliente, lista para el pecado, el desenfreno y el descanso.</li>
-      <li>Cada detalle está pensado para que tú te rindas sin culpas, sin vergüenzas, sin juicios.</li>
-      <li>Tú solo déjate caer sobre mi camilla o tu cama... el resto es arte, fuego, ¡pasión!</li>
-    </ul>
-  </div>
-</section>
-
-<section id="beneficios" class="bg-cover bg-center bg-no-repeat py-16 px-6 text-orange-900" style="background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('/assets/beneficio8.png');">
-  <div class="relative max-w-4xl mx-auto js-collapsible">
-    <h2 class="text-3xl font-bold mb-4">Beneficios</h2>
-    <ul class="list-disc pl-6 space-y-2 text-gray-800">
-      <li>Desbloqueo de emociones profundas y tensiones antiguas ligadas a tu sexualidad.</li>
-      <li>Mejor calidad del sueño, circulación y energía vital.</li>
-      <li>Profunda reconexión emocional, sexual y espiritual.</li>
-      <li>Fortalece el tono del piso pélvico y el flujo del placer.</li>
-    </ul>
-  </div>
-</section>
-
-<section id="tantrico" class="bg-cover bg-center bg-no-repeat py-16 px-6 text-red-900" style="background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), url('/assets/tantrico6.png');">
-  <div class="relative max-w-4xl mx-auto bg-white bg-opacity-10 backdrop-blur-md rounded-xl shadow-xl p-6 text-gray-800 js-collapsible">
-    <h2 class="text-3xl font-bold mb-4">Masaje Erótico, Tántrico-Sensitivo</h2>
-    <p class="mb-3">Un arte delicado y provocador, donde tu piel se convierte en escenario del placer más exquisito.</p>
-    <ul class="list-disc pl-6 space-y-2">
-      <li>Una experiencia erótica, intensa y sagrada.</li>
-      <li>Caricias lentas, exploratorias, que recorren todo tu cuerpo sin prisa.</li>
-      <li>Estimulación de tus zonas más íntimas y oscuras con aceites, texturas suaves y el arte del contacto energético.</li>
-      <li>Atención personal y sensual al piso pélvico, puntos energéticos y zonas de alto voltaje sensorial.</li>
-      <li>Tu cuerpo es un bosque virgen que debo descubrir lento, con fuerza y energía vital.</li>
-      <li>Es un viaje erótico donde tu cuerpo se expande y se abre en oleadas de placer.</li>
-    </ul>
-  </div>
-</section>
-
-<!-- TARIFAS (solo teaser; contenido completo va en modal) -->
-<section id="tarifas-teaser" class="bg-cover bg-center bg-no-repeat bg-white/80 py-16 px-6 text-green-900" style="background-image: linear-gradient(rgba(255,255,255,0.50), rgba(255,255,255,0.50)), url('/assets/taco4.png');">
-  <div class="max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold mb-4">Tarifas & Cobertura</h2>
-    <p class="mb-4">Masajes a domicilio para mujeres en RM y V Región.</p>
-    <button class="rounded-xl border border-green-300 px-4 py-2 text-green-900 hover:bg-green-50" data-modal-link="tarifas">Abrir detalles</button>
-  </div>
-</section>
-
-<!-- CONTACTO (solo teaser; formulario completo en modal) -->
-<section id="contacto-teaser" class="bg-cover bg-center bg-no-repeat bg-white/80 py-16 px-6 text-gray-900" style="background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)), url('/assets/contacto1.png');">
-  <div class="max-w-3xl mx-auto bg-white/40 backdrop-blur-md rounded-xl shadow-xl p-8">
-    <h2 class="text-3xl font-bold text-green-800 mb-4">Contacto privado</h2>
-    <p class="mb-4 text-gray-800">Reserva, dudas o coordinación: respuesta discreta.
-    contacto@placerprivado.cl</p>
-    <div class="flex flex-wrap gap-3">
-      <button class="rounded-xl border border-neutral-300 px-4 py-2 hover:bg-neutral-50" data-modal-link="contacto">Abrir formulario</button>
-      <a href="https://wa.me/56965747615" target="_blank" rel="noopener noreferrer" class="rounded-xl bg-green-600 px-4 py-2 text-white">WhatsApp</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== MODALES ===== -->
-
-<!-- MODAL: Testimonios -->
-<div id="overlay-testimonios" class="fixed inset-0 z-50 hidden place-items-center bg-black/40 backdrop-blur-sm">
-  <div role="dialog" aria-modal="true" aria-labelledby="title-testimonios" class="mx-4 flex h-[86vh] w-full max-w-5xl flex-col overflow-hidden rounded-3xl bg-white shadow-2xl">
-    <div class="flex items-center justify-between border-b border-neutral-200 px-5 py-4">
-      <div class="flex items-center gap-3">
-        <span id="title-testimonios" class="rounded-lg bg-pink-600 px-2.5 py-1 text-xs font-semibold text-white">Testimonios</span>
-        <button data-copy="testimonios" class="rounded-lg border border-neutral-300 px-2 py-1 text-xs hover:bg-neutral-50" title="Copiar enlace directo">Copiar enlace</button>
-      </div>
-      <button data-close class="rounded-xl border border-neutral-300 p-2 hover:bg-neutral-50" aria-label="Cerrar">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-      </button>
-    </div>
-    <div class="flex-1 overflow-y-auto px-5 py-5">
-      <ul id="list-testimonios" class="grid gap-5 md:grid-cols-1">
-        <!-- se rellena por JS con textos largos -->
-      </ul>
-      <div class="mt-4 flex justify-center"><button id="more-testimonios" class="rounded-xl border border-neutral-300 px-4 py-2 hover:bg-neutral-50">Ver más</button></div>
-    </div>
-  </div>
-</div>
-
-<!-- MODAL: FAQ -->
-<div id="overlay-faq" class="fixed inset-0 z-50 hidden place-items-center bg-black/40 backdrop-blur-sm">
-  <div role="dialog" aria-modal="true" aria-labelledby="title-faq" class="mx-4 flex h-[86vh] w-full max-w-5xl flex-col overflow-hidden rounded-3xl bg-white shadow-2xl">
-    <div class="flex items-center justify-between border-b border-neutral-200 px-5 py-4">
-      <div class="flex items-center gap-3">
-        <span id="title-faq" class="rounded-lg bg-yellow-600 px-2.5 py-1 text-xs font-semibold text-white">Preguntas Frecuentes</span>
-        <button data-copy="faq" class="rounded-lg border border-neutral-300 px-2 py-1 text-xs hover:bg-neutral-50" title="Copiar enlace directo">Copiar enlace</button>
-      </div>
-      <button data-close class="rounded-xl border border-neutral-300 p-2 hover:bg-neutral-50" aria-label="Cerrar">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-      </button>
-    </div>
-    <div class="flex-1 overflow-y-auto px-5 py-5 space-y-5">
-      <div>
-        <h3 class="text-xl font-semibold mb-2">¿Hay penetración digital o con pene?</h3>
-        <p class="text-neutral-700">Sí, la penetración digital forma parte del servicio base solo con consentimiento mutuo. La penetración con pene siempre puede considerarse, previa conversación o petición explícita de parte de la paciente.</p>
-      </div>
-      <div>
-        <h3 class="text-xl font-semibold mb-2">¿Se permite sexo oral?</h3>
-        <p class="text-neutral-700">Sí, solo para complementar el servicio hacia tu cuerpo. Siempre con pasión, lascivia y lujuria. Nada se asume, todo se acuerda. Y recuerda que te daré el mejor oral que hayas tenido.</p>
-      </div>
-      <div>
-        <h3 class="text-xl font-semibold mb-2">¿Sexo anal?</h3>
-        <p class="text-neutral-700">Solo con la petición explícita de parte tuya y se hará con mucha obscenidad. Se acuerda humedecer, mojar, lubricar y dilatar previamente, con inmoralidad, para causar mucho placer.</p>
-      </div>
-      <div>
-        <h3 class="text-xl font-semibold mb-2">¿Dónde se realiza el servicio?</h3>
-        <p class="text-neutral-700">El servicio es 100% a domicilio: en hoteles, moteles, oficinas o espacios tipo Airbnb. En casos excepcionales, se puede realizar en mi propio espacio privado.</p>
-      </div>
-      <div>
-        <h3 class="text-xl font-semibold mb-2">¿Qué significa; todo incluido, todo permitido en "Extensión sensorial profunda"?</h3>
-        <p class="text-neutral-700">Significa; dejar que tu imaginación corra, te traicione y se haga realidad.  Te puedes permitir, realizar algunas fantasias.</p>
-      </div>
-      <div>
-        <h3 class="text-xl font-semibold mb-2">Confidencialidad</h3>
-        <p class="text-neutral-700">Máxima discreción. No se comparten datos, contenidos o conversaciones privadas. Todo lo realizado y hablado queda en anonimato total <strong>EXCEPTO</strong> si me regalas tu <strong>TESTIMONIO</strong> para publicarlo.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- MODAL: Tarifas & Cobertura -->
-<div id="overlay-tarifas" class="fixed inset-0 z-50 hidden place-items-center bg-black/40 backdrop-blur-sm">
-  <div role="dialog" aria-modal="true" aria-labelledby="title-tarifas" class="mx-4 flex h-[86vh] w-full max-w-5xl flex-col overflow-hidden rounded-3xl bg-white shadow-2xl">
-    <div class="flex items-center justify-between border-b border-neutral-200 px-5 py-4">
-      <div class="flex items-center gap-3">
-        <span id="title-tarifas" class="rounded-lg bg-green-700 px-2.5 py-1 text-xs font-semibold text-white">Tarifas & Cobertura</span>
-        <button data-copy="tarifas" class="rounded-lg border border-neutral-300 px-2 py-1 text-xs hover:bg-neutral-50" title="Copiar enlace directo">Copiar enlace</button>
-      </div>
-      <button data-close class="rounded-xl border border-neutral-300 p-2 hover:bg-neutral-50" aria-label="Cerrar">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-      </button>
-    </div>
-    <div class="flex-1 overflow-y-auto px-5 py-5 space-y-4 text-green-900">
-      <h3 class="text-xl font-semibold">Tarifas</h3>
-      <ul class="list-disc pl-6 space-y-2">
-        <li><strong>Sesión breve</strong> (30 min): <span class="font-semibold">$29.990</span> <span class="text-sm text-neutral-700">(desde)</span></li>
-        <li><strong>Sesión completa</strong> (<span class="lowercase">sin límite de tiempo</span>): <span class="font-semibold">$49.990</span>
-          <div class="text-sm text-neutral-700">Incluye aromaterapia, gel estimulante y juguetes.</div>
-        </li>
-        <li><strong>Extensión sensorial profunda</strong> (todo incluido, todo permitido): <em>a convenir!</em></li>
-      </ul>
-
-      <p class="text-sm text-neutral-700 mt-2">No hay recargo por traslado.</p>
-
-      <h3 class="text-xl font-semibold mt-8">Cobertura de atención a domicilio</h3>
-      <p class="text-neutral-800">Para mujeres en Santiago (RM) y Quinta Región. Atención en hoteles, casas, moteles y Airbnb.</p>
-
-      <div class="grid gap-4 md:grid-cols-2">
-        <div>
-          <h4 class="font-semibold mt-4">Atiendo a domicilio en toda la Región Metropolitana, con especial presencia en:</h4>
-          <ul class="list-disc pl-6 space-y-1">
-            <li>Las Condes, Vitacura, Providencia, Santiago Centro</li>
-            <li>Ñuñoa, La Reina, Peñalolén, Huechuraba</li>
+        <div class="glass rounded-3xl p-8 shadow-xl">
+          <h2 class="text-xl font-semibold">Lo que te garantizo</h2>
+          <ul class="mt-3 space-y-3 text-sm leading-relaxed">
+            <li><strong>Discreción real.</strong> Conversaciones y coordinación con absoluta reserva.</li>
+            <li><strong>Ambiente cuidado.</strong> Velas, aromas suaves, música y preparación del espacio.</li>
+            <li><strong>Higiene & protocolos.</strong> Material limpio, manos cuidadas, orden y respeto.</li>
+            <li><strong>Límites claros.</strong> Nada se asume; todo se conversa.</li>
+            <li><strong>Agendamiento simple.</strong> WhatsApp o formulario, confirmación rápida.</li>
           </ul>
         </div>
-        <div>
-          <h4 class="font-semibold mt-4">También ofrezco mis masajes íntimos para mujeres en toda la Quinta Región, especialmente en:</h4>
-          <ul class="list-disc pl-6 space-y-1">
-            <li>Viña del Mar, Reñaca, Concón</li>
-            <li>Valparaíso, Quilpué, Algarrobo, El Quisco</li>
-          </ul>
-          <p class="text-sm text-neutral-700 mt-2">En Quinta Región: disponible <strong>solo</strong> para <em>Sesión completa</em> y <em>Extensión sensorial profunda</em>.</p>
+      </div>
+    </section>
+
+    <!-- QUIÉN SOY -->
+    <section id="quien" class="mx-auto mt-16 max-w-6xl px-4">
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div class="glass rounded-3xl p-8 shadow-xl">
+          <img src="/assets/quien_soy.jpg" alt="Quién Soy" class="mb-4 h-48 w-full rounded-2xl object-cover" />
+          <h2 class="text-2xl font-bold">Quién Soy</h2>
+          <p class="mt-3 leading-relaxed">
+            Soy masoterapeuta y facilitador de masaje sensitivo (tántrico) para mujeres, con enfoque en relajación profunda,
+            presencia, respiración y conexión corporal. Mi trabajo se basa en respeto, discreción y un trato profesional.
+          </p>
+        </div>
+        <div class="flex items-center justify-center">
+          <img src="/assets/experiencia.jpg" alt="Ambiente" class="h-64 w-full max-w-md rounded-3xl object-cover shadow-xl" />
         </div>
       </div>
-    </div>
-  </div>
-</div>
+    </section>
 
-<!-- NUEVO: MODAL Recomendaciones y Sugerencias -->
-<div id="overlay-recomendaciones" class="fixed inset-0 z-50 hidden place-items-center bg-black/40 backdrop-blur-sm">
-  <div role="dialog" aria-modal="true" aria-labelledby="title-recomendaciones" class="mx-4 flex h-[86vh] w-full max-w-5xl flex-col overflow-hidden rounded-3xl bg-white shadow-2xl">
-    <div class="flex items-center justify-between border-b border-neutral-200 px-5 py-4">
-      <div class="flex items-center gap-3">
-        <!-- etiqueta en tono verde claro -->
-        <span id="title-recomendaciones" class="rounded-lg bg-green-300 px-2.5 py-1 text-xs font-semibold text-green-900">Recomendaciones y Sugerencias</span>
-        <button data-copy="recomendaciones" class="rounded-lg border border-neutral-300 px-2 py-1 text-xs hover:bg-neutral-50" title="Copiar enlace directo">Copiar enlace</button>
-      </div>
-      <button data-close class="rounded-xl border border-neutral-300 p-2 hover:bg-neutral-50" aria-label="Cerrar">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-      </button>
-    </div>
-    <!-- cuerpo con fondo verde suave, como pediste -->
-    <div class="flex-1 overflow-y-auto px-5 py-5">
-      <div class="max-w-4xl mx-auto rounded-2xl border border-green-100 bg-green-50 p-5 text-green-900">
-        <h3 class="text-2xl font-semibold mb-3">Recomendaciones y Sugerencias</h3>
-        <ul class="list-disc pl-6 space-y-2">
-          <li>Elige un espacio cómodo y privado para tu masaje: habitación, sala u oficina amplia.</li>
-          <li>Informa previamente cualquier problema de salud, lesión o condición médica relevante.</li>
-          <li>Evita el masaje si estás con infecciones vaginales, fiebres, o condiciones de riesgo.</li>
-          <li>Hidrátate bien antes del masaje y evita comer justo antes de la sesión.</li>
-          <li>Mantén tu celular apagado o en silencio para disfrutar una sesión completamente enfocada en ti.</li>
-          <li>Cuida tu higiene personal íntima y déjate llevar por la experiencia sin prendas.</li>
-          <li>Después del masaje, evita el frío y escucha las recomendaciones personalizadas del masajista.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- MODAL: Contacto (formulario completo) -->
-<div id="overlay-contacto" class="fixed inset-0 z-50 hidden place-items-center bg-black/40 backdrop-blur-sm">
-  <div role="dialog" aria-modal="true" aria-labelledby="title-contacto" class="mx-4 flex h-[86vh] w-full max-w-3xl flex-col overflow-hidden rounded-3xl bg-white shadow-2xl">
-    <div class="flex items-center justify-between border-b border-neutral-200 px-5 py-4">
-      <div class="flex items-center gap-3">
-        <span id="title-contacto" class="rounded-lg bg-green-700 px-2.5 py-1 text-xs font-semibold text-white">Contacto</span>
-        <button data-copy="contacto" class="rounded-lg border border-neutral-300 px-2 py-1 text-xs hover:bg-neutral-50" title="Copiar enlace directo">Copiar enlace</button>
-      </div>
-      <button data-close class="rounded-xl border border-neutral-300 p-2 hover:bg-neutral-50" aria-label="Cerrar">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-      </button>
-    </div>
-    <div class="flex-1 overflow-y-auto px-5 py-5">
-      <div class="mb-4 text-sm text-neutral-700">Los mensajes llegan a <strong>contacto@placerprivado.cl</strong>. Si incluyes tu correo, podrás recibir respuesta directa.</div>
-      <div class="mb-4 text-sm text-neutral-700"><strong>Nueva Providencia #1881</strong> Metro Pedro de Valdivia, salida Marchant Pereira. <strong>Solo con agendamiento previo</strong> indico piso y número de mi oficina.</div>
-
-      <!-- Alertas inline -->
-      <div id="contact-alert" class="hidden mb-4 rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-green-800" role="status" aria-live="polite">Gracias, te respondemos pronto.</div>
-      <div id="contact-alert-error" class="hidden mb-4 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-red-800" role="alert"></div>
-
-      <form id="contact-form" name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-4">
-        <input type="hidden" name="form-name" value="contacto" />
-        <!-- Campo honeypot para spam (oculto también para lectores de pantalla) -->
-        <p class="hidden" aria-hidden="true">
-          <label>No llenar: <input name="bot-field" /></label>
+    <!-- EXPERIENCIA -->
+    <section id="experiencia" class="mx-auto mt-16 max-w-6xl px-4">
+      <div class="glass rounded-3xl p-8 shadow-xl">
+        <h2 class="text-2xl font-bold">La experiencia</h2>
+        <p class="mt-3 text-sm leading-relaxed">
+          Transformo tu espacio en un entorno íntimo y seguro: luz cálida, aromas suaves, música y un ritmo de masaje diseñado
+          para bajar el estrés, soltar tensión y reconectar con tu cuerpo de forma delicada y gradual.
         </p>
-        <!-- Destino (informativo / útil para integraciones externas) -->
-        <input type="hidden" name="to" value="contacto@placerprivado.cl" />
-        <input type="hidden" name="subject" value="Nuevo contacto — PlacerPrivado.cl" />
-        <div>
-          <label class="block mb-1 font-semibold">Nombre</label>
-          <input type="text" name="nombre" autocomplete="name" required class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500" />
-        </div>
-        <div>
-          <label class="block mb-1 font-semibold">Correo electrónico</label>
-          <input type="email" name="email" autocomplete="email" required class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500" />
-          <div class="text-xs text-neutral-500 mt-1">Al responder desde tu bandeja, el mensaje irá a este correo.</div>
-        </div>
-        <div>
-          <label class="block mb-1 font-semibold">Teléfono</label>
-          <input type="text" name="telefono" autocomplete="tel" class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500" />
-        </div>
-        <div>
-          <label class="block mb-1 font-semibold">Mensaje</label>
-          <textarea name="mensaje" rows="5" required class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
-        </div>
-        <div class="flex flex-col sm:flex-row justify-between items-center mt-4 gap-4">
-          <button type="submit" class="bg-green-700 hover:bg-green-800 text-white font-bold py-3 px-6 rounded shadow-lg transition duration-300">Enviar mensaje</button>
-          <a href="https://wa.me/56965747615" target="_blank" rel="noopener noreferrer" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded shadow-lg transition duration-300 flex items-center gap-2">WhatsApp</a>
-        </div>
-      </form>
+      </div>
+    </section>
 
-      <!--
-      NOTA TÉCNICA (OCULTA)
-      - Netlify Forms envía a contacto@placerprivado.cl (Zoho) vía Forms → Notifications.
-      - El campo "email" se usa como Reply-To.
-      -->
+    <!-- SERVICIO -->
+    <section id="servicio" class="mx-auto mt-16 max-w-6xl px-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight uppercase drop-shadow-sm">
+        MASAJE SENSITIVO (TÁNTRICO) PARA MUJERES
+      </h2>
+      <div class="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <article class="glass rounded-3xl p-6 shadow">
+          <img src="/assets/servicio_tantrico.jpg" alt="Masaje sensitivo" class="h-44 w-full rounded-2xl object-cover" />
+          <h3 class="mt-4 text-lg font-semibold">Conexión, respiración y presencia</h3>
+          <p class="mt-2 text-sm leading-relaxed">
+            Sesión enfocada en relajación profunda, conciencia corporal y sensorialidad. Ideal para mujeres que buscan soltar tensión,
+            bajar el ruido mental y recuperar bienestar emocional y físico.
+          </p>
+        </article>
+
+        <article class="glass rounded-3xl p-6 shadow">
+          <img src="/assets/beneficios.jpg" alt="Beneficios" class="h-44 w-full rounded-2xl object-cover" />
+          <h3 class="mt-4 text-lg font-semibold">Beneficios</h3>
+          <ul class="mt-2 list-disc pl-5 text-sm leading-relaxed space-y-1">
+            <li>Disminuye estrés y tensión muscular.</li>
+            <li>Mejora descanso y regulación emocional.</li>
+            <li>Ayuda a reconectar con el cuerpo y el placer de estar presente.</li>
+            <li>Experiencia íntima y discreta, con límites claros.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- TARIFAS -->
+    <section id="tarifas" class="mx-auto mt-16 max-w-6xl px-4">
+      <div class="glass rounded-3xl p-8 shadow-xl">
+        <h2 class="text-2xl font-bold">Tarifas & Cobertura</h2>
+        <p class="mt-2 text-sm">RM y V Región. Solo con cita previa.</p>
+        <ul class="mt-4 list-disc pl-6 text-sm leading-relaxed space-y-1">
+          <li><strong>Sesión breve</strong> (30 min): $29.990 (desde)</li>
+          <li><strong>Sesión completa</strong>: $49.990</li>
+        </ul>
+        <p class="mt-3 text-xs text-slate-700">*Valores referenciales. Confirmación y coordinación por WhatsApp o formulario.</p>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section id="testimonios" class="mx-auto mt-16 max-w-6xl px-4">
+      <div class="glass rounded-3xl p-8 shadow-xl">
+        <h2 class="text-2xl font-bold">Testimonios</h2>
+        <p class="mt-2 text-sm">Experiencias reales, en tono discreto y respetuoso.</p>
+        <div class="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
+          <blockquote class="rounded-2xl bg-white/70 p-4 shadow">
+            “Me sentí cuidada y tranquila. Todo fue discreto y muy profesional. Volvería sin dudas.”
+          </blockquote>
+          <blockquote class="rounded-2xl bg-white/70 p-4 shadow">
+            “El ambiente y el ritmo del masaje me ayudaron a soltar estrés. Me quedé con una paz increíble.”
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- AGENDA / CONTACTO -->
+    <section id="agenda" class="mx-auto my-16 max-w-6xl px-4">
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div class="glass rounded-3xl p-8 shadow-xl">
+          <h2 class="text-2xl font-bold">Agendar sesión</h2>
+          <p class="mt-2 text-sm">Reserva por formulario o WhatsApp. Respuesta discreta.</p>
+
+          <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias" class="mt-4 space-y-4">
+            <input type="hidden" name="form-name" value="contacto" />
+            <p class="hidden"><label>No llenar: <input name="bot-field" /></label></p>
+
+            <div>
+              <label class="block text-sm font-medium">Nombre</label>
+              <input required name="nombre" type="text" autocomplete="name" class="mt-1 w-full rounded-xl border px-3 py-2" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Correo</label>
+              <input required name="correo" type="email" autocomplete="email" class="mt-1 w-full rounded-xl border px-3 py-2" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">WhatsApp</label>
+              <input name="whatsapp" type="tel" inputmode="tel" placeholder="+56 9 1234 5678" class="mt-1 w-full rounded-xl border px-3 py-2" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Mensaje</label>
+              <textarea name="mensaje" rows="4" class="mt-1 w-full rounded-xl border px-3 py-2" placeholder="Comuna, lugar (domicilio/oficina), horario preferido…"></textarea>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-3 pt-2">
+              <button type="submit" class="rounded-xl bg-black px-5 py-3 text-white hover:bg-black/80">Enviar</button>
+              <a href="https://wa.me/56965747615" target="_blank" rel="noopener" class="rounded-xl border px-5 py-3 hover:bg-white">Agendar por WhatsApp</a>
+            </div>
+          </form>
+        </div>
+
+        <div class="glass rounded-3xl p-8 shadow-xl">
+          <h3 class="text-xl font-semibold">Contacto directo</h3>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li><strong>WhatsApp:</strong> <a class="underline" href="https://wa.me/56965747615" target="_blank" rel="noopener">+56 9 6574 7615</a></li>
+            <li><strong>Correo:</strong> contacto@placerprivado.cl</li>
+            <li><strong>Atención:</strong> Solo mujeres · Solo con cita previa</li>
+          </ul>
+          <img src="/assets/contacto.jpg" alt="Contacto" class="mt-6 h-40 w-full rounded-2xl object-cover" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t bg-white/80">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-6 md:flex-row">
+      <p class="text-sm">© <span id="year"></span> PLACER PRIVADO. Todos los derechos reservados.</p>
+      <div class="flex items-center gap-3">
+        <a href="#inicio" class="text-sm hover:underline">Volver arriba</a>
+        <a href="https://wa.me/56965747615" target="_blank" rel="noopener"
+           class="rounded-xl bg-emerald-600 px-3 py-1.5 text-white hover:bg-emerald-700">WhatsApp</a>
+      </div>
     </div>
-  </div>
-</div>
+  </footer>
 
-<script>
-
-  // --- Menú móvil ---
-  const btn = document.getElementById('menu-btn');
-  const menu = document.getElementById('mobile-menu');
-  if (btn && menu) {
-    btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
-    const links = menu.querySelectorAll('a');
-    links.forEach(link => link.addEventListener('click', () => menu.classList.add('hidden')));
-  }
-
-  // --- Seguridad URL/Historial (sandbox-safe) ---
-  const isSandbox = (() => {
-    try { return (location.href.startsWith('about:') || document.baseURI.startsWith('about:') || location.origin === 'null'); } catch (e) { return true; } })();
-  function safeSetHash(hash){ if (isSandbox) return; try { history.replaceState(history.state, '', location.pathname + location.search + hash); } catch {} }
-  function safeClearHash(){ if (isSandbox) return; try { history.replaceState(history.state, '', location.pathname + location.search); } catch {} }
-
-  // --- Modal infra ---
-  const OVERLAYS = {
-    testimonios: document.getElementById('overlay-testimonios'),
-    faq: document.getElementById('overlay-faq'),
-    tarifas: document.getElementById('overlay-tarifas'),
-    contacto: document.getElementById('overlay-contacto'),
-    // NUEVO
-    recomendaciones: document.getElementById('overlay-recomendaciones')
-  };
-
-  function openModal(id){
-    const overlay = OVERLAYS[id];
-    if (!overlay) return;
-    overlay.classList.remove('hidden');
-    document.body.classList.add('lock-scroll');
-    safeSetHash('#' + id);
-    // Carga inmediata de testimonios (si aún no hay ítems)
-    try {
-      if (id === 'testimonios' && typeof LIST_TEST !== 'undefined' && LIST_TEST && !LIST_TEST.children.length && typeof renderMoreTests === 'function') {
-        renderMoreTests();
-      }
-    } catch(e) {}
-  }
-  function closeAnyModal(){
-    Object.values(OVERLAYS).forEach(ov => ov.classList.add('hidden'));
-    document.body.classList.remove('lock-scroll');
-    if (['#testimonios','#faq','#tarifas','#contacto','#recomendaciones'].includes(location.hash)) safeClearHash();
-  }
-
-  // Botones/links que abren modales
-  document.querySelectorAll('[data-modal-link]').forEach(el => {
-    el.addEventListener('click', (e) => {
-      e.preventDefault();
-      openModal(el.getAttribute('data-modal-link'));
-    });
-  });
-
-  // Cerrar por botones, click fuera y ESC
-  document.querySelectorAll('[data-close]').forEach(btn => btn.addEventListener('click', closeAnyModal));
-  Object.values(OVERLAYS).forEach(ov => ov.addEventListener('click', (e) => { if (e.target === ov) closeAnyModal(); }));
-  window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAnyModal(); });
-
-  // Copiar enlaces
-  document.querySelectorAll('[data-copy]').forEach(btn => {
-    btn.addEventListener('click', async () => {
-      const id = btn.getAttribute('data-copy');
-      const link = (isSandbox ? ('#' + id) : (location.origin + location.pathname + location.search + '#' + id));
-      try { await navigator.clipboard.writeText(link); alert('Enlace copiado'); } catch {}
-    });
-  });
-
-  // Deep-link inicial
-  (function openFromHash(){
-    const h = location.hash.replace('#','');
-    if (['testimonios','faq','tarifas','contacto','recomendaciones'].includes(h)) openModal(h);
-  })();
-
-  // --- Collapsibles en secciones largas (para lectura ágil) ---
-  function makeCollapsible(container, bgFallback){
-    if (!container) return;
-    const maxH = 300;
-    if (container.scrollHeight <= maxH + 24) return;
-    container.classList.add('collapsible','collapsed');
-    const fade = document.createElement('div');
-    fade.className = 'fade';
-    const bg = bgFallback || getComputedStyle(container).backgroundColor || 'rgba(255,255,255,0.95)';
-    fade.style.background = `linear-gradient(to top, ${bg}, transparent)`;
-    container.appendChild(fade);
-    const btnWrap = document.createElement('div'); btnWrap.className = 'mt-4 flex justify-center';
-    const btn = document.createElement('button'); btn.className = 'rounded-xl border border-neutral-300 px-4 py-2 hover:bg-neutral-50'; btn.textContent = 'Leer más';
-    btn.addEventListener('click', () => { const collapsed = container.classList.toggle('collapsed'); btn.textContent = collapsed ? 'Leer más' : 'Leer menos'; });
-    btnWrap.appendChild(btn); container.parentNode.insertBefore(btnWrap, container.nextSibling);
-  }
-  makeCollapsible(document.querySelector('#quien-soy .js-collapsible'));
-  makeCollapsible(document.querySelector('#experiencia .js-collapsible'));
-  makeCollapsible(document.querySelector('#beneficios .js-collapsible'));
-  makeCollapsible(document.querySelector('#tantrico .js-collapsible'));
-
-  // --- Testimonios (contenidos largos) ---
-  const LIST_TEST = document.getElementById('list-testimonios');
-  const BTN_MORE_TEST = document.getElementById('more-testimonios');
-  const TESTIMONIOS_POOL = [
-    { name: 'Mujer, 46 años, ejecutiva de marketing', text: `Recuerdo que te llamé a mi oficina y llegaste antes de la hora acordada con tu pelo largo amarrado y todas tus cosas, maleta gigante, bolso, mochilas y comenzaste a armar el show. Te juro que hasta vergüenza me dio y salí a tomar aire. Cuando llegué tenías todo preparado y me pediste que cuando yo estuviera lista me sacara la ropa para subir a tu camilla y, mientras lo hacía, me hiciste un montón de preguntas de salud y personales. No te miento, deseé pagarte y que te fueras antes de comenzar todo, pero mi yo interna me dijo que te quedaras. Te juzgué, me anticipé, caí en un grave error. Tus manos cálidas (y eso que hacía mucho frío ese día) me tocaron los hombros, recorrieron mi espalda, mis brazos, mis manos, mis piernas, ¡mi cuerpo completo! Ni siquiera mi esposo me conoce tan bien como me conoces tú, Nolberto (¿poco común tu nombre, te lo han dicho?). Hiciste que el placer tuviera otro significado con tus manos, tus brazos y tu boca. Confieso que acabé más de una vez y fue mentira cuando te dije que estás dentro de lo normal. La verdad es que "eres un ángel"; quiero volver a conectar contigo. Sé que es tu trabajo y todo, pero definitivamente necesito tenerte tocando mi piel.
-Me dijiste que publicabas los mensajes y correos y espero que este sea uno de ellos. Solo me falta agregar que eres muy profesional en todo!` },
-    { name: 'Mujer, 36 años, azafata internacional', text: `No esperaba que metieras tus dedos tan profundo... tan delicadamente. Lo hiciste mientras me masajeabas el cuello con la otra mano. Me vine con la garganta cerrada y las piernas temblando. Y luego me diste vuelta y me besaste el vientre como si fuera sagrado. ¿Eso haces con todas? No me importa. Solo dime que volverás si te llamo nuevamente.` },
-    { name: 'Mujer, 35 años, ingeniero', text: `Pensé que iba a un masaje con final feliz y todo, pero lo que viví fue un reencuentro con mi sexualidad. No sentí culpa. Me sentí poderosa.` },
-    { name: 'Mujer, 43 años, emprendedora', text: `Nunca pensé que un masaje a domicilio pudiera ser tan excitante y liberador. Sentí todo su ser dentro de mí. Te vuelvo a llamar sí o sí.` },
-    { name: 'Mujer, 31 años, arquitecta', text: `Oye, Nolberto, solo me dijiste: ‘relájate, yo me encargo de todo’. Y así fue. Tus dedos dibujaban círculos en mi cadera; tus manos bajaban, subían… Y cuando ya estaba tan mojada que la toalla se pegaba a mí, te acercaste sin tocar. Solo respirabas sobre mi clítoris. ¡Eso fue peor que el contacto! Me corrí sin que me tocaras, te juro. Y luego me hiciste acabar dos veces más.` }
-  ];
-  let testIndex = 0; const TEST_PAGE = 3; // carga 3 largos por click para no saturar
-  const poolRandom = TESTIMONIOS_POOL.slice(); // podrías hacer shuffle si quieres
-  function renderMoreTests(){
-    const slice = poolRandom.slice(testIndex, testIndex + TEST_PAGE);
-    slice.forEach(t => {
-      const li = document.createElement('li');
-      li.className = 'rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm';
-      li.innerHTML = `<blockquote class="text-[15px] leading-relaxed text-neutral-700 whitespace-pre-line">“${t.text}”</blockquote>
-        <div class="mt-3 text-sm text-neutral-500">— ${t.name}</div>`;
-      LIST_TEST.appendChild(li);
-    });
-    testIndex += slice.length;
-    if (testIndex >= poolRandom.length) BTN_MORE_TEST.classList.add('hidden');
-  }
-  BTN_MORE_TEST.addEventListener('click', renderMoreTests);
-
-  // --- Self tests ---
-  (function selfTests(){
-    function noThrow(fn, name){ try { fn(); console.log('[TEST OK]', name); } catch(e){ console.error('[TEST FAIL]', name, e); } }
-    noThrow(() => { safeSetHash('#testimonios'); safeClearHash(); }, 'Safe history in sandbox');
-    noThrow(() => { renderMoreTests(); }, 'Render long testimonials');
-    noThrow(() => { openModal('faq'); closeAnyModal(); }, 'Open/close FAQ modal');
-    noThrow(() => { openModal('tarifas'); closeAnyModal(); }, 'Open/close Tarifas modal');
-    noThrow(() => { openModal('contacto'); closeAnyModal(); }, 'Open/close Contacto modal');
-    // NUEVO test
-    noThrow(() => { openModal('recomendaciones'); closeAnyModal(); }, 'Open/close Recomendaciones modal');
-  })();
-</script>
-<script>
-// Envío AJAX a Netlify + banner de confirmación (sin salir del modal)
-(function(){
-  const form = document.querySelector('#overlay-contacto form[name="contacto"]');
-  const ok = document.getElementById('contact-alert');
-  const err = document.getElementById('contact-alert-error');
-  if (!form) return;
-  function encodeFD(fd){ return Array.from(fd).map(([k,v]) => encodeURIComponent(k)+'='+encodeURIComponent(v)).join('&'); }
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    ok && ok.classList.add('hidden');
-    err && err.classList.add('hidden');
-    const submitBtn = form.querySelector('button[type="submit"]');
-    submitBtn && submitBtn.setAttribute('disabled','');
-    const fd = new FormData(form);
-    if (!fd.has('form-name')) fd.append('form-name','contacto');
-    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: encodeFD(fd) })
-      .then(r => { if (!r.ok) throw new Error('HTTP '+r.status); form.reset(); ok && ok.classList.remove('hidden'); setTimeout(() => ok && ok.classList.add('hidden'), 6000); })
-      .catch(() => { if (err){ err.textContent = 'No se pudo enviar. Intenta de nuevo o escríbenos por WhatsApp.'; err.classList.remove('hidden'); } })
-      .finally(() => { submitBtn && submitBtn.removeAttribute('disabled'); });
-  });
-})();
-</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const btn = document.getElementById('menuBtn');
+    const mobile = document.getElementById('mobileMenu');
+    if (btn && mobile) {
+      btn.addEventListener('click', () => {
+        const open = mobile.classList.toggle('hidden') === false;
+        btn.setAttribute('aria-expanded', String(open));
+      });
+      mobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        mobile.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      }));
+    }
+  </script>
 </body>
 </html>
 
