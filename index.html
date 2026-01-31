@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PLACER PRIVADO — Masajes de Conexión Íntima Femenina</title>
 
-  <!-- SEO base -->
-  <meta name="description" content="Masaje Sensitivo (Tántrico) para mujeres. Experiencia profesional, discreta y confidencial. Atención exclusivamente a domicilio y con cita previa en RM y V Región." />
-  <meta name="keywords" content="masaje sensitivo para mujeres, masaje tántrico femenino, masajes para mujeres a domicilio, masajes providencia, masajes las condes, masajes vitacura, masajes viña del mar, reñaca, concón" />
+  <!-- SEO -->
+  <meta name="description" content="Masaje Sensitivo (Tántrico) para mujeres. Experiencia profesional, discreta y confidencial. Atención exclusivamente a domicilio y con cita previa en RM, V y VI Región." />
+  <meta name="keywords" content="masaje sensitivo para mujeres, masaje tántrico femenino, masajes para mujeres a domicilio, masajes providencia, masajes las condes, masajes vitacura, masajes viña del mar, reñaca, concón, masajes rancagua" />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://placerprivado.cl/" />
   <link rel="alternate" hreflang="es-cl" href="https://placerprivado.cl/" />
@@ -28,11 +28,10 @@
 
   <style>
     html { scroll-behavior: smooth; }
-    /* Evita que el header tape el ancla */
     section[id] { scroll-margin-top: 110px; }
 
-    /* Video de fondo */
-    .bg-video{
+    /* Video full-screen */
+    .bg-video {
       position: fixed; inset: 0;
       width: 100vw; height: 100vh;
       object-fit: cover;
@@ -41,21 +40,23 @@
       pointer-events: none;
       background: url('/assets/hero_poster.jpg') center/cover no-repeat;
     }
-    /* Overlay suave para contraste */
-    .bg-overlay{
+
+    /* Overlay para contraste */
+    .bg-overlay {
       position: fixed; inset: 0;
       z-index: -1;
-      background: radial-gradient(1200px 700px at 30% 20%, rgba(255,255,255,.16), transparent 55%),
-                  linear-gradient(to bottom, rgba(0,0,0,.10), rgba(0,0,0,.22));
       pointer-events: none;
+      background:
+        radial-gradient(1200px 700px at 30% 20%, rgba(255,255,255,.16), transparent 55%),
+        linear-gradient(to bottom, rgba(0,0,0,.12), rgba(0,0,0,.24));
     }
 
     .glass {
-      background: rgba(255,255,255,.78);
+      background: rgba(255,255,255,.80);
       backdrop-filter: blur(10px);
     }
 
-    /* Fallback si el video falla */
+    /* Fallback si el video no reproduce */
     .no-video .bg-video { display: none; }
     .no-video::before{
       content:"";
@@ -64,9 +65,12 @@
       filter: brightness(.55);
       z-index: -2;
     }
+
+    /* Mejora legibilidad en títulos blancos */
+    .title-shadow { text-shadow: 0 10px 30px rgba(0,0,0,.35); }
   </style>
 
-  <!-- JSON-LD sobrio -->
+  <!-- JSON-LD (sobrio) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -76,12 +80,12 @@
     "image":"https://placerprivado.cl/assets/logo.jpeg",
     "telephone":"+56965747615",
     "email":"mailto:contacto@placerprivado.cl",
-    "priceRange":"CLP $$",
     "byAppointmentOnly": true,
     "description":"Masaje Sensitivo (Tántrico) para mujeres. Experiencia profesional, discreta y confidencial. Atención exclusivamente a domicilio y con cita previa.",
     "areaServed":[
       {"@type":"AdministrativeArea","name":"Región Metropolitana de Santiago"},
-      {"@type":"AdministrativeArea","name":"Región de Valparaíso"}
+      {"@type":"AdministrativeArea","name":"Región de Valparaíso"},
+      {"@type":"AdministrativeArea","name":"Región de O'Higgins"}
     ],
     "contactPoint":[{
       "@type":"ContactPoint",
@@ -95,9 +99,8 @@
 </head>
 
 <body class="text-slate-800">
-
-  <!-- Video de fondo (si el códec es compatible, se reproduce) -->
-  <video class="bg-video" autoplay muted loop playsinline preload="auto" poster="/assets/hero_poster.jpg">
+  <!-- Video de fondo -->
+  <video class="bg-video" autoplay muted loop playsinline preload="auto" poster="/assets/hero_poster.jpg" aria-hidden="true">
     <source src="/assets/videofondo.mp4" type="video/mp4" />
   </video>
   <div class="bg-overlay" aria-hidden="true"></div>
@@ -114,10 +117,11 @@
         <!-- Menú escritorio -->
         <div class="hidden md:flex items-center gap-5 text-sm">
           <a href="#quien" class="hover:underline">Quién Soy</a>
-          <a href="#experiencia" class="hover:underline">Experiencia</a>
-          <a href="#servicio" class="hover:underline">Servicio</a>
+          <a href="#sensitivo" class="hover:underline">Masaje Sensitivo</a>
+          <a href="#bienestar" class="hover:underline">Masajes Bienestar</a>
           <a href="#tarifas" class="hover:underline">Tarifas</a>
           <a href="#ubicacion" class="hover:underline">Ubicación</a>
+          <a href="#faq" class="hover:underline">FAQ</a>
           <a href="#agenda" class="inline-block rounded-xl border px-3 py-1.5 hover:bg-white">Agendar</a>
           <a href="https://wa.me/56965747615" target="_blank" rel="noopener"
              class="inline-flex items-center rounded-xl bg-emerald-600 px-3 py-1.5 text-white hover:bg-emerald-700">
@@ -140,10 +144,11 @@
       <!-- Menú móvil desplegable -->
       <div id="mobileMenu" class="mt-3 hidden flex-col gap-2 text-sm md:hidden">
         <a href="#quien" class="rounded-lg px-2 py-2 hover:bg-white">Quién Soy</a>
-        <a href="#experiencia" class="rounded-lg px-2 py-2 hover:bg-white">Experiencia</a>
-        <a href="#servicio" class="rounded-lg px-2 py-2 hover:bg-white">Servicio</a>
+        <a href="#sensitivo" class="rounded-lg px-2 py-2 hover:bg-white">Masaje Sensitivo</a>
+        <a href="#bienestar" class="rounded-lg px-2 py-2 hover:bg-white">Masajes Bienestar</a>
         <a href="#tarifas" class="rounded-lg px-2 py-2 hover:bg-white">Tarifas</a>
         <a href="#ubicacion" class="rounded-lg px-2 py-2 hover:bg-white">Ubicación</a>
+        <a href="#faq" class="rounded-lg px-2 py-2 hover:bg-white">FAQ</a>
         <a href="#agenda" class="rounded-lg px-2 py-2 border hover:bg-white">Agendar</a>
         <a href="https://wa.me/56965747615" target="_blank" rel="noopener"
            class="rounded-lg px-2 py-2 bg-emerald-600 text-white hover:bg-emerald-700">
@@ -154,7 +159,6 @@
   </header>
 
   <main id="inicio" class="pt-28">
-
     <!-- HERO -->
     <section class="mx-auto max-w-6xl px-4">
       <div class="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
@@ -162,8 +166,8 @@
           <img src="/assets/logo.jpeg" alt="Logo Placer Privado" class="h-16 w-16 rounded-full mb-4" />
           <h1 class="text-3xl sm:text-4xl font-bold leading-tight">Masajes de Conexión Íntima Femenina</h1>
           <p class="mt-3 text-base leading-relaxed">
-            Masaje Sensitivo (Tántrico) <strong>solo para mujeres</strong>.
-            Una experiencia profesional, discreta y profundamente relajante, diseñada para reconectar contigo desde el cuerpo,
+            <strong>Masaje Sensitivo (Tántrico) solo para mujeres</strong>.
+            Experiencia profesional, discreta y profundamente relajante, diseñada para reconectar contigo desde el cuerpo,
             la respiración y la presencia.
           </p>
 
@@ -175,12 +179,9 @@
           </div>
 
           <div class="mt-6 flex flex-wrap gap-3">
-            <a href="#agenda" class="rounded-xl bg-black/75 px-5 py-3 text-white hover:bg-black">
-              Agendar ahora
-            </a>
-            <a href="#servicio" class="rounded-xl border px-5 py-3 hover:bg-white">
-              Ver servicio
-            </a>
+            <a href="#agenda" class="rounded-xl bg-black/80 px-5 py-3 text-white hover:bg-black">Agendar ahora</a>
+            <a href="#sensitivo" class="rounded-xl border px-5 py-3 hover:bg-white">Ver masaje sensitivo</a>
+            <a href="#bienestar" class="rounded-xl border px-5 py-3 hover:bg-white">Ver masajes bienestar</a>
             <a href="https://wa.me/56965747615" target="_blank" rel="noopener"
                class="rounded-xl bg-emerald-600 px-5 py-3 text-white hover:bg-emerald-700">
               WhatsApp +56 9 6574 7615
@@ -201,6 +202,12 @@
             <li><strong>Ritmo profesional.</strong> Sin apuros, con enfoque en relajación y presencia.</li>
             <li><strong>Agendamiento simple.</strong> WhatsApp o formulario; confirmo rápido.</li>
           </ul>
+          <div class="mt-6 rounded-2xl bg-white/70 p-4 shadow">
+            <div class="text-sm font-semibold">Atención exclusiva</div>
+            <div class="mt-1 text-sm text-slate-700">
+              Servicio <strong>solo para mujeres</strong> · <strong>exclusivamente a domicilio</strong> · con cita previa.
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -227,42 +234,15 @@
       </div>
     </section>
 
-    <!-- EXPERIENCIA -->
-    <section id="experiencia" class="mx-auto mt-16 max-w-6xl px-4">
-      <div class="glass rounded-3xl p-8 shadow-xl">
-        <h2 class="text-2xl font-bold">La experiencia</h2>
-        <p class="mt-3 text-sm leading-relaxed">
-          Transformo tu espacio en un entorno íntimo y seguro: luz cálida, aromas suaves, música y un ritmo de masaje diseñado
-          para bajar el estrés, soltar tensión y ayudarte a volver al cuerpo con calma.
-        </p>
-
-        <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-3">
-          <div class="rounded-2xl bg-white/70 p-4 shadow">
-            <div class="text-sm font-semibold">1) Preparación</div>
-            <div class="mt-1 text-sm text-slate-700">Acondiciono el espacio, higiene y acuerdo de límites.</div>
-          </div>
-          <div class="rounded-2xl bg-white/70 p-4 shadow">
-            <div class="text-sm font-semibold">2) Sesión</div>
-            <div class="mt-1 text-sm text-slate-700">Trabajo corporal, respiración, ritmo progresivo y relajación.</div>
-          </div>
-          <div class="rounded-2xl bg-white/70 p-4 shadow">
-            <div class="text-sm font-semibold">3) Cierre</div>
-            <div class="mt-1 text-sm text-slate-700">Bajada, hidratación y recomendaciones post sesión.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICIO -->
-<section id="servicio" class="mx-auto mt-16 max-w-6xl px-4">
-  <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight uppercase drop-shadow-sm text-white">
-    Masaje Sensitivo (Tántrico) para Mujeres
-  </h2>
-</section>
+    <!-- SERVICIO ESTRELLA: SENSITIVO -->
+    <section id="sensitivo" class="mx-auto mt-16 max-w-6xl px-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight uppercase text-white title-shadow">
+        Masaje Sensitivo (Tántrico) para Mujeres
+      </h2>
 
       <div class="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
         <article class="glass rounded-3xl p-6 shadow">
-          <img src="/assets/servicio_tantrico.jpg" alt="Masaje sensitivo (tántrico)" class="h-44 w-full rounded-2xl object-cover" />
+          <img src="/assets/sensitivo.jpg" alt="Masaje sensitivo (tántrico)" class="h-44 w-full rounded-2xl object-cover" />
           <h3 class="mt-4 text-lg font-semibold">Conexión, respiración y presencia</h3>
           <p class="mt-2 text-sm leading-relaxed">
             Sesión enfocada en relajación profunda y conciencia corporal.
@@ -280,17 +260,69 @@
           <ul class="mt-3 list-disc pl-5 text-sm leading-relaxed space-y-1">
             <li>Disminuye estrés y tensión muscular.</li>
             <li>Mejora descanso y regulación emocional.</li>
-            <li>Promueve conexión con el cuerpo y sensación de calma.</li>
+            <li>Promueve sensación de calma y presencia.</li>
             <li>Experiencia íntima y discreta, con límites claros.</li>
           </ul>
 
           <div class="mt-6 rounded-2xl bg-white/70 p-4 shadow">
             <div class="text-sm font-semibold">Importante</div>
             <div class="mt-1 text-sm text-slate-700">
-              Esta es una experiencia profesional. La seguridad, el respeto y el consentimiento guían toda la sesión.
+              Es una experiencia profesional. La seguridad, el respeto y el consentimiento guían toda la sesión.
             </div>
           </div>
         </article>
+      </div>
+    </section>
+
+    <!-- OPCIÓN A: MASAJES NORMALES (ENTRADA PROFESIONAL) -->
+    <section id="bienestar" class="mx-auto mt-16 max-w-6xl px-4">
+      <div class="glass rounded-3xl p-8 shadow-xl">
+        <h2 class="text-2xl font-bold">Masajes de Bienestar</h2>
+        <p class="mt-2 text-sm leading-relaxed">
+          Para quienes prefieren una sesión clásica de bienestar, también realizo masajes profesionales
+          de relajación y descontracturante, con el mismo estándar de discreción, higiene y cuidado.
+        </p>
+
+        <div class="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <article class="rounded-3xl bg-white/70 p-5 shadow">
+            <img src="/assets/relajacion.jpg" alt="Masaje de Relajación" class="h-32 w-full rounded-2xl object-cover" />
+            <h3 class="mt-4 font-semibold">Relajación</h3>
+            <p class="mt-2 text-sm text-slate-700">
+              Movimientos suaves para bajar estrés, soltar tensión y mejorar descanso.
+            </p>
+          </article>
+
+          <article class="rounded-3xl bg-white/70 p-5 shadow">
+            <img src="/assets/descontracturante.jpg" alt="Masaje Descontracturante" class="h-32 w-full rounded-2xl object-cover" />
+            <h3 class="mt-4 font-semibold">Descontracturante</h3>
+            <p class="mt-2 text-sm text-slate-700">
+              Trabajo más profundo en zonas de tensión: cuello, espalda, hombros y piernas.
+            </p>
+          </article>
+
+          <article class="rounded-3xl bg-white/70 p-5 shadow">
+            <img src="/assets/mixto.jpg" alt="Masaje Mixto" class="h-32 w-full rounded-2xl object-cover" />
+            <h3 class="mt-4 font-semibold">Mixto</h3>
+            <p class="mt-2 text-sm text-slate-700">
+              Combina relajación + descontracturante para un resultado integral.
+            </p>
+          </article>
+
+          <article class="rounded-3xl bg-white/70 p-5 shadow">
+            <img src="/assets/reflexologia.jpg" alt="Reflexología" class="h-32 w-full rounded-2xl object-cover" />
+            <h3 class="mt-4 font-semibold">Reflexología</h3>
+            <p class="mt-2 text-sm text-slate-700">
+              Trabajo focalizado en pies para alivio, descanso y descarga corporal.
+            </p>
+          </article>
+        </div>
+
+        <div class="mt-6 rounded-2xl bg-white/70 p-4 shadow">
+          <div class="text-sm font-semibold">Tip de conversión</div>
+          <div class="mt-1 text-sm text-slate-700">
+            Muchas mujeres comienzan con un masaje de bienestar y, si se sienten cómodas, luego coordinan una experiencia sensitiva.
+          </div>
+        </div>
       </div>
     </section>
 
@@ -298,55 +330,66 @@
     <section id="tarifas" class="mx-auto mt-16 max-w-6xl px-4">
       <div class="glass rounded-3xl p-8 shadow-xl">
         <h2 class="text-2xl font-bold">Tarifas & Cobertura</h2>
-        <p class="mt-2 text-sm">Región Metropolitana, Región de O'Higgins, y Región de Valparaíso. Atención exclusivamente a domicilio.</p>
+        <p class="mt-2 text-sm">
+          Región Metropolitana, Región de O'Higgins y Región de Valparaíso. Atención <strong>exclusivamente a domicilio</strong>.
+        </p>
 
-        <ul class="mt-4 list-disc pl-6 text-sm leading-relaxed space-y-1">
-          <li><strong>Sesión breve</strong> (30 min): Desde $29.990 <span class="text-slate-600">(solo RM)</span></li>
-          <li><strong>Sesión completa</strong> (90 min): Desde $49.990</li>
-        </ul>
-
-        <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div class="rounded-2xl bg-white/70 p-4 shadow">
-            <div class="text-sm font-semibold">RM</div>
-            <div class="mt-1 text-sm text-slate-700">Las Condes, Vitacura, Providencia, Ñuñoa, Santiago Centro y alrededores.</div>
+        <div class="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
+          <div class="rounded-2xl bg-white/70 p-5 shadow">
+            <h3 class="text-lg font-semibold">Masaje Sensitivo (Tántrico)</h3>
+            <ul class="mt-3 list-disc pl-6 text-sm space-y-1">
+              <li><strong>Sesión breve</strong> (30 min): Desde $29.990 <span class="text-slate-600">(solo RM)</span></li>
+              <li><strong>Sesión completa</strong> (90 min): Desde $49.990</li>
+            </ul>
+            <p class="mt-3 text-xs text-slate-700">
+              *Valores referenciales. Confirmación final por WhatsApp o formulario.
+            </p>
           </div>
-          <div class="rounded-2xl bg-white/70 p-4 shadow">
-            <div class="text-sm font-semibold">V y VI Regiones</div>
-            <div class="mt-1 text-sm text-slate-700">Viña del Mar (Reñaca), Concón, Valparaíso, Quilpué, Villa Alemana · Litoral Central: Algarrobo, Santo Domingo.  Y Rancagua, Machalí, Graneros, San Fernando (según coordinación).</div>
+
+          <div class="rounded-2xl bg-white/70 p-5 shadow">
+            <h3 class="text-lg font-semibold">Masajes de Bienestar</h3>
+            <ul class="mt-3 list-disc pl-6 text-sm space-y-1">
+              <li><strong>Relajación</strong> (60–90 min): a convenir</li>
+              <li><strong>Descontracturante</strong> (60–90 min): a convenir</li>
+              <li><strong>Mixto</strong> (60–90 min): a convenir</li>
+              <li><strong>Reflexología</strong> (40–60 min): a convenir</li>
+            </ul>
+            <p class="mt-3 text-xs text-slate-700">
+              *Defino valores según comuna/tiempo, y se confirma antes de ir.
+            </p>
           </div>
         </div>
 
-        <p class="mt-3 text-xs text-slate-700">
-          *Valores referenciales. Confirmación final y coordinación por WhatsApp o formulario.
-        </p>
+        <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div class="rounded-2xl bg-white/70 p-4 shadow">
+            <div class="text-sm font-semibold">RM</div>
+            <div class="mt-1 text-sm text-slate-700">
+              Las Condes, Vitacura, Providencia, Ñuñoa, Santiago Centro y alrededores.
+            </div>
+          </div>
+          <div class="rounded-2xl bg-white/70 p-4 shadow">
+            <div class="text-sm font-semibold">V y VI Regiones</div>
+            <div class="mt-1 text-sm text-slate-700">
+              Viña del Mar (Reñaca), Concón, Valparaíso, Quilpué, Villa Alemana ·
+              y VI Región: Rancagua, Machalí, Graneros, San Fernando (según coordinación).
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- UBICACIÓN (sin dirección fija / sin riesgo de confianza) -->
+    <!-- UBICACIÓN (sin riesgo de confianza) -->
     <section id="ubicacion" class="mx-auto mt-16 max-w-6xl px-4">
       <div class="glass rounded-3xl p-8 shadow-xl">
         <h2 class="text-2xl font-bold">Ubicación</h2>
         <p class="mt-2 text-sm leading-relaxed">
-          La atención es <strong>exclusivamente a domicilio</strong>. Proximamente tendremos una sala abierta a público y dirección fija en Stgo Centro para recibir pacientes.
-          Para tu seguridad y privacidad, la ubicación exacta se coordina directamente contigo al momento de agendar.
+          La atención es <strong>exclusivamente a domicilio</strong>. No contamos con local abierto al público.
+          Para tu privacidad y seguridad, la ubicación exacta se coordina directamente contigo al momento de agendar.
         </p>
-
-        <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div class="rounded-2xl bg-white/70 p-4 shadow">
-            <div class="text-sm font-semibold">Cobertura principal</div>
-            <div class="mt-1 text-sm text-slate-700">Región Metropolitana.</div>
-          </div>
-          <div class="rounded-2xl bg-white/70 p-4 shadow">
-            <div class="text-sm font-semibold">Punto de referencia</div>
-            <div class="mt-1 text-sm text-slate-700">
-              Providencia / Santiago (solo como referencia de zona). La sesión se realiza en tu Domicilio/Hotel/Airbnb/Motel/Oficina.
-            </div>
-          </div>
-        </div>
 
         <div class="mt-6 overflow-hidden rounded-2xl shadow">
           <iframe
-            title="Mapa referencial de cobertura (Santiago)"
+            title="Mapa referencial (Santiago)"
             src="https://www.google.com/maps?q=Providencia%20Santiago%20Chile&output=embed"
             width="100%"
             height="320"
@@ -361,19 +404,33 @@
       </div>
     </section>
 
-    <!-- TESTIMONIOS -->
-    <section id="testimonios" class="mx-auto mt-16 max-w-6xl px-4">
+    <!-- FAQ -->
+    <section id="faq" class="mx-auto mt-16 max-w-6xl px-4">
       <div class="glass rounded-3xl p-8 shadow-xl">
-        <h2 class="text-2xl font-bold">Testimonios</h2>
-        <p class="mt-2 text-sm">Experiencias reales.</p>
+        <h2 class="text-2xl font-bold">Preguntas Frecuentes</h2>
 
         <div class="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
-          <blockquote class="rounded-2xl bg-white/70 p-4 shadow">
-            “Me sentí cuidada y tranquila. Todo fue discreto y muy profesional. Lo vuelvo a llamar sin dudas.”
-          </blockquote>
-          <blockquote class="rounded-2xl bg-white/70 p-4 shadow">
-            “El ambiente y el ritmo del masaje me ayudaron a soltar estrés. Me quedé con una paz increíble.”
-          </blockquote>
+          <div class="rounded-2xl bg-white/70 p-5 shadow">
+            <h3 class="font-semibold">¿Atiendes a hombres?</h3>
+            <p class="mt-2 text-sm text-slate-700">No. El servicio es exclusivamente para mujeres.</p>
+          </div>
+
+          <div class="rounded-2xl bg-white/70 p-5 shadow">
+            <h3 class="font-semibold">¿Dónde se realiza la sesión?</h3>
+            <p class="mt-2 text-sm text-slate-700">Exclusivamente a domicilio: casa, hotel o Airbnb (según coordinación).</p>
+          </div>
+
+          <div class="rounded-2xl bg-white/70 p-5 shadow">
+            <h3 class="font-semibold">¿Cómo agendo?</h3>
+            <p class="mt-2 text-sm text-slate-700">Por WhatsApp o formulario. Confirmo disponibilidad y detalles antes de ir.</p>
+          </div>
+
+          <div class="rounded-2xl bg-white/70 p-5 shadow">
+            <h3 class="font-semibold">Higiene y límites</h3>
+            <p class="mt-2 text-sm text-slate-700">
+              Trabajo con protocolos de higiene, respeto y consentimiento. Todo se conversa y se acuerda.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -393,14 +450,29 @@
               <label class="block text-sm font-medium">Nombre</label>
               <input required name="nombre" type="text" autocomplete="name" class="mt-1 w-full rounded-xl border px-3 py-2" />
             </div>
+
             <div>
               <label class="block text-sm font-medium">Correo</label>
               <input required name="correo" type="email" autocomplete="email" class="mt-1 w-full rounded-xl border px-3 py-2" />
             </div>
+
             <div>
               <label class="block text-sm font-medium">WhatsApp</label>
               <input name="whatsapp" type="tel" inputmode="tel" placeholder="+56 9 1234 5678" class="mt-1 w-full rounded-xl border px-3 py-2" />
             </div>
+
+            <div>
+              <label class="block text-sm font-medium">Tipo de sesión</label>
+              <select name="tipo" class="mt-1 w-full rounded-xl border px-3 py-2">
+                <option value="">Selecciona…</option>
+                <option>Masaje Sensitivo (Tántrico)</option>
+                <option>Relajación</option>
+                <option>Descontracturante</option>
+                <option>Mixto</option>
+                <option>Reflexología</option>
+              </select>
+            </div>
+
             <div>
               <label class="block text-sm font-medium">Mensaje</label>
               <textarea name="mensaje" rows="4" class="mt-1 w-full rounded-xl border px-3 py-2" placeholder="Comuna, lugar (domicilio/hotel/Airbnb), horario preferido…"></textarea>
@@ -414,7 +486,7 @@
             </div>
 
             <p class="text-xs text-slate-700 pt-2">
-              *Atención exclusiva para mujeres · Solo con cita previa · A domicilio.
+              *Atención exclusiva para mujeres · Solo con cita previa · Exclusivamente a domicilio.
             </p>
           </form>
         </div>
@@ -424,16 +496,15 @@
           <ul class="mt-4 space-y-2 text-sm">
             <li><strong>WhatsApp:</strong> <a class="underline" href="https://wa.me/56965747615" target="_blank" rel="noopener">+56 9 6574 7615</a></li>
             <li><strong>Correo:</strong> contacto@placerprivado.cl</li>
-            <li><strong>Atención:</strong> Solo mujeres · Solo con cita previa · A domicilio</li>
+            <li><strong>Atención:</strong> Solo mujeres · Exclusivamente a domicilio</li>
           </ul>
           <img src="/assets/contacto.jpg" alt="Contacto" class="mt-6 h-40 w-full rounded-2xl object-cover" />
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- Botón flotante WhatsApp (conversión) -->
+  <!-- Botón flotante WhatsApp -->
   <a href="https://wa.me/56965747615"
      target="_blank"
      rel="noopener"
@@ -454,31 +525,43 @@
   </footer>
 
   <script>
-    // Toggle menú móvil (y cierra al navegar)
+    // Menú móvil
     const btn = document.getElementById('menuBtn');
     const mobile = document.getElementById('mobileMenu');
-
     if (btn && mobile) {
       btn.addEventListener('click', () => {
         const open = mobile.classList.toggle('hidden') === false;
         btn.setAttribute('aria-expanded', String(open));
       });
-
       mobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
         mobile.classList.add('hidden');
         btn.setAttribute('aria-expanded', 'false');
       }));
     }
 
-    // Fallback si el video no reproduce (códec / permisos)
+    // Fallback video (codec/autoplay)
     (function(){
       const v = document.querySelector('video.bg-video');
       if (!v) return;
-      const fail = () => document.documentElement.classList.add('no-video');
+
+      let timeout = setTimeout(() => {
+        // Si en 2.2s no cargó metadata, asumimos que no reproduce
+        document.documentElement.classList.add('no-video');
+      }, 2200);
+
+      const ok = () => { clearTimeout(timeout); };
+      const fail = () => {
+        clearTimeout(timeout);
+        document.documentElement.classList.add('no-video');
+      };
+
+      v.addEventListener('loadedmetadata', ok);
+      v.addEventListener('canplay', ok);
       v.addEventListener('error', fail);
+
+      // intenta reproducir (si falla, activa fallback)
       v.play().catch(fail);
     })();
   </script>
-
 </body>
 </html>
