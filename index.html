@@ -762,75 +762,149 @@
     </section>
 
     <!-- AGENDA -->
-    <section id="agenda" class="mx-auto my-16 max-w-6xl px-4">
-      <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-        <div class="glass rounded-[2rem] p-8 shadow-soft">
-          <span class="section-kicker">Agenda</span>
-          <h2 class="text-2xl font-bold card-title">Agendar sesión</h2>
-          <p class="mt-3 text-sm text-slate-700">
-            Reserva por formulario o WhatsApp. Respuesta discreta. Atención exclusiva para mujeres.
-          </p>
+<section id="agenda" class="mx-auto my-16 max-w-6xl px-4">
+  <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+    <div class="glass rounded-[2rem] p-8 shadow-soft">
+      <span class="section-kicker">Agenda</span>
+      <h2 class="text-2xl font-bold card-title">Solicitar reserva</h2>
+      <p class="mt-3 text-sm leading-relaxed text-slate-700">
+        Puedes coordinar tu sesión por formulario o por WhatsApp. La respuesta es privada,
+        clara y según disponibilidad. Atención exclusiva para mujeres.
+      </p>
 
-          <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/" class="mt-5 space-y-4">
-            <input type="hidden" name="form-name" value="contacto" />
-            <p class="hidden"><label>No llenar: <input name="bot-field" /></label></p>
+      <form
+        name="contacto"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        action="/"
+        class="mt-5 space-y-4"
+      >
+        <input type="hidden" name="form-name" value="contacto" />
 
-            <div>
-              <label class="block text-sm font-medium text-slate-800">Nombre</label>
-              <input required name="nombre" type="text" autocomplete="name" class="mt-1 w-full rounded-2xl border border-slate-300 bg-white/85 px-3 py-2.5" />
-            </div>
-
-            <div>
-              <label class="block text-sm font-medium text-slate-800">Correo</label>
-              <input required name="correo" type="email" autocomplete="email" class="mt-1 w-full rounded-2xl border border-slate-300 bg-white/85 px-3 py-2.5" />
-            </div>
-
-            <div>
-              <label class="block text-sm font-medium text-slate-800">WhatsApp (opcional)</label>
-              <input name="whatsapp" type="tel" inputmode="tel" placeholder="+56 9 5091 2663" class="mt-1 w-full rounded-2xl border border-slate-300 bg-white/85 px-3 py-2.5" />
-            </div>
-
-            <div>
-              <label class="block text-sm font-medium text-slate-800">Tipo de masaje</label>
-              <select name="tipo" class="mt-1 w-full rounded-2xl border border-slate-300 bg-white/85 px-3 py-2.5" required>
-                <option value="">Selecciona…</option>
-                <option>Masaje Sensitivo (Tántrico) — solo mujeres</option>
-                <option>Bienestar — Cuerpo Completo (Relajante)</option>
-                <option>Bienestar — Descontracturante</option>
-              </select>
-            </div>
-
-            <div>
-              <label class="block text-sm font-medium text-slate-800">Mensaje</label>
-              <textarea name="mensaje" rows="4" class="mt-1 w-full rounded-2xl border border-slate-300 bg-white/85 px-3 py-2.5" placeholder="Comuna, lugar (domicilio, hotel, apart hotel, oficina o Airbnb), horario preferido…"></textarea>
-            </div>
-
-            <div class="flex flex-wrap items-center gap-3 pt-2">
-              <button type="submit" class="rounded-2xl bg-slate-900 px-5 py-3 text-white hover:bg-slate-800">Enviar</button>
-              <a href="https://wa.me/56950912663" target="_blank" rel="noopener" class="rounded-2xl border border-slate-300 bg-white/75 px-5 py-3 hover:bg-white">
-                Agendar por WhatsApp
-              </a>
-            </div>
-
-            <p class="text-xs text-slate-600 pt-2">
-              *Atención exclusiva para mujeres · Solo con cita previa · Exclusivamente a domicilio.
-            </p>
-          </form>
+        <div class="hidden" aria-hidden="true">
+          <label>
+            Empresa
+            <input name="bot-field" tabindex="-1" autocomplete="off" />
+          </label>
         </div>
 
-        <div class="glass rounded-[2rem] p-8 shadow-soft">
-          <span class="section-kicker">Contacto directo</span>
-          <h3 class="text-xl font-semibold card-title">Coordinación simple y discreta</h3>
-          <ul class="mt-4 space-y-3 text-sm text-slate-700">
-            <li><strong>WhatsApp:</strong> <a class="underline" href="https://wa.me/56950912663" target="_blank" rel="noopener">+56 9 5091 2663</a></li>
-            <li><strong>Correo:</strong> contacto@placerprivado.cl</li>
-            <li><strong>Atención:</strong> Solo mujeres · Solo con cita previa · Solo domicilios</li>
-            <li><strong>Modalidad:</strong> Domicilio, hotel, apart hotel, oficina o Airbnb según coordinación</li>
-          </ul>
-          <img src="./assets/contacto.jpg" alt="Contacto Placer Privado" class="mt-6 h-44 w-full rounded-3xl object-cover shadow-card" />
+        <div>
+          <label class="block text-sm font-medium text-slate-800" for="nombre">Nombre</label>
+          <input
+            required
+            id="nombre"
+            name="nombre"
+            type="text"
+            autocomplete="name"
+            class="mt-1 w-full rounded-2xl border border-slate-300 bg-white/85 px-3 py-2.5"
+          />
         </div>
-      </div>
-    </section>
+
+        <div>
+          <label class="block text-sm font-medium text-slate-800" for="correo">Correo</label>
+          <input
+            required
+            id="correo"
+            name="correo"
+            type="email"
+            autocomplete="email"
+            class="mt-1 w-full rounded-2xl border border-slate-300 bg-white/85 px-3 py-2.5"
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-slate-800" for="whatsapp">WhatsApp (opcional)</label>
+          <input
+            id="whatsapp"
+            name="whatsapp"
+            type="tel"
+            inputmode="tel"
+            placeholder="+56 9 5091 2663"
+            autocomplete="tel"
+            class="mt-1 w-full rounded-2xl border border-slate-300 bg-white/85 px-3 py-2.5"
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-slate-800" for="tipo">Tipo de masaje</label>
+          <select
+            id="tipo"
+            name="tipo"
+            required
+            class="mt-1 w-full rounded-2xl border border-slate-300 bg-white/85 px-3 py-2.5"
+          >
+            <option value="">Selecciona…</option>
+            <option>Masaje Sensitivo (Tántrico) — solo mujeres</option>
+            <option>Bienestar — Cuerpo Completo (Relajante)</option>
+            <option>Bienestar — Descontracturante</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-slate-800" for="mensaje">Mensaje</label>
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            rows="4"
+            class="mt-1 w-full rounded-2xl border border-slate-300 bg-white/85 px-3 py-2.5"
+            placeholder="Comuna, lugar de atención, horario preferido y cualquier detalle importante para coordinar tu reserva…"
+          ></textarea>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3 pt-2">
+          <button
+            type="submit"
+            class="rounded-2xl bg-slate-900 px-5 py-3 text-white transition hover:bg-slate-800"
+          >
+            Enviar solicitud
+          </button>
+
+          <a
+            href="https://wa.me/56950912663"
+            target="_blank"
+            rel="noopener"
+            class="rounded-2xl border border-slate-300 bg-white/75 px-5 py-3 transition hover:bg-white"
+          >
+            Agendar por WhatsApp
+          </a>
+        </div>
+
+        <p class="pt-2 text-xs text-slate-600">
+          *Atención exclusiva para mujeres · Solo con cita previa · Exclusivamente a domicilio.
+        </p>
+      </form>
+    </div>
+
+    <div class="glass rounded-[2rem] p-8 shadow-soft">
+      <span class="section-kicker">Contacto directo</span>
+      <h3 class="text-xl font-semibold card-title">Coordinación privada y discreta</h3>
+
+      <p class="mt-3 text-sm leading-relaxed text-slate-700">
+        Si prefieres una coordinación más directa, puedes escribir por WhatsApp o correo.
+        La atención se organiza de manera reservada, clara y según disponibilidad.
+      </p>
+
+      <ul class="mt-4 space-y-3 text-sm text-slate-700">
+        <li>
+          <strong>WhatsApp:</strong>
+          <a class="underline" href="https://wa.me/56950912663" target="_blank" rel="noopener">
+            +56 9 5091 2663
+          </a>
+        </li>
+        <li><strong>Correo:</strong> contacto@placerprivado.cl</li>
+        <li><strong>Atención:</strong> Solo mujeres · Solo con cita previa · Solo domicilios</li>
+        <li><strong>Modalidad:</strong> Domicilio, hotel, apart hotel, oficina o Airbnb según coordinación</li>
+      </ul>
+
+      <img
+        src="./assets/contacto.jpg"
+        alt="Contacto Placer Privado"
+        class="mt-6 h-44 w-full rounded-3xl object-cover shadow-card"
+      />
+    </div>
+  </div>
+</section>
 
   </main>
 
