@@ -380,17 +380,151 @@
 
       </div>
     </section>
-<!-- BANDEROLA FLOTANTE PROMO ABRIL -->
-<div id="promo-abril" class="fixed left-1/2 top-4 z-50 w-[92%] max-w-lg -translate-x-1/2 transition-all duration-300">
-  <div class="rounded-full border border-white/10 bg-[#4b2f35]/70 px-6 py-3 text-center shadow-xl backdrop-blur-md">
-    <p class="text-sm font-semibold uppercase tracking-[0.18em] text-white">
+<!-- BURBUJA FLOTANTE PROMO ABRIL -->
+<div
+  id="promo-abril"
+  class="fixed z-40 w-[250px] max-w-[78vw] rounded-[1.7rem] border border-white/15 bg-[#7a656b]/55 text-white shadow-2xl backdrop-blur-md select-none"
+  style="top:110px; left:16px; touch-action:none; -webkit-user-select:none; user-select:none;"
+>
+  <div class="cursor-grab active:cursor-grabbing px-5 py-4">
+    <p class="text-[10px] uppercase tracking-[0.24em] text-white/65">
+      Promoción abril
+    </p>
+    <p class="mt-1 text-sm font-semibold uppercase tracking-[0.18em] sm:text-base">
       ABRIL, MASAJES MIL
     </p>
-    <p class="text-sm text-white/90">
+    <p class="mt-1 text-[15px] leading-snug text-white/95">
       Todos los masajes a $29.990!
+    </p>
+    <p class="mt-2 text-[11px] text-white/55">
+      Arrástrame
     </p>
   </div>
 </div>
+
+<script>
+  (() => {
+    const bubble = document.getElementById('promo-abril');
+    if (!bubble) return;
+
+    const margin = 12;
+    let startX = 0;
+    let startY = 0;
+    let originLeft = 0;
+    let originTop = 0;
+    let dragging = false;
+    let userMoved = false;
+
+    function getPoint(e) {
+      if (e.touches && e.touches[0]) {
+        return {
+          x: e.touches[0].clientX,
+          y: e.touches[0].clientY
+        };
+      }
+      return {
+        x: e.clientX,
+        y: e.clientY
+      };
+    }
+
+    function clamp(value, min, max) {
+      return Math.min(Math.max(value, min), max);
+    }
+
+    function placeBelowHeader() {
+      const header =
+        document.querySelector('header') ||
+        document.querySelector('nav') ||
+        document.querySelector('[role="banner"]');
+
+      let top = 92;
+
+      if (header) {
+        const rect = header.getBoundingClientRect();
+        top = Math.max(86, Math.round(rect.bottom + 12));
+      }
+
+      const left = Math.max(
+        margin,
+        window.innerWidth - bubble.offsetWidth - margin
+      );
+
+      bubble.style.left = `${left}px`;
+      bubble.style.top = `${top}px`;
+    }
+
+    function keepInsideViewport() {
+      const rect = bubble.getBoundingClientRect();
+
+      const maxLeft = window.innerWidth - bubble.offsetWidth - margin;
+      const maxTop = window.innerHeight - bubble.offsetHeight - margin;
+
+      bubble.style.left = `${clamp(rect.left, margin, maxLeft)}px`;
+      bubble.style.top = `${clamp(rect.top, margin, maxTop)}px`;
+    }
+
+    function startDrag(e) {
+      dragging = true;
+      userMoved = true;
+
+      const point = getPoint(e);
+      const rect = bubble.getBoundingClientRect();
+
+      startX = point.x;
+      startY = point.y;
+      originLeft = rect.left;
+      originTop = rect.top;
+
+      bubble.classList.add('scale-[1.01]');
+
+      if (e.cancelable) e.preventDefault();
+    }
+
+    function moveDrag(e) {
+      if (!dragging) return;
+
+      const point = getPoint(e);
+      const dx = point.x - startX;
+      const dy = point.y - startY;
+
+      const maxLeft = window.innerWidth - bubble.offsetWidth - margin;
+      const maxTop = window.innerHeight - bubble.offsetHeight - margin;
+
+      const newLeft = clamp(originLeft + dx, margin, maxLeft);
+      const newTop = clamp(originTop + dy, margin, maxTop);
+
+      bubble.style.left = `${newLeft}px`;
+      bubble.style.top = `${newTop}px`;
+
+      if (e.cancelable) e.preventDefault();
+    }
+
+    function endDrag() {
+      dragging = false;
+      bubble.classList.remove('scale-[1.01]');
+    }
+
+    placeBelowHeader();
+
+    bubble.addEventListener('mousedown', startDrag);
+    bubble.addEventListener('touchstart', startDrag, { passive: false });
+
+    window.addEventListener('mousemove', moveDrag, { passive: false });
+    window.addEventListener('touchmove', moveDrag, { passive: false });
+
+    window.addEventListener('mouseup', endDrag);
+    window.addEventListener('touchend', endDrag);
+
+    window.addEventListener('resize', () => {
+      if (userMoved) {
+        keepInsideViewport();
+      } else {
+        placeBelowHeader();
+      }
+    });
+  })();
+</script>
 </section>
     <!-- QUIÉN SOY -->
     <section id="quien" class="mx-auto mt-16 max-w-6xl px-4">
