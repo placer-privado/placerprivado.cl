@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-CL">
+<html lang="es-CL" class="no-video">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,9 +19,11 @@
   <link rel="alternate" hreflang="es-cl" href="https://placerprivado.cl/" />
   <link rel="alternate" hreflang="x-default" href="https://placerprivado.cl/" />
 
+  <link rel="preload" as="image" href="./assets/hero_poster.webp" fetchpriority="high" />
+
   <!-- Favicon -->
-  <link rel="icon" href="./assets/logo.jpeg" />
-  <link rel="apple-touch-icon" href="./assets/logo.jpeg" />
+  <link rel="icon" href="./assets/icon.png" />
+  <link rel="apple-touch-icon" href="./assets/icon.png" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -91,7 +93,7 @@
       z-index: -2;
       filter: brightness(.48) saturate(1.04);
       pointer-events: none;
-      background: url('./assets/hero_poster.jpg') center/cover no-repeat;
+      background: url('./assets/hero_poster.webp') center/cover no-repeat;
     }
 
     .bg-overlay{
@@ -151,9 +153,55 @@
       content:"";
       position: fixed;
       inset: 0;
-      background: url('./assets/hero_poster.jpg') center/cover no-repeat;
+      background: url('./assets/hero_poster.webp') center/cover no-repeat;
       filter: brightness(.50);
       z-index: -2;
+    }
+
+    /* Lectura, navegación y controles accesibles. */
+    [hidden] { display: none !important; }
+    html { -webkit-text-size-adjust: 100%; }
+    body { overflow-wrap: break-word; }
+    a, button, input, select, textarea, summary { -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 3px solid #14532d; outline-offset: 4px; }
+    .skip-link {
+      position: fixed; top: 12px; left: 12px; z-index: 100;
+      padding: 12px 18px; border-radius: 12px;
+      color: white; background: #14532d; transform: translateY(-180%);
+    }
+    .skip-link:focus { transform: translateY(0); }
+    header .glass { background: rgba(255,255,255,.97); }
+    main .glass { background: rgba(255,255,255,.94); }
+    main p { line-height: 1.7; }
+    #mobileMenu { max-height: calc(100dvh - 6rem); overflow-y: auto; overscroll-behavior: contain; }
+    #mobileMenu a { display: flex; align-items: center; min-height: 44px; }
+    #menuBtn { min-width: 44px; min-height: 44px; }
+    #faq details { align-self: start; }
+    #faq summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 44px; list-style: none; cursor: pointer; }
+    #faq summary::-webkit-details-marker { display: none; }
+    #faq summary::after { content: '+'; flex: none; font-size: 1.4rem; color: #14532d; }
+    #faq details[open] summary::after { content: '−'; }
+    #faq details[open] summary { margin-bottom: .6rem; }
+    .motion-control {
+      position: fixed; left: 1rem; bottom: 1.25rem; z-index: 30;
+      min-height: 44px; padding: .65rem 1rem; border-radius: 999px;
+      border: 1px solid #cbd5e1; background: rgba(255,255,255,.97);
+      color: #0f172a; font-size: .8rem; box-shadow: 0 4px 20px rgba(15,23,42,.12);
+    }
+    #close-promotion { position: absolute; top: 4px; right: 4px; min-width: 44px; min-height: 44px; border-radius: 50%; font-size: 1.5rem; }
+    #close-promotion:hover { background: rgba(255,255,255,.16); }
+    #close-promotion:focus-visible { outline-color: #a7f3d0; }
+    body > footer { padding-bottom: 4rem; }
+    @media (max-width: 767px) {
+      #experiencia-privada-bubble { display: none !important; }
+      .motion-control { display: none !important; }
+      main .glass, main .glass-dark { padding: 1.25rem; border-radius: 1.5rem; }
+      main p.text-sm, main li.text-sm, main .text-sm p { font-size: 1rem; }
+      input, select, textarea { font-size: 16px !important; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
     }
   </style>
 
@@ -227,19 +275,20 @@
 </head>
 
 <body class="text-slate-800">
+  <a class="skip-link" href="#inicio">Saltar al contenido</a>
 
   <!-- Video de fondo -->
-  <video class="bg-video" autoplay muted loop playsinline preload="metadata" poster="./assets/hero_poster.jpg">
-    <source src="./assets/videofondo.mp4" type="video/mp4" />
+  <video class="bg-video" muted loop playsinline preload="none" aria-hidden="true" poster="./assets/hero_poster.webp">
+    <source data-src="./assets/videofondo.mp4" type="video/mp4" />
   </video>
   <div class="bg-overlay" aria-hidden="true"></div>
 
   <!-- Header fijo -->
   <header class="fixed inset-x-0 top-0 z-40">
-    <nav class="mx-auto max-w-6xl px-4 py-3 glass rounded-b-3xl shadow-soft">
+    <nav aria-label="Navegación principal" class="mx-auto max-w-6xl px-4 py-3 glass rounded-b-3xl shadow-soft">
       <div class="flex items-center justify-between gap-4">
         <a href="#inicio" class="flex items-center gap-3">
-          <img src="./assets/logo.jpeg" alt="Placer Privado" class="h-11 w-11 rounded-full object-cover shadow" />
+          <img width="256" height="256" decoding="async" src="./assets/logo.webp" alt="Placer Privado" class="h-11 w-11 rounded-full object-cover shadow" />
           <div>
             <span class="block text-sm font-semibold tracking-[0.18em] text-slate-900">PLACER PRIVADO</span>
             <span class="block text-[11px] text-slate-500">Bienestar · discreción · presencia</span>
@@ -247,7 +296,7 @@
         </a>
 
         <!-- Menú escritorio -->
-        <div class="hidden md:flex items-center gap-5 text-sm text-slate-700">
+        <div class="hidden xl:flex items-center gap-5 text-sm text-slate-700">
           <a href="#quien" class="hover:text-slate-950">Quién Soy</a>
           <a href="#servicio" class="hover:text-slate-950">Sensitivo</a>
           <a href="#bienestar" class="hover:text-slate-950">Bienestar</a>
@@ -262,8 +311,8 @@
         </div>
 
         <!-- Hamburguesa móvil -->
-        <button id="menuBtn"
-                class="md:hidden inline-flex items-center justify-center rounded-xl border border-slate-300 px-3 py-2 bg-white/80"
+        <button id="menuBtn" type="button"
+                class="xl:hidden inline-flex items-center justify-center rounded-xl border border-slate-300 px-3 py-2 bg-white/80"
                 aria-label="Abrir menú"
                 aria-expanded="false"
                 aria-controls="mobileMenu">
@@ -274,7 +323,7 @@
       </div>
 
       <!-- Menú móvil -->
-      <div id="mobileMenu" class="mt-3 hidden flex flex-col gap-2 text-sm md:hidden">
+      <div id="mobileMenu" class="mt-3 hidden flex flex-col gap-2 text-sm xl:hidden">
         <a href="#quien" class="rounded-xl px-3 py-2 hover:bg-white">Quién Soy</a>
         <a href="#servicio" class="rounded-xl px-3 py-2 hover:bg-white">Sensitivo</a>
         <a href="#bienestar" class="rounded-xl px-3 py-2 hover:bg-white">Bienestar</a>
@@ -290,7 +339,7 @@
     </nav>
   </header>
 
-  <main id="inicio" class="pt-28">
+  <main id="inicio" tabindex="-1" class="pt-28">
 
     <!-- HERO -->
     <section class="mx-auto max-w-6xl px-4">
@@ -298,7 +347,7 @@
 
         <div class="glass rounded-[2rem] p-8 shadow-soft">
           <span class="section-kicker">Atención exclusiva para mujeres</span>
-          <img src="./assets/logo.jpeg" alt="Logo Placer Privado" class="h-16 w-16 rounded-full mb-5 shadow" />
+          <img width="256" height="256" decoding="async" src="./assets/logo.webp" alt="Logo Placer Privado" class="h-16 w-16 rounded-full mb-5 shadow" />
 
           <!-- SEO CLAVE -->
           <h1 class="text-3xl sm:text-4xl font-bold leading-tight text-slate-950">
@@ -385,7 +434,8 @@
   class="fixed z-40 w-[210px] max-w-[64vw] rounded-[1.35rem] border border-white/15 bg-slate-900/65 text-white shadow-2xl backdrop-blur-md select-none sm:w-[235px] sm:max-w-[72vw]"
   style="top:110px; left:16px; touch-action:none; -webkit-user-select:none; user-select:none;"
 >
-  <div class="drag-handle cursor-grab active:cursor-grabbing px-4 pt-3 pb-2">
+  <button id="close-promotion" type="button" aria-label="Cerrar aviso"><span aria-hidden="true">×</span></button>
+  <div class="drag-handle cursor-grab active:cursor-grabbing pl-4 pr-14 pt-3 pb-2">
     <p class="text-[11px] uppercase tracking-[0.22em] text-emerald-200/80">
       Septiembre 2026
     </p>
@@ -426,6 +476,20 @@
   (() => {
     const bubble = document.getElementById('experiencia-privada-bubble');
     if (!bubble) return;
+
+    try {
+      if (sessionStorage.getItem('pp-promotion-dismissed') === '2026-09') {
+        bubble.hidden = true;
+        return;
+      }
+    } catch (_) { /* La navegación sigue disponible sin almacenamiento. */ }
+
+    const closeButton = document.getElementById('close-promotion');
+    closeButton.addEventListener('click', () => {
+      bubble.hidden = true;
+      try { sessionStorage.setItem('pp-promotion-dismissed', '2026-09'); } catch (_) {}
+      document.getElementById('inicio').focus({ preventScroll: true });
+    });
 
     const handle = bubble.querySelector('.drag-handle');
     if (!handle) return;
@@ -557,8 +621,8 @@
     <div class="grid grid-cols-1 items-center gap-8 lg:grid-cols-[0.9fr_1.1fr]">
       <!-- IMAGEN DE LA TEMPORADA -->
       <div class="overflow-hidden rounded-[2rem] shadow-card">
-        <img
-          src="./assets/promocion_nuru_septiembre.png"
+        <img width="933" height="1400" decoding="async" loading="lazy"
+          src="./assets/promocion_nuru_septiembre.webp"
           alt="Temporada Nuru de septiembre en Placer Privado"
           class="h-[620px] w-full object-cover object-center sm:h-[720px] lg:h-[760px]"
         />
@@ -687,21 +751,21 @@
       <span class="section-kicker">Quién Soy</span>
 
       <!-- FOTO PRINCIPAL -->
-      <img
-        src="./assets/quien_soy_1.jpg"
+      <img width="864" height="1152" decoding="async" loading="lazy"
+        src="./assets/quien_soy_1.webp"
         alt="Masoterapeuta profesional de Placer Privado"
         class="mb-4 h-72 w-full rounded-3xl object-cover shadow-card"
       />
 
       <!-- DOS FOTOS SECUNDARIAS -->
       <div class="mb-5 grid grid-cols-2 gap-4">
-        <img
-          src="./assets/quien_soy_2.jpg"
+        <img width="615" height="1400" decoding="async" loading="lazy"
+          src="./assets/quien_soy_2.webp"
           alt="Preparación profesional del ambiente"
           class="h-40 w-full rounded-3xl object-cover shadow-card"
         />
-        <img
-          src="./assets/quien_soy_3.jpg"
+        <img width="631" height="1400" decoding="async" loading="lazy"
+          src="./assets/quien_soy_3.webp"
           alt="Atención profesional y discreta a domicilio"
           class="h-40 w-full rounded-3xl object-cover shadow-card"
         />
@@ -725,8 +789,8 @@
     <div class="glass rounded-[2rem] p-8 shadow-soft flex flex-col justify-center">
       <span class="section-kicker">Ambiente</span>
 
-      <img
-        src="./assets/ambiente.jpg"
+      <img width="1024" height="1024" decoding="async" loading="lazy"
+        src="./assets/ambiente.webp"
         alt="Ambiente cuidado para masajes a domicilio"
         class="h-72 w-full rounded-3xl object-cover shadow-card"
       />
@@ -760,7 +824,7 @@
 
       <div class="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
         <article class="glass rounded-[2rem] p-6 shadow-soft">
-          <img src="./assets/sensitivo.jpg" alt="Masaje sensitivo (tántrico) para mujeres a domicilio" class="h-48 w-full rounded-3xl object-cover shadow-card" />
+          <img width="1400" height="1400" decoding="async" loading="lazy" src="./assets/sensitivo.webp" alt="Masaje sensitivo (tántrico) para mujeres a domicilio" class="h-48 w-full rounded-3xl object-cover shadow-card" />
           <h3 class="mt-5 text-xl font-semibold card-title">Cómo es la sesión</h3>
           <p class="mt-3 text-sm leading-relaxed text-slate-700">
             La sesión parte con una conversación breve para saber qué buscas, qué te gustaría explorar y cuáles son tus límites.
@@ -829,7 +893,7 @@
 
       <div class="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
         <article class="glass rounded-[2rem] p-6 shadow-soft">
-          <img src="./assets/relajante.jpg" alt="Masaje de cuerpo completo a domicilio para mujeres" class="h-48 w-full rounded-3xl object-cover shadow-card" />
+          <img width="1248" height="832" decoding="async" loading="lazy" src="./assets/relajante.webp" alt="Masaje de cuerpo completo a domicilio para mujeres" class="h-48 w-full rounded-3xl object-cover shadow-card" />
           <h3 class="mt-5 text-xl font-semibold card-title">Masaje de Cuerpo Completo</h3>
 
           <p class="mt-3 text-sm leading-relaxed text-slate-700">
@@ -847,7 +911,7 @@
         </article>
 
         <article class="glass rounded-[2rem] p-6 shadow-soft">
-          <img src="./assets/descontracturante.jpg" alt="Masaje descontracturante a domicilio para mujeres" class="h-48 w-full rounded-3xl object-cover shadow-card" />
+          <img width="933" height="1400" decoding="async" loading="lazy" src="./assets/descontracturante.webp" alt="Masaje descontracturante a domicilio para mujeres" class="h-48 w-full rounded-3xl object-cover shadow-card" />
           <h3 class="mt-5 text-xl font-semibold card-title">Masaje Descontracturante</h3>
           <p class="mt-3 text-sm text-slate-700 leading-relaxed">
             Enfoque en contracturas y zonas críticas: cuello, trapecios, espalda, zona lumbar, glúteos y piernas, según evaluación.
@@ -1020,41 +1084,41 @@
         <h2 class="text-2xl font-bold card-title">Información simple y directa</h2>
 
         <div class="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
-          <div class="rounded-3xl bg-white/80 p-5 shadow-card">
-            <h3 class="font-semibold text-slate-900">¿Atiendes a hombres?</h3>
+          <details class="rounded-3xl bg-white/80 p-5 shadow-card">
+            <summary class="font-semibold text-slate-900">¿Atiendes a hombres?</summary>
             <p class="mt-2 text-sm text-slate-700">No. La atención es exclusiva para mujeres.</p>
-          </div>
+          </details>
 
-          <div class="rounded-3xl bg-white/80 p-5 shadow-card">
-            <h3 class="font-semibold text-slate-900">¿Dónde se realiza la sesión?</h3>
+          <details class="rounded-3xl bg-white/80 p-5 shadow-card">
+            <summary class="font-semibold text-slate-900">¿Dónde se realiza la sesión?</summary>
             <p class="mt-2 text-sm text-slate-700">En domicilio, hotel, apart hotel, oficina, Airbnb o espacio privado seleccionado, siempre según coordinación previa.</p>
-          </div>
+          </details>
 
           <!-- SEO CLAVE -->
-          <div class="rounded-3xl bg-white/80 p-5 shadow-card">
-            <h3 class="font-semibold text-slate-900">¿Atiendes reservas en hotel o Airbnb?</h3>
+          <details class="rounded-3xl bg-white/80 p-5 shadow-card">
+            <summary class="font-semibold text-slate-900">¿Atiendes reservas en hotel o Airbnb?</summary>
             <p class="mt-2 text-sm text-slate-700">Sí. La atención puede coordinarse en hotel, apart hotel o Airbnb con reserva previa y discreción.</p>
-          </div>
+          </details>
 
-          <div class="rounded-3xl bg-white/80 p-5 shadow-card">
-            <h3 class="font-semibold text-slate-900">¿Cómo agendo?</h3>
+          <details class="rounded-3xl bg-white/80 p-5 shadow-card">
+            <summary class="font-semibold text-slate-900">¿Cómo agendo?</summary>
             <p class="mt-2 text-sm text-slate-700">Por WhatsApp o formulario. Confirmo disponibilidad, cobertura, modalidad y detalles antes de la sesión.</p>
-          </div>
+          </details>
 
-          <div class="rounded-3xl bg-white/80 p-5 shadow-card">
-            <h3 class="font-semibold text-slate-900">Higiene y límites</h3>
+          <details class="rounded-3xl bg-white/80 p-5 shadow-card">
+            <summary class="font-semibold text-slate-900">Higiene y límites</summary>
             <p class="mt-2 text-sm text-slate-700">
               Trabajo con protocolos de higiene, respeto y consentimiento. Todo se conversa y se acuerda.
             </p>
-          </div>
+          </details>
 
-          <div class="rounded-3xl bg-white/80 p-5 shadow-card">
-            <h3 class="font-semibold text-slate-900">¿Hay local físico?</h3>
+          <details class="rounded-3xl bg-white/80 p-5 shadow-card">
+            <summary class="font-semibold text-slate-900">¿Hay local físico?</summary>
             <p class="mt-2 text-sm text-slate-700">
               Actualmente no existe local abierto al público. La atención se realiza con reserva previa en domicilio,
               hotel o espacios privados previamente coordinados.
             </p>
-          </div>
+          </details>
         </div>
       </div>
     </section>
@@ -1124,70 +1188,70 @@ Junio 2026 · Daniela, 36 años, Colina
 </footer>
       </blockquote>
 
-      <blockquote class="testimonio-extra hidden flex h-full flex-col rounded-3xl bg-white/80 p-5 shadow-card">
+      <blockquote id="testimonio-extra-1" class="testimonio-extra hidden flex h-full flex-col rounded-3xl bg-white/80 p-5 shadow-card">
         <p class="text-slate-800 leading-relaxed">
 Llegaste puntual y eso te lo agradezco.   Con el frío que hacía armaste un ambiente muy rico en mi departamento.   Yo venía de una semana muy pesada, de esas que una solo quiere acostarse y morir, pero te llamé y el masaje que me diste me bajó mil cambios.   Quedé blandita. </p> <footer class="mt-4 border-t border-slate-200 pt-3 font-bold text-slate-500">
 Junio 2026 · Mujer, 46 años, Las Condes
 </footer>
       </blockquote>
 
-      <blockquote class="testimonio-extra hidden flex h-full flex-col rounded-3xl bg-white/80 p-5 shadow-card">
+      <blockquote id="testimonio-extra-2" class="testimonio-extra hidden flex h-full flex-col rounded-3xl bg-white/80 p-5 shadow-card">
         <p class="text-slate-800 leading-relaxed">
 Lo que más me gustó de ti fue que no se sintió mecánico como otros masajistas.   Se notaba que estabas atento a cómo iba reaccionando mi cuerpo.   Fue rico, tranquilo y bien llevado.   Gracias por todo!!. </p> <footer class="mt-4 border-t border-slate-200 pt-3 font-bold text-slate-500">
 Junio 2026 · Ejecutiva comercial, 42 años
 </footer>
       </blockquote>
 
-      <blockquote class="testimonio-extra hidden flex h-full flex-col rounded-3xl bg-white/80 p-5 shadow-card">
+      <blockquote id="testimonio-extra-3" class="testimonio-extra hidden flex h-full flex-col rounded-3xl bg-white/80 p-5 shadow-card">
         <p class="text-slate-800 leading-relaxed">
 Te soy sincera?  Me dio nervio abrir la puerta jajaja.   Pero apenas te vi me tranquilicé.   Muy profesional y varonil.   Después del masaje quedé con una sensación bien rica, como de alivio y tranquilidad mental. </p> <footer class="mt-4 border-t border-slate-200 pt-3 font-bold text-slate-500">
 Junio 2026 · Mujer, 43 años, Machalí
 </footer>
       </blockquote>
 
-      <blockquote class="testimonio-extra hidden flex h-full flex-col rounded-3xl bg-white/80 p-5 shadow-card">
+      <blockquote id="testimonio-extra-4" class="testimonio-extra hidden flex h-full flex-col rounded-3xl bg-white/80 p-5 shadow-card">
         <p class="text-slate-800 leading-relaxed">
 Hola Nolberto, quería agradecerte porque ese día estaba colapsada; trabajo, casa, hijos, frío, todo junto!   Costó soltarme al principio, y gracias a tus maravillosas manos me fui entregando al masaje.   Terminé respirando distinto. Eso fue lo más rico. </p> <footer class="mt-4 border-t border-slate-200 pt-3 font-bold text-slate-500">
 Junio 2026 · Claudia, 47 años, Providencia
 </footer>
       </blockquote>
 
-      <blockquote class="testimonio-extra hidden flex h-full flex-col rounded-3xl bg-white/80 p-5 shadow-card">
+      <blockquote id="testimonio-extra-5" class="testimonio-extra hidden flex h-full flex-col rounded-3xl bg-white/80 p-5 shadow-card">
         <p class="text-slate-800 leading-relaxed">
 Me gustó que no prometieras nada.   Fuiste claro desde el principio y eso me dio confianza.   Todo fue muy natural haciéndome sentir mujer, descansada y regaloneada, que falta que hace a veces. </p> <footer class="mt-4 border-t border-slate-200 pt-3 font-bold text-slate-500">
 Junio 2026 · Mujer, 49 años, La Florida
 </footer>
       </blockquote>
 
-      <blockquote class="testimonio-extra hidden flex h-full flex-col rounded-3xl bg-white/80 p-5 shadow-card">
+      <blockquote id="testimonio-extra-6" class="testimonio-extra hidden flex h-full flex-col rounded-3xl bg-white/80 p-5 shadow-card">
         <p class="text-slate-800 leading-relaxed">
 Ay Nolberto, ese masaje me dejó tontita jajaja.   Estaba más helá que pata de pingüino y terminé calentita, tranquila y con el cuerpo liviano gracias a tus manos.   Me gustó mucho tu tacto y discreción, sobre todo porque una igual tiene desconfianza de contar o hacer cosas... XD. </p> <footer class="mt-4 border-t border-slate-200 pt-3 font-bold text-slate-500">
 Junio 2026 · Mujer, 38 años, Macul
 </footer>
       </blockquote>
 
-      <blockquote class="testimonio-extra hidden flex h-full flex-col rounded-3xl bg-white/80 p-5 shadow-card">
+      <blockquote id="testimonio-extra-7" class="testimonio-extra hidden flex h-full flex-col rounded-3xl bg-white/80 p-5 shadow-card">
         <p class="text-slate-800 leading-relaxed">
 Gracias por la paciencia, porque te pregunté mil cosas antes de agendar pero, me respondiste todo súper bien.   El masaje fue exquisito, (sin prisa, pero sin pausa)   Me sentí segura todo el tiempo y eso para mí vale mucho. </p> <footer class="mt-4 border-t border-slate-200 pt-3 font-bold text-slate-500">
 Junio 2026 · Profesional independiente, 40 años
 </footer>
       </blockquote>
 
-      <blockquote class="testimonio-extra hidden flex h-full flex-col rounded-3xl bg-white/80 p-5 shadow-card">
+      <blockquote id="testimonio-extra-8" class="testimonio-extra hidden flex h-full flex-col rounded-3xl bg-white/80 p-5 shadow-card">
         <p class="text-slate-800 leading-relaxed">
 Me hiciste reír tanto cuando me dijiste que respirara porque estaba tiesa como tabla... era verdad jjhasjas.   Me encantó que tuvieras esa fuerza para levantarme y mucha delicadeza para acomodarme y después mi cuerpo se fue soltando solito.   Quedé como nueva. </p> <footer class="mt-4 border-t border-slate-200 pt-3 font-bold text-slate-500">
 Junio 2026 · Mujer, 27 años, Ñuñoa
 </footer>
       </blockquote>
 
-      <blockquote class="testimonio-extra hidden flex h-full flex-col rounded-3xl bg-white/80 p-5 shadow-card">
+      <blockquote id="testimonio-extra-9" class="testimonio-extra hidden flex h-full flex-col rounded-3xl bg-white/80 p-5 shadow-card">
         <p class="text-slate-800 leading-relaxed">
 Ese día no quería hablar, estaba cansada y media bajoneada (lo respetaste y se agradece).   Tus manos grandes, calientes, el aceite tibio y dejaste que el masaje hiciera lo suyo. </p> <footer class="mt-4 border-t border-slate-200 pt-3 font-bold text-slate-500">
 Junio 2026 · Mujer, 35 años, San Miguel
 </footer>
       </blockquote>
 
-      <blockquote class="testimonio-extra hidden flex h-full flex-col rounded-3xl bg-white/80 p-5 shadow-card">
+      <blockquote id="testimonio-extra-10" class="testimonio-extra hidden flex h-full flex-col rounded-3xl bg-white/80 p-5 shadow-card">
         <p class="text-slate-800 leading-relaxed">
 Nolberto, no sé si decirlo así pero me sentí bonita otra vez.   No por fuera, sino porque pude volver a sentir mi cuerpo sin culpa.   Fue una experiencia íntima y delicada.   Me quedé con ganas de más.   Te llamaré a fin de mes </p> <footer class="mt-4 border-t border-slate-200 pt-3 font-bold text-slate-500">
 Junio 2026 · Mujer, 55 años, Pirque
@@ -1197,6 +1261,8 @@ Junio 2026 · Mujer, 55 años, Pirque
       <div class="md:col-span-2 flex justify-center">
         <button
           id="toggle-testimonios"
+          aria-expanded="false"
+          aria-controls="testimonio-extra-1 testimonio-extra-2 testimonio-extra-3 testimonio-extra-4 testimonio-extra-5 testimonio-extra-6 testimonio-extra-7 testimonio-extra-8 testimonio-extra-9 testimonio-extra-10"
           type="button"
           class="rounded-2xl border border-slate-300 bg-white/75 px-5 py-3 text-sm font-semibold text-slate-700 transition hover:bg-white"
         >
@@ -1223,6 +1289,7 @@ Junio 2026 · Mujer, 55 años, Pirque
         item.classList.toggle('hidden', !expanded);
       });
 
+      button.setAttribute('aria-expanded', String(expanded));
       button.textContent = expanded ? 'Ver menos testimonios' : 'Ver más testimonios';
     });
   })();
@@ -1363,8 +1430,8 @@ Junio 2026 · Mujer, 55 años, Pirque
         <li><strong>Modalidad:</strong> Domicilio, hotel, apart hotel, oficina, Airbnb o espacio privado seleccionado según coordinación</li>
       </ul>
 
-      <img
-        src="./assets/contacto.jpg"
+      <img width="933" height="1400" decoding="async" loading="lazy"
+        src="./assets/contacto.webp"
         alt="Contacto Placer Privado"
         class="mt-6 h-44 w-full rounded-3xl object-cover shadow-card"
       />
@@ -1373,6 +1440,8 @@ Junio 2026 · Mujer, 55 años, Pirque
 </section>
 
   </main>
+
+  <button id="motion-toggle" type="button" class="motion-control" hidden>Pausar fondo animado</button>
 
   <!-- Botón flotante WhatsApp -->
   <a href="https://wa.me/56950912663"
@@ -1404,26 +1473,74 @@ Junio 2026 · Mujer, 55 años, Pirque
     document.addEventListener('DOMContentLoaded', () => {
       const btn = document.getElementById('menuBtn');
       const mobile = document.getElementById('mobileMenu');
+      const desktop = window.matchMedia('(min-width: 1280px)');
+      const setMenu = (open, restoreFocus = false) => {
+        mobile.classList.toggle('hidden', !open);
+        btn.setAttribute('aria-expanded', String(open));
+        btn.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+        if (restoreFocus) btn.focus();
+      };
 
       if (btn && mobile) {
-        btn.addEventListener('click', () => {
-          const isHidden = mobile.classList.toggle('hidden');
-          btn.setAttribute('aria-expanded', String(!isHidden));
+        btn.addEventListener('click', () => setMenu(btn.getAttribute('aria-expanded') !== 'true'));
+        mobile.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+        document.addEventListener('keydown', event => {
+          if (event.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') setMenu(false, true);
         });
-
-        mobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-          mobile.classList.add('hidden');
-          btn.setAttribute('aria-expanded', 'false');
-        }));
+        document.addEventListener('click', event => {
+          if (!mobile.contains(event.target) && !btn.contains(event.target)) setMenu(false);
+        });
+        desktop.addEventListener('change', () => setMenu(false));
       }
 
-      const v = document.querySelector('video.bg-video');
-      if (v) {
-        const fail = () => document.documentElement.classList.add('no-video');
-        v.addEventListener('error', fail);
-        const p = v.play();
-        if (p && typeof p.catch === 'function') p.catch(fail);
-      }
+      const video = document.querySelector('video.bg-video');
+      const toggle = document.getElementById('motion-toggle');
+      if (!video || !toggle) return;
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const mobileScreen = window.matchMedia('(max-width: 767px)');
+      const connection = navigator.connection;
+      let userPaused = false;
+      let generation = 0;
+      const allowed = () => !reducedMotion.matches && !mobileScreen.matches && !connection?.saveData;
+      const stop = () => {
+        generation += 1;
+        video.pause();
+        document.documentElement.classList.add('no-video');
+        toggle.textContent = 'Reproducir fondo animado';
+      };
+      const start = async () => {
+        if (!allowed() || userPaused || document.hidden) return;
+        const current = ++generation;
+        const source = video.querySelector('source');
+        if (!source.getAttribute('src')) {
+          source.src = source.dataset.src;
+          video.load();
+        }
+        try {
+          await video.play();
+          if (current !== generation) return;
+          if (!allowed() || userPaused || document.hidden) { stop(); return; }
+          document.documentElement.classList.remove('no-video');
+          toggle.textContent = 'Pausar fondo animado';
+        } catch (_) {
+          if (current === generation) stop();
+        }
+      };
+      const update = () => {
+        toggle.hidden = !allowed();
+        if (allowed() && !userPaused && !document.hidden) start();
+        else stop();
+      };
+      toggle.addEventListener('click', () => {
+        userPaused = !video.paused;
+        if (userPaused) stop(); else start();
+      });
+      video.addEventListener('error', stop);
+      reducedMotion.addEventListener('change', update);
+      mobileScreen.addEventListener('change', update);
+      connection?.addEventListener?.('change', update);
+      document.addEventListener('visibilitychange', update);
+      update();
     });
   </script>
 
