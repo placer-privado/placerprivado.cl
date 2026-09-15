@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-CL" class="no-video">
+<html lang="es-CL">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -50,6 +50,18 @@
     content="Masaje tántrico para mujeres, masaje sensitivo y masajes de bienestar. Atención exclusiva para mujeres, solo a domicilio, hotel, apart hotel, oficina o Airbnb en Chile."
   />
   <meta name="twitter:image" content="https://placerprivado.cl/assets/hero_poster.jpg" />
+
+  <!-- Si falta una copia optimizada, recuperar la fotografía original. -->
+  <script>
+    document.addEventListener('error', event => {
+      const image = event.target;
+      if (image.tagName !== 'IMG') return;
+      const fallback = image.getAttribute('data-fallback');
+      if (!fallback) return;
+      image.removeAttribute('data-fallback');
+      image.src = fallback;
+    }, true);
+  </script>
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -182,19 +194,11 @@
     #faq summary::after { content: '+'; flex: none; font-size: 1.4rem; color: #14532d; }
     #faq details[open] summary::after { content: '−'; }
     #faq details[open] summary { margin-bottom: .6rem; }
-    .motion-control {
-      position: fixed; left: 1rem; bottom: 1.25rem; z-index: 30;
-      min-height: 44px; padding: .65rem 1rem; border-radius: 999px;
-      border: 1px solid #cbd5e1; background: rgba(255,255,255,.97);
-      color: #0f172a; font-size: .8rem; box-shadow: 0 4px 20px rgba(15,23,42,.12);
-    }
     #close-promotion { position: absolute; top: 4px; right: 4px; min-width: 44px; min-height: 44px; border-radius: 50%; font-size: 1.5rem; }
     #close-promotion:hover { background: rgba(255,255,255,.16); }
     #close-promotion:focus-visible { outline-color: #a7f3d0; }
     body > footer { padding-bottom: 4rem; }
     @media (max-width: 767px) {
-      #experiencia-privada-bubble { display: none !important; }
-      .motion-control { display: none !important; }
       main .glass, main .glass-dark { padding: 1.25rem; border-radius: 1.5rem; }
       main p.text-sm, main li.text-sm, main .text-sm p { font-size: 1rem; }
       input, select, textarea { font-size: 16px !important; }
@@ -278,8 +282,8 @@
   <a class="skip-link" href="#inicio">Saltar al contenido</a>
 
   <!-- Video de fondo -->
-  <video class="bg-video" muted loop playsinline preload="none" aria-hidden="true" poster="./assets/hero_poster.webp">
-    <source data-src="./assets/videofondo.mp4" type="video/mp4" />
+  <video class="bg-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true" poster="./assets/hero_poster.webp">
+    <source src="./assets/videofondo.mp4" type="video/mp4" />
   </video>
   <div class="bg-overlay" aria-hidden="true"></div>
 
@@ -288,7 +292,7 @@
     <nav aria-label="Navegación principal" class="mx-auto max-w-6xl px-4 py-3 glass rounded-b-3xl shadow-soft">
       <div class="flex items-center justify-between gap-4">
         <a href="#inicio" class="flex items-center gap-3">
-          <img width="256" height="256" decoding="async" src="./assets/logo.webp" alt="Placer Privado" class="h-11 w-11 rounded-full object-cover shadow" />
+          <img data-fallback="./assets/logo.jpeg" width="256" height="256" decoding="async" src="./assets/logo.webp" alt="Placer Privado" class="h-11 w-11 rounded-full object-cover shadow" />
           <div>
             <span class="block text-sm font-semibold tracking-[0.18em] text-slate-900">PLACER PRIVADO</span>
             <span class="block text-[11px] text-slate-500">Bienestar · discreción · presencia</span>
@@ -347,7 +351,7 @@
 
         <div class="glass rounded-[2rem] p-8 shadow-soft">
           <span class="section-kicker">Atención exclusiva para mujeres</span>
-          <img width="256" height="256" decoding="async" src="./assets/logo.webp" alt="Logo Placer Privado" class="h-16 w-16 rounded-full mb-5 shadow" />
+          <img data-fallback="./assets/logo.jpeg" width="256" height="256" decoding="async" src="./assets/logo.webp" alt="Logo Placer Privado" class="h-16 w-16 rounded-full mb-5 shadow" />
 
           <!-- SEO CLAVE -->
           <h1 class="text-3xl sm:text-4xl font-bold leading-tight text-slate-950">
@@ -478,7 +482,7 @@
     if (!bubble) return;
 
     try {
-      if (sessionStorage.getItem('pp-promotion-dismissed') === '2026-09') {
+      if (sessionStorage.getItem('pp-promotion-dismissed') === '2026-09-v2') {
         bubble.hidden = true;
         return;
       }
@@ -487,7 +491,7 @@
     const closeButton = document.getElementById('close-promotion');
     closeButton.addEventListener('click', () => {
       bubble.hidden = true;
-      try { sessionStorage.setItem('pp-promotion-dismissed', '2026-09'); } catch (_) {}
+      try { sessionStorage.setItem('pp-promotion-dismissed', '2026-09-v2'); } catch (_) {}
       document.getElementById('inicio').focus({ preventScroll: true });
     });
 
@@ -621,7 +625,7 @@
     <div class="grid grid-cols-1 items-center gap-8 lg:grid-cols-[0.9fr_1.1fr]">
       <!-- IMAGEN DE LA TEMPORADA -->
       <div class="overflow-hidden rounded-[2rem] shadow-card">
-        <img width="933" height="1400" decoding="async" loading="lazy"
+        <img data-fallback="./assets/promocion_nuru_septiembre.png" width="933" height="1400" decoding="async" loading="lazy"
           src="./assets/promocion_nuru_septiembre.webp"
           alt="Temporada Nuru de septiembre en Placer Privado"
           class="h-[620px] w-full object-cover object-center sm:h-[720px] lg:h-[760px]"
@@ -751,7 +755,7 @@
       <span class="section-kicker">Quién Soy</span>
 
       <!-- FOTO PRINCIPAL -->
-      <img width="864" height="1152" decoding="async" loading="lazy"
+      <img data-fallback="./assets/quien_soy_1.jpg" width="864" height="1152" decoding="async" loading="lazy"
         src="./assets/quien_soy_1.webp"
         alt="Masoterapeuta profesional de Placer Privado"
         class="mb-4 h-72 w-full rounded-3xl object-cover shadow-card"
@@ -759,12 +763,12 @@
 
       <!-- DOS FOTOS SECUNDARIAS -->
       <div class="mb-5 grid grid-cols-2 gap-4">
-        <img width="615" height="1400" decoding="async" loading="lazy"
+        <img data-fallback="./assets/quien_soy_2.jpg" width="615" height="1400" decoding="async" loading="lazy"
           src="./assets/quien_soy_2.webp"
           alt="Preparación profesional del ambiente"
           class="h-40 w-full rounded-3xl object-cover shadow-card"
         />
-        <img width="631" height="1400" decoding="async" loading="lazy"
+        <img data-fallback="./assets/quien_soy_3.jpg" width="631" height="1400" decoding="async" loading="lazy"
           src="./assets/quien_soy_3.webp"
           alt="Atención profesional y discreta a domicilio"
           class="h-40 w-full rounded-3xl object-cover shadow-card"
@@ -789,7 +793,7 @@
     <div class="glass rounded-[2rem] p-8 shadow-soft flex flex-col justify-center">
       <span class="section-kicker">Ambiente</span>
 
-      <img width="1024" height="1024" decoding="async" loading="lazy"
+      <img data-fallback="./assets/ambiente.jpg" width="1024" height="1024" decoding="async" loading="lazy"
         src="./assets/ambiente.webp"
         alt="Ambiente cuidado para masajes a domicilio"
         class="h-72 w-full rounded-3xl object-cover shadow-card"
@@ -824,7 +828,7 @@
 
       <div class="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
         <article class="glass rounded-[2rem] p-6 shadow-soft">
-          <img width="1400" height="1400" decoding="async" loading="lazy" src="./assets/sensitivo.webp" alt="Masaje sensitivo (tántrico) para mujeres a domicilio" class="h-48 w-full rounded-3xl object-cover shadow-card" />
+          <img data-fallback="./assets/sensitivo.jpg" width="1400" height="1400" decoding="async" loading="lazy" src="./assets/sensitivo.webp" alt="Masaje sensitivo (tántrico) para mujeres a domicilio" class="h-48 w-full rounded-3xl object-cover shadow-card" />
           <h3 class="mt-5 text-xl font-semibold card-title">Cómo es la sesión</h3>
           <p class="mt-3 text-sm leading-relaxed text-slate-700">
             La sesión parte con una conversación breve para saber qué buscas, qué te gustaría explorar y cuáles son tus límites.
@@ -893,7 +897,7 @@
 
       <div class="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
         <article class="glass rounded-[2rem] p-6 shadow-soft">
-          <img width="1248" height="832" decoding="async" loading="lazy" src="./assets/relajante.webp" alt="Masaje de cuerpo completo a domicilio para mujeres" class="h-48 w-full rounded-3xl object-cover shadow-card" />
+          <img data-fallback="./assets/relajante.jpg" width="1248" height="832" decoding="async" loading="lazy" src="./assets/relajante.webp" alt="Masaje de cuerpo completo a domicilio para mujeres" class="h-48 w-full rounded-3xl object-cover shadow-card" />
           <h3 class="mt-5 text-xl font-semibold card-title">Masaje de Cuerpo Completo</h3>
 
           <p class="mt-3 text-sm leading-relaxed text-slate-700">
@@ -911,7 +915,7 @@
         </article>
 
         <article class="glass rounded-[2rem] p-6 shadow-soft">
-          <img width="933" height="1400" decoding="async" loading="lazy" src="./assets/descontracturante.webp" alt="Masaje descontracturante a domicilio para mujeres" class="h-48 w-full rounded-3xl object-cover shadow-card" />
+          <img data-fallback="./assets/descontracturante.jpg" width="933" height="1400" decoding="async" loading="lazy" src="./assets/descontracturante.webp" alt="Masaje descontracturante a domicilio para mujeres" class="h-48 w-full rounded-3xl object-cover shadow-card" />
           <h3 class="mt-5 text-xl font-semibold card-title">Masaje Descontracturante</h3>
           <p class="mt-3 text-sm text-slate-700 leading-relaxed">
             Enfoque en contracturas y zonas críticas: cuello, trapecios, espalda, zona lumbar, glúteos y piernas, según evaluación.
@@ -1430,7 +1434,7 @@ Junio 2026 · Mujer, 55 años, Pirque
         <li><strong>Modalidad:</strong> Domicilio, hotel, apart hotel, oficina, Airbnb o espacio privado seleccionado según coordinación</li>
       </ul>
 
-      <img width="933" height="1400" decoding="async" loading="lazy"
+      <img data-fallback="./assets/contacto.jpg" width="933" height="1400" decoding="async" loading="lazy"
         src="./assets/contacto.webp"
         alt="Contacto Placer Privado"
         class="mt-6 h-44 w-full rounded-3xl object-cover shadow-card"
@@ -1440,8 +1444,6 @@ Junio 2026 · Mujer, 55 años, Pirque
 </section>
 
   </main>
-
-  <button id="motion-toggle" type="button" class="motion-control" hidden>Pausar fondo animado</button>
 
   <!-- Botón flotante WhatsApp -->
   <a href="https://wa.me/56950912663"
@@ -1494,53 +1496,17 @@ Junio 2026 · Mujer, 55 años, Pirque
       }
 
       const video = document.querySelector('video.bg-video');
-      const toggle = document.getElementById('motion-toggle');
-      if (!video || !toggle) return;
-      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-      const mobileScreen = window.matchMedia('(max-width: 767px)');
-      const connection = navigator.connection;
-      let userPaused = false;
-      let generation = 0;
-      const allowed = () => !reducedMotion.matches && !mobileScreen.matches && !connection?.saveData;
-      const stop = () => {
-        generation += 1;
-        video.pause();
-        document.documentElement.classList.add('no-video');
-        toggle.textContent = 'Reproducir fondo animado';
-      };
-      const start = async () => {
-        if (!allowed() || userPaused || document.hidden) return;
-        const current = ++generation;
-        const source = video.querySelector('source');
-        if (!source.getAttribute('src')) {
-          source.src = source.dataset.src;
-          video.load();
+      if (video) {
+        const fail = () => document.documentElement.classList.add('no-video');
+        const playing = () => document.documentElement.classList.remove('no-video');
+        video.addEventListener('error', fail);
+        video.querySelector('source')?.addEventListener('error', fail);
+        video.addEventListener('playing', playing);
+        const playback = video.play();
+        if (playback && typeof playback.catch === 'function') {
+          playback.then(playing).catch(fail);
         }
-        try {
-          await video.play();
-          if (current !== generation) return;
-          if (!allowed() || userPaused || document.hidden) { stop(); return; }
-          document.documentElement.classList.remove('no-video');
-          toggle.textContent = 'Pausar fondo animado';
-        } catch (_) {
-          if (current === generation) stop();
-        }
-      };
-      const update = () => {
-        toggle.hidden = !allowed();
-        if (allowed() && !userPaused && !document.hidden) start();
-        else stop();
-      };
-      toggle.addEventListener('click', () => {
-        userPaused = !video.paused;
-        if (userPaused) stop(); else start();
-      });
-      video.addEventListener('error', stop);
-      reducedMotion.addEventListener('change', update);
-      mobileScreen.addEventListener('change', update);
-      connection?.addEventListener?.('change', update);
-      document.addEventListener('visibilitychange', update);
-      update();
+      }
     });
   </script>
 
