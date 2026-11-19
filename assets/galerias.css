@@ -1,4 +1,5 @@
-.service-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(0,1fr));gap:.65rem;margin:0 0 1.25rem;max-width:100%}
+.service-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem;margin:0 0 1.25rem;max-width:100%}
+.service-gallery>.gallery-photo:first-child{grid-column:1 / -1}
 .gallery-photo{display:block;border-radius:1.25rem;overflow:hidden;background:#f9f5ef;cursor:zoom-in;border:1px solid #e5e7eb}
 .gallery-photo img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain;transition:transform .2s ease}
 .gallery-photo:hover img{transform:scale(1.015)}
@@ -9,3 +10,5 @@ article[id],div[id="sensitivo"],div[id="tantrico"]{scroll-margin-top:7rem}
 .photo-dialog img{display:block;max-width:100%;width:auto;max-height:78dvh;object-fit:contain;margin:auto}
 .photo-dialog button{position:absolute;right:.65rem;top:.5rem;min-width:44px;min-height:44px;border:1px solid #cbd5e1;border-radius:.7rem;background:#fff;color:#0f172a;font:600 1rem system-ui;cursor:pointer;padding:.5rem 1rem}
 @media(prefers-reduced-motion:reduce){.gallery-photo img{transition:none}}
+
+@media(max-width:480px){.dual-gallery{grid-template-columns:1fr}}
