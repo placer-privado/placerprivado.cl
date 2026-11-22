@@ -454,12 +454,12 @@
 >
   <button id="close-promotion" type="button" aria-label="Cerrar aviso"><span aria-hidden="true">×</span></button>
   <div class="drag-handle cursor-grab active:cursor-grabbing pl-4 pr-14 pt-3 pb-2">
-    <p class="text-[11px] uppercase tracking-[0.22em] text-emerald-200/80">
+    <p class="text-sm uppercase tracking-[0.22em] text-emerald-200/80">
       Promoción de inauguración
     </p>
 
     <p class="mt-1 text-sm font-semibold uppercase leading-snug tracking-[0.13em]">
-      Todos los masajes
+      Masajes exclusivos para mujeres
     </p>
 
     <p class="mt-2 text-sm font-semibold leading-snug text-emerald-200">
@@ -477,7 +477,7 @@
         href="./promociones.html#inauguracion"
         class="rounded-full bg-emerald-400/20 px-3 py-1.5 text-center text-[12px] font-medium text-white transition hover:bg-emerald-400/30 sm:text-[13px]"
       >
-        Conocer la promoción
+        Ver promoción para ellas
       </a>
 
       <a
@@ -496,7 +496,7 @@
     if (!bubble) return;
 
     try {
-      if (sessionStorage.getItem('pp-promotion-dismissed') === 'inauguracion-local-29990-v1') {
+      if (sessionStorage.getItem('pp-promotion-dismissed') === 'inauguracion-mujeres-local-29990-v2') {
         bubble.hidden = true;
         return;
       }
@@ -505,7 +505,7 @@
     const closeButton = document.getElementById('close-promotion');
     closeButton.addEventListener('click', () => {
       bubble.hidden = true;
-      try { sessionStorage.setItem('pp-promotion-dismissed', 'inauguracion-local-29990-v1'); } catch (_) {}
+      try { sessionStorage.setItem('pp-promotion-dismissed', 'inauguracion-mujeres-local-29990-v2'); } catch (_) {}
       document.getElementById('inicio').focus({ preventScroll: true });
     });
 
